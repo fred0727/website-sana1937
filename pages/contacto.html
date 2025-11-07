@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - SANA 1937 | ¡Comunícate con nosotros!</title>
+    <meta
+      name="description"
+      content="Contáctanos para consultas sobre productos SANA 1937, smoothie bar, franquicias o cualquier información sobre bienestar natural."
+    />
+    <meta
+      name="keywords"
+      content="SANA 1937, contacto, consultas, smoothie bar, franquicia, productos naturales"
+    />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="Contacto - SANA 1937 | ¡Comunícate con nosotros!"
+    />
+    <meta
+      property="og:description"
+      content="Estamos aquí para ayudarte. Contáctanos para cualquier consulta sobre nuestros productos naturales."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://sana1937.com/pages/contacto.html"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <!-- Font Awesome para iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <nav class="nav">
+            <a href="#" class="nav-link">Productos</a>
+            <a href="#" class="nav-link">Marcas</a>
+            <a href="nosotros.html" class="nav-link">Nosotros</a>
+          </nav>
+
+          <div class="logo-container">
+            <a href="../index.html">
+              <img src="../images/logo.png" alt="SANA 1937" class="logo" />
+            </a>
+          </div>
+
+          <nav class="nav">
+            <a href="#" class="nav-link">Smoothies</a>
+            <a href="franquicia.html" class="nav-link">Franquicia</a>
+          </nav>
+
+          <!-- Menú móvil unificado -->
+          <nav class="nav mobile-nav">
+            <a href="#" class="nav-link">Productos</a>
+            <a href="#" class="nav-link">Marcas</a>
+            <a href="nosotros.html" class="nav-link">Nosotros</a>
+            <a href="#" class="nav-link">Smoothies</a>
+            <a href="franquicia.html" class="nav-link">Franquicia</a>
+          </nav>
+
+          <button class="menu-toggle" aria-label="Abrir menú">
+            <span>☰</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+      <!-- Solo fondo de imagen, sin contenido -->
+    </section>
+
+    <!-- Información de Contacto -->
+    <!-- Sección de Contacto -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-container">
+          <!-- Información de Soporte a la izquierda -->
+          <div class="contact-info-card">
+            <h3>Soporte al Cliente e Información</h3>
+
+            <div class="support-item">
+              <h4>
+                ¿Necesitas ayuda con una orden en tienda, app de SANA 1937, o
+                app de comida?
+              </h4>
+              <p>
+                Visita nuestra página de
+                <a href="nosotros.html">Ubicaciones</a> para contactar
+                directamente a la tienda o llama a nuestra línea general al
+                <a href="tel:+51123456789">+51 1 234 5678</a>
+              </p>
+            </div>
+
+            <div class="support-item">
+              <h4>¿Necesitas soporte relacionado con sana1937.com?</h4>
+              <div class="support-hours">
+                <p><strong>9AM-5PM PST Lunes-Viernes</strong></p>
+                <p>
+                  Llama sin costo:
+                  <a href="tel:+51987654321">+51 9 8765 4321</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulario a la derecha -->
+          <div class="contact-form-container">
+            <h2 class="contact-title">¡Comunícate con nosotros!</h2>
+            <form class="contact-form" action="#" method="POST">
+              <div class="form-group">
+                <label for="nombre">Nombre Completo *</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Ingresa tu nombre completo"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Ingresa tu correo electrónico"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="asunto">Asunto *</label>
+                <select id="asunto" name="asunto" required>
+                  <option value="">Selecciona un tema</option>
+                  <option value="productos">Consulta sobre Productos</option>
+                  <option value="smoothies">Smoothie Bar</option>
+                  <option value="franquicia">Información de Franquicia</option>
+                  <option value="general">Consulta General</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="mensaje">Mensaje *</label>
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  rows="5"
+                  placeholder="Escribe tu mensaje aquí..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="contact-submit-btn">
+                Enviar Mensaje
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Columna 1: Redes Sociales -->
+          <div class="footer-section">
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/share/1D5MP5KZiw/?mibextid=wwXIfr"
+                target="_blank"
+                class="social-link"
+                title="Facebook - SANA 1937"
+              >
+                <i class="fab fa-facebook-f"></i>
+                <span>Facebook</span>
+              </a>
+              <a
+                href="https://www.instagram.com/sana1937"
+                target="_blank"
+                class="social-link"
+                title="Instagram - @sana1937"
+              >
+                <i class="fab fa-instagram"></i>
+                <span>@sana1937</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Columna 2: SANA 1937 - Quiénes Somos -->
+          <div class="footer-section">
+            <h3>SANA 1937 - Quiénes Somos</h3>
+            <p>
+              Marca peruana dedicada al bienestar, con más de 85 años de
+              tradición familiar en el cuidado de la salud natural.
+              Transformamos la herencia ancestral en propuestas modernas de
+              nutrición y sabor.
+            </p>
+          </div>
+
+          <!-- Columna 3: Servicio al Cliente -->
+          <div class="footer-section">
+            <h3>Servicio al Cliente - Contacto</h3>
+            <p>
+              <i
+                class="fas fa-phone"
+                style="margin-right: 10px; color: var(--black)"
+              ></i>
+              +51 1 234 5678
+            </p>
+            <p>
+              <i
+                class="fas fa-envelope"
+                style="margin-right: 10px; color: var(--black)"
+              ></i>
+              info@sana1937.com
+            </p>
+            <p>
+              <i
+                class="fas fa-map-marker-alt"
+                style="margin-right: 10px; color: var(--black)"
+              ></i>
+              Lima, Perú
+            </p>
+            <a
+              href="contacto.html"
+              class="btn"
+              style="margin-top: 1rem; display: inline-block"
+            >
+              Contáctanos
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 SANA 1937. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+  </body>
+</html>
