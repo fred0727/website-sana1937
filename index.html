@@ -23,9 +23,29 @@
     <meta property="og:url" content="https://sana1937.com" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/logowhite.png" />
+    <link rel="icon" type="image/x-icon" href="images/logo_let.png" />
 
-    <!-- CSS -->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary-navy': '#15264b',
+              'secondary-navy': '#2d4a6b',
+              'light-navy': '#4a6b8a',
+            },
+            fontFamily: {
+              'poppins': ['Poppins', 'sans-serif'],
+              'inter': ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- CSS personalizado mínimo -->
     <link rel="stylesheet" href="css/styles.css" />
 
     <!-- Font Awesome para iconos -->
@@ -42,233 +62,258 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="font-poppins">
     <!-- Header -->
-    <header class="header">
-      <div class="container">
-        <div class="header-content">
-          <nav class="nav">
-            <a href="#" class="nav-link">Productos</a>
-            <a href="#" class="nav-link">Marcas</a>
-            <a href="pages/nosotros.html" class="nav-link">Nosotros</a>
+    <header class="header fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="flex justify-between items-center py-5 relative">
+          <!-- Nav izquierda - desktop -->
+          <nav class="hidden lg:flex items-center gap-10">
+            <a href="#" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Productos</a>
+            <a href="#" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Marcas</a>
+            <a href="pages/nosotros.html" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Nosotros</a>
           </nav>
 
-          <div class="logo-container">
+          <!-- Logo centrado -->
+          <div class="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 z-10">
             <a href="index.html">
-              <img src="images/logo.png" alt="SANA 1937" class="logo" />
+              <img src="images/logo_let.png" alt="SANA 1937" class="h-[60px] w-auto transition-all duration-300 logo" />
             </a>
           </div>
 
-          <nav class="nav">
-            <a href="#" class="nav-link">Smoothies</a>
-            <a href="pages/franquicia.html" class="nav-link">Franquicia</a>
+          <!-- Nav derecha - desktop -->
+          <nav class="hidden lg:flex items-center gap-10">
+            <a href="#" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Smoothies</a>
+            <a href="pages/franquicia.html" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Franquicia</a>
           </nav>
 
-          <!-- Menú móvil unificado -->
-          <nav class="nav mobile-nav">
-            <a href="#" class="nav-link">Productos</a>
-            <a href="#" class="nav-link">Marcas</a>
-            <a href="pages/nosotros.html" class="nav-link">Nosotros</a>
-            <a href="#" class="nav-link">Smoothies</a>
-            <a href="pages/franquicia.html" class="nav-link">Franquicia</a>
-          </nav>
-
-          <button class="menu-toggle" aria-label="Abrir menú">
-            <span>☰</span>
+          <!-- Menú móvil -->
+          <button class="lg:hidden p-2 rounded text-primary-navy hover:bg-gray-50 menu-toggle" aria-label="Abrir menú">
+            <span class="text-2xl">☰</span>
           </button>
+
+          <!-- Nav móvil desplegable -->
+          <nav class="mobile-nav absolute top-full left-0 right-0 bg-white flex-col p-5 shadow-lg border-t border-gray-200 opacity-0 invisible -translate-y-full transition-all duration-300">
+            <a href="#" class="py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy">Productos</a>
+            <a href="#" class="py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy">Marcas</a>
+            <a href="pages/nosotros.html" class="py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy">Nosotros</a>
+            <a href="#" class="py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy">Smoothies</a>
+            <a href="pages/franquicia.html" class="py-4 text-center text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy">Franquicia</a>
+          </nav>
         </div>
       </div>
     </header>
 
     <!-- Hero Banner -->
-    <section class="hero">
+    <section class="hidden sm:flex hero h-[80vh] flex items-center justify-center relative bg-cover bg-center bg-fixed bg-no-repeat" style="background-image: url('images/herov2.webp');">
+      <!-- Solo fondo de imagen, sin contenido -->
+    </section>
+
+
+    <!-- Hero Banner -->
+    <section class="flex sm:hidden hero h-[50vh] flex items-center justify-center relative bg-contain bg-center bg-no-repeat mt-12" style="background-image: url('images/hero_mobile.png');">
       <!-- Solo fondo de imagen, sin contenido -->
     </section>
 
     <!-- Botón de scroll entre secciones -->
-    <div class="hero-scroll-button">
-      <button
-        class="scroll-down-btn"
+    <div class="relative text-center -mt-12 sm:-mt-8 mb-4 z-10">
+      <a href="#nuevos-productos"
+        class="scroll-down-btn mx-auto bg-primary-navy border-2 border-primary-navy rounded-full w-[60px] h-[60px] flex items-center justify-center text-white text-xl cursor-pointer transition-all duration-300 shadow-lg hover:bg-primary-navy hover:-translate-y-1 hover:shadow-xl"
         onclick="scrollToContent()"
         aria-label="Navegar hacia abajo"
       >
         <i class="fas fa-chevron-down"></i>
-      </button>
+      </a>
     </div>
 
     <!-- Nuevos Productos -->
-    <section class="section">
-      <div class="container">
-        <div class="text-center mb-3">
-          <h2>¿Qué estás buscando hoy?</h2>
-          <p class="section-subtitle">
+    <section class="py-16 pt-10" id="nuevos-productos">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-semibold text-primary-navy mb-4 tracking-tight">¿Qué estás buscando hoy?</h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto font-light">
             Descubre nuestra selección curada de productos premium para tu
             bienestar integral
           </p>
         </div>
 
         <!-- Tags de categorías -->
-        <div class="category-tags">
-          <span class="category-tag">Creatina</span>
-          <span class="category-tag">Proteína Vegana</span>
-          <span class="category-tag">Proteína Whey</span>
-          <span class="category-tag">Colágeno</span>
-          <span class="category-tag">Salud Femenina</span>
-          <span class="category-tag">Salud Masculina</span>
-          <span class="category-tag">Electrolitos</span>
-          <span class="category-tag">Aminoácidos</span>
-          <span class="category-tag">Sueño</span>
-          <span class="category-tag">Holístico</span>
-          <span class="category-tag">Omega-3</span>
-          <span class="category-tag">Antioxidantes</span>
+        <div class="hidden flex flex-wrap justify-center gap-2 mb-12 max-w-4xl mx-auto">
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Creatina</span>
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Proteína Vegana</span>
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Proteína Whey</span>
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Colágeno</span>
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Salud Femenina</span>
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Salud Masculina</span>
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Electrolitos</span>
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Aminoácidos</span>
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Sueño</span>
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Holístico</span>
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Omega-3</span>
+          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Antioxidantes</span>
         </div>
 
         <!-- Sección de marca destacada -->
-        <div class="brand-section">
-          <div class="brand-header">
-            <h3>SANA 1937</h3>
-            <a href="#" class="shop-link">Ver más productos</a>
+        <div class="mt-12">
+          <div class="flex justify-between items-center mb-8 border-b border-gray-200 pb-4">
+            <h3 class="text-2xl font-normal text-gray-800">Nuevos Productos</h3>
+            <a href="#" class="text-primary-navy text-sm font-medium underline hover:text-secondary-navy">Ver más productos</a>
           </div>
 
-          <div class="products-grid-minimal">
-            <div class="product-card-minimal">
-              <img
-                src="images/omega-3.png"
-                alt="SANA 1937 Omega-3"
-                class="product-img-minimal"
-              />
-              <div class="product-brand-minimal">SANA 1937</div>
-              <div class="product-rating">⭐⭐⭐⭐⭐ 4.8/5</div>
-              <h4 class="product-name-minimal">
-                SANA 1937 | Premium Omega-3+D Cápsulas | Menta Fresca
-              </h4>
-              <div class="product-price-range">S/. 89.90</div>
-              <a href="#" class="btn-choose">Ver mas</a>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12 max-w-6xl mx-auto" id="nuevos-productos-list">
+            <!-- Producto 1 -->
+            <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+              <div class="relative overflow-hidden bg-gray-50">
+                <img
+                  src="images/omega-3.png"
+                  alt="SANA 1937 Omega-3"
+                  class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div class="absolute top-4 right-4 bg-primary-navy text-white px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide">
+                  Nuevo
+                </div>
+              </div>
+              <div class="p-8">
+                <div class="text-xs text-primary-navy uppercase font-bold tracking-wider mb-2">SANA 1937</div>
+                <h4 class="text-xl font-semibold text-gray-900 mb-3 leading-tight group-hover:text-primary-navy transition-colors">
+                  Premium Omega-3+D Cápsulas | Menta Fresca
+                </h4>
+                <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                  Suplemento premium de alta calidad para tu bienestar cardiovascular y salud integral.
+                </p>
+                <a href="#" class="block w-full bg-primary-navy text-white text-center rounded-full px-8 py-4 text-sm font-bold uppercase tracking-wide transition-all hover:bg-secondary-navy hover:shadow-lg transform hover:scale-105">
+                  Descubrir más
+                </a>
+              </div>
             </div>
 
-            <div class="product-card-minimal">
-              <img
-                src="images/proteina-vegana.png"
-                alt="SANA 1937 Proteína Vegana"
-                class="product-img-minimal"
-              />
-              <div class="product-brand-minimal">SANA 1937</div>
-              <div class="product-rating">⭐⭐⭐⭐⭐ 4.9/5</div>
-              <h4 class="product-name-minimal">
-                SANA 1937 | Proteína Vegana Limpia | Chocolate
-              </h4>
-              <div class="product-price-fixed">S/. 125.90</div>
-              <a href="#" class="btn-add">Ver mas</a>
-            </div>
-
-            <div class="product-card-minimal">
-              <img
-                src="images/adaptogenos.png"
-                alt="SANA 1937 Adaptógenos"
-                class="product-img-minimal"
-              />
-              <div class="product-brand-minimal">SANA 1937</div>
-              <div class="product-rating">⭐⭐⭐⭐⭐ 4.7/5</div>
-              <h4 class="product-name-minimal">
-                SANA 1937 | Complejo Adaptógeno Ancestral | Maca & Ashwagandha
-              </h4>
-              <div class="product-price-range">S/. 95.90</div>
-              <a href="#" class="btn-choose">Ver mas</a>
+            <!-- Producto 2 -->
+            <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+              <div class="relative overflow-hidden bg-gray-50">
+                <img
+                  src="images/proteina-vegana.png"
+                  alt="SANA 1937 Proteína Vegana"
+                  class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div class="absolute top-4 right-4 bg-primary-navy text-white px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide">
+                  Nuevo
+                </div>
+              </div>
+              <div class="p-8">
+                <div class="text-xs text-primary-navy uppercase font-bold tracking-wider mb-2">SANA 1937</div>
+                <h4 class="text-xl font-semibold text-gray-900 mb-3 leading-tight group-hover:text-primary-navy transition-colors">
+                  Proteína Vegana Limpia | Chocolate
+                </h4>
+                <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                  Proteína 100% vegana de origen natural, perfecta para tu estilo de vida saludable.
+                </p>
+                <a href="#" class="block w-full bg-primary-navy text-white text-center rounded-full px-8 py-4 text-sm font-bold uppercase tracking-wide transition-all hover:bg-secondary-navy hover:shadow-lg transform hover:scale-105">
+                  Descubrir más
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="brand-description">
-            <p>
-              Desbloquea el bienestar holístico con nuestra selección de
-              productos naturales y naturopáticos recomendados para soluciones
-              integrales de bienestar. Desde suplementos para el alivio del
-              estrés hasta mejorar la salud integral del cuerpo, nuestra
-              colección curada ofrece suplementos de salud premium adaptados a
-              tus necesidades. Eleva tu bienestar con marcas de confianza,
-              provenientes de todo el Perú, y embárcate en un viaje hacia una
-              salud y vitalidad óptimas.
-            </p>
+          <div class="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-10 md:p-12 mt-12 shadow-sm" id="desbloquea">
+            <div class="max-w-4xl mx-auto text-center">
+              <div class="mb-6">
+                <i class="fas fa-leaf text-primary-navy text-4xl opacity-20"></i>
+              </div>
+              <h3 class="text-2xl md:text-3xl font-semibold text-primary-navy mb-6 tracking-tight">
+                Desbloquea tu Bienestar Holístico
+              </h3>
+              <p class="text-gray-700 text-base md:text-lg font-light leading-relaxed mb-6">
+                Descubre nuestra selección de productos naturales y naturopáticos recomendados para soluciones integrales de bienestar. Desde suplementos para el alivio del estrés hasta mejorar la salud integral del cuerpo, nuestra colección curada ofrece suplementos de salud premium adaptados a tus necesidades.
+              </p>
+              <p class="text-gray-600 italic text-sm md:text-base font-light leading-relaxed">
+                Eleva tu bienestar con marcas de confianza provenientes de todo el Perú, y embárcate en un viaje hacia una salud y vitalidad óptimas.
+              </p>
+              <div class="mt-8 flex flex-wrap justify-center gap-3">
+                <span class="bg-white border border-primary-navy/20 text-primary-navy px-4 py-2 rounded-full text-xs font-medium">
+                  <i class="fas fa-check-circle mr-1"></i> 100% Natural
+                </span>
+                <span class="bg-white border border-primary-navy/20 text-primary-navy px-4 py-2 rounded-full text-xs font-medium">
+                  <i class="fas fa-check-circle mr-1"></i> Calidad Premium
+                </span>
+                <span class="bg-white border border-primary-navy/20 text-primary-navy px-4 py-2 rounded-full text-xs font-medium">
+                  <i class="fas fa-check-circle mr-1"></i> Origen Peruano
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Smoothie Bar & Quiénes Somos -->
-    <section class="section section-alt">
-      <div class="container">
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-5">
         <!-- Headline principal -->
-        <div class="smoothie-hero">
-          <h2>
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-semibold text-primary-navy tracking-tight">
             Somos más que una tienda de vitaminas, suplementos y alimentos
             saludables, somos un estilo de vida.
           </h2>
         </div>
 
         <!-- Smoothie Bar Items -->
-        <div class="smoothie-section">
-          <h3 class="section-title">Menú de Smoothie Bar</h3>
-          <p class="section-description">
+        <div class="mb-16">
+          <h3 class="text-3xl font-medium text-primary-navy text-center mb-4">Menú de Smoothie Bar</h3>
+          <p class="text-center text-gray-600 text-lg font-light mb-10 max-w-2xl mx-auto">
             Ordena tus Smoothies, Smoothie Bowls y Acai Bowls favoritos en línea
             o a través de nuestra App.
           </p>
 
-          <div class="smoothie-grid">
-            <div class="smoothie-image-large">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <div class="lg:col-span-2">
               <img
                 src="images/smoothie1.png"
                 alt="SANA 1937 Smoothies"
-                class="smoothie-main-img"
+                class="w-full h-[500px] object-cover rounded-lg"
               />
             </div>
 
-            <div class="smoothie-images-small">
+            <div class="grid grid-cols-2 gap-2">
               <img
                 src="images/smoothie2.png"
                 alt="Acai Bowl"
-                class="smoothie-small-img"
+                class="w-full h-[245px] object-cover rounded-lg"
               />
               <img
                 src="images/smoothie3.png"
                 alt="Smoothie Bottles"
-                class="smoothie-small-img"
+                class="w-full h-[245px] object-cover rounded-lg"
               />
               <img
                 src="images/smoothie4.png"
                 alt="Smoothie Bowl"
-                class="smoothie-small-img"
+                class="w-full h-[245px] object-cover rounded-lg"
               />
               <img
                 src="images/smoothie5.png"
                 alt="Blue Smoothie"
-                class="smoothie-small-img"
+                class="w-full h-[245px] object-cover rounded-lg"
               />
             </div>
           </div>
-
-          <!-- <div class="smoothie-actions">
-            <a href="pages/contacto.html" class="btn-order">Contactar</a>
-            <a href="pages/smoothies.html" class="btn-menu"
-              >Menú de Smoothies</a
-            >
-          </div> -->
         </div>
 
         <!-- SUPERCHARGE Section -->
-        <div class="supercharge-section-new">
-          <div class="supercharge-content">
-            <h3>POTENCIA Tu Smoothie</h3>
-            <p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-white rounded-lg p-8 border border-gray-200">
+          <div class="text-center lg:text-left">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">POTENCIA Tu Smoothie</h3>
+            <p class="font-light leading-relaxed mb-6">
               Combinaciones curadas de smoothies y Power Fuels para tu impulso
               diario. ¡Disponible con Açaí de Arándanos, Green Goddess y Thunder
               Coffee!
             </p>
-            <a href="pages/contacto.html" class="btn-order-super">Contactar</a>
+            <a href="#" class="inline-block bg-primary-navy text-white rounded-full px-6 py-3 text-sm font-medium uppercase tracking-wide transition-all hover:bg-secondary-navy">Ver más</a>
           </div>
-          <div class="supercharge-image">
+          <div>
             <img
               src="images/power-smoothies.png"
               alt="Power Smoothies"
-              class="supercharge-img"
+              class="w-full h-[300px] object-cover rounded-lg"
             />
           </div>
         </div>
@@ -276,44 +321,42 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
+    <footer class="bg-gray-50 text-gray-800 py-16 border-t border-gray-200">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <!-- Columna 1: Logo y Redes Sociales -->
-          <div class="footer-section">
-            <div class="footer-logo">
+          <div class="text-center md:text-left">
+            <div class="mb-6">
               <img
-                src="images/logowhite.png"
+                src="images/logo_let.png"
                 alt="SANA 1937"
-                class="footer-logo-img"
+                class="h-20 w-auto mx-auto md:mx-0"
               />
             </div>
-            <div class="social-links">
+            <div class="flex gap-4 justify-center md:justify-start">
               <a
                 href="https://www.facebook.com/share/1D5MP5KZiw/?mibextid=wwXIfr"
                 target="_blank"
-                class="social-link"
+                class="inline-flex items-center justify-center w-10 h-10 bg-primary-navy rounded-full text-white transition-all hover:bg-secondary-navy hover:-translate-y-0.5 hover:shadow-md"
                 title="Facebook - SANA 1937"
               >
                 <i class="fab fa-facebook-f"></i>
-                <span>Facebook</span>
               </a>
               <a
-                href="https://www.instagram.com/sana1937"
+                href="https://www.instagram.com/_sana1937_/"
                 target="_blank"
-                class="social-link"
+                class="inline-flex items-center justify-center w-10 h-10 bg-primary-navy rounded-full text-white transition-all hover:bg-secondary-navy hover:-translate-y-0.5 hover:shadow-md"
                 title="Instagram - @sana1937"
               >
                 <i class="fab fa-instagram"></i>
-                <span>@sana1937</span>
               </a>
             </div>
           </div>
 
           <!-- Columna 2: SANA 1937 - Quiénes Somos -->
-          <div class="footer-section">
-            <h3>SANA 1937 - Quiénes Somos</h3>
-            <p>
+          <div class="text-center md:text-left">
+            <h3 class="font-inter font-semibold text-primary-navy mb-6 text-sm uppercase tracking-wide">SANA 1937 - Quiénes Somos</h3>
+            <p class="font-inter text-gray-600 leading-relaxed text-sm">
               Marca peruana dedicada al bienestar, con más de 85 años de
               tradición familiar en el cuidado de la salud natural.
               Transformamos la herencia ancestral en propuestas modernas de
@@ -322,47 +365,33 @@
           </div>
 
           <!-- Columna 3: Servicio al Cliente -->
-          <div class="footer-section">
-            <h3>Servicio al Cliente - Contacto</h3>
-            <p>
-              <i
-                class="fas fa-phone"
-                style="margin-right: 10px; color: var(--black)"
-              ></i>
+          <div class="text-center md:text-left">
+            <h3 class="font-inter font-semibold text-primary-navy mb-6 text-sm uppercase tracking-wide">Servicio al Cliente - Contacto</h3>
+            <!-- <p class="font-inter text-gray-600 text-sm mb-3">
+              <i class="fas fa-phone mr-2.5 text-black"></i>
               +51 1 234 5678
             </p>
-            <p>
-              <i
-                class="fas fa-envelope"
-                style="margin-right: 10px; color: var(--black)"
-              ></i>
+            <p class="font-inter text-gray-600 text-sm mb-3">
+              <i class="fas fa-envelope mr-2.5 text-black"></i>
               info@sana1937.com
-            </p>
-            <p>
-              <i
-                class="fas fa-map-marker-alt"
-                style="margin-right: 10px; color: var(--black)"
-              ></i>
-              Lima, Perú
+            </p> -->
+            <p class="font-inter text-gray-600 text-sm mb-4">
+              <i class="fas fa-map-marker-alt mr-2.5 text-black"></i>
+              For Now - Lima, Perú
             </p>
             <a
               href="pages/contacto.html"
-              class="btn"
-              style="margin-top: 1rem; display: inline-block"
+              class="inline-block bg-primary-navy text-white py-2.5 px-6 rounded text-sm font-medium uppercase tracking-wide transition-all hover:bg-secondary-navy hover:-translate-y-0.5 hover:shadow-md"
             >
               Contáctanos
             </a>
           </div>
         </div>
 
-        <div class="footer-bottom">
-          <p>&copy; 2025 SANA 1937. Todos los derechos reservados.</p>
-          <div class="footer-payment-methods">
-            <!-- <div class="payment-icon">VISA</div>
-            <div class="payment-icon">MC</div>
-            <div class="payment-icon">AMEX</div>
-            <div class="payment-icon">GPay</div>
-            <div class="payment-icon">PayPal</div> -->
+        <div class="border-t border-gray-200 pt-5 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
+          <p class="font-inter text-gray-500 text-sm">&copy; 2025 SANA 1937. Todos los derechos reservados.</p>
+          <div class="flex items-center gap-2">
+            <!-- Payment icons placeholder -->
           </div>
         </div>
       </div>
