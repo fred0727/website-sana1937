@@ -99,20 +99,20 @@ function initStickyHeader() {
 
 // Animaciones al scroll
 function initScrollAnimations() {
-    const animatedElements = document.querySelectorAll('.fade-in-up');
+    const animatedElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .scale-in');
 
     if (animatedElements.length === 0) return;
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.animationDelay = '0.1s';
-                entry.target.classList.add('fade-in-up');
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.15,
+        rootMargin: '0px 0px -100px 0px'
     });
 
     animatedElements.forEach(el => {
