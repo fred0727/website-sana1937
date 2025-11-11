@@ -1,211 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nosotros - SANA 1937 | Salud y Bienestar Natural</title>
-    <meta
-      name="description"
-      content="Conoce la historia de SANA 1937 - Marca peruana con más de 85 años de tradición familiar en el bienestar natural. Desde 1937 transformando la herencia ancestral en propuestas modernas."
-    />
-    <meta
-      name="keywords"
-      content="SANA 1937, historia, tradición familiar, bienestar natural, Perú, salud ancestral"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosotros - SANA 1937 | Salud y Bienestar Natural</title>
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary-navy': '#15264b',
+            'secondary-navy': '#2d4a6b',
+          },
+          fontFamily: {
+            'poppins': ['Poppins', 'sans-serif'],
+            'inter': ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="font-poppins">
+  <!-- Header -->
+  <header class="header fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="flex justify-between items-center py-8 relative">
+        <nav class="hidden lg:flex items-center gap-10">
+          <a href="#" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Productos</a>
+          <a href="#" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Marcas</a>
+          <a href="nosotros.html" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 text-primary-navy border-black">Nosotros</a>
+        </nav>
+        <div class="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 z-10">
+          <a href="../index.html"><img src="../images/logo_let.png" alt="SANA 1937" class="h-[60px] w-auto transition-all duration-300 logo" /></a>
+        </div>
+        <nav class="hidden lg:flex items-center gap-10">
+          <a href="#" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Smoothies</a>
+          <a href="franquicia.html" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Franquicia</a>
+        </nav>
+        <button class="lg:hidden p-2 rounded text-primary-navy hover:bg-gray-50 menu-toggle" aria-label="Abrir menú"><span class="text-2xl">☰</span></button>
+        <nav class="mobile-nav absolute top-full left-0 right-0 bg-white flex-col p-5 shadow-lg border-t border-gray-200 opacity-0 invisible -translate-y-full transition-all duration-300">
+          <a href="#" class="py-4 text-center border-b border-gray-200 text-gray-800">Productos</a>
+          <a href="#" class="py-4 text-center border-b border-gray-200 text-gray-800">Marcas</a>
+          <a href="nosotros.html" class="py-4 text-center border-b border-gray-200 text-gray-800">Nosotros</a>
+          <a href="#" class="py-4 text-center border-b border-gray-200 text-gray-800">Smoothies</a>
+          <a href="franquicia.html" class="py-4 text-center text-gray-800">Franquicia</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-    <!-- Open Graph Meta Tags -->
-    <meta
-      property="og:title"
-      content="Nosotros - SANA 1937 | Salud y Bienestar Natural"
-    />
-    <meta
-      property="og:description"
-      content="Conoce nuestra historia: Marca peruana inspirada en el bienestar, con raíces familiares desde 1937."
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://sana1937.com/pages/nosotros.html"
-    />
+  <!-- Hero -->
+  <section class="hidden hero min-h-[90vh] flex items-center justify-center relative overflow-hidden bg-cover bg-center bg-fixed" style="background-image: url('../images/hero.webp');"></section>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <!-- Nosotros Section -->
+  <section class="py-20 px-5 md:px-12 lg:px-48 mt-24">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h3 class="text-4xl md:text-5xl font-medium text-primary-navy mb-8 tracking-tight">Nosotros</h3>
+        <p class="text-lg text-gray-600 font-light leading-relaxed max-w-5xl mx-auto">
+          En <strong>SANA 1937</strong> creemos que la salud empieza con lo que eliges cada día. Somos una marca peruana inspirada en el bienestar, la vitalidad y el equilibrio, con raíces familiares que se remontan a 1937, cuando comenzó nuestra dedicación al cuidado de la salud.
+        </p>
+      </div>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/styles.css" />
-
-    <!-- Font Awesome para iconos -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="header">
-      <div class="container">
-        <div class="header-content">
-          <nav class="nav">
-            <a href="#" class="nav-link">Productos</a>
-            <a href="#" class="nav-link">Marcas</a>
-            <a href="nosotros.html" class="nav-link">Nosotros</a>
-          </nav>
-
-          <div class="logo-container">
-            <a href="../index.html">
-              <img src="../images/logo.png" alt="SANA 1937" class="logo" />
-            </a>
+      <!-- Gallery Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+          <img src="../images/sana1937-historia.png" alt="SANA 1937 Historia" class="w-full h-60 object-cover" />
+          <div class="p-6">
+            <h4 class="text-xl font-semibold text-primary-navy mb-4">Tradición Familiar</h4>
+            <p class="text-gray-600 font-light leading-relaxed text-sm">Más de 85 años de dedicación familiar al bienestar natural, transmitiendo conocimientos ancestrales de generación en generación.</p>
           </div>
+        </div>
 
-          <nav class="nav">
-            <a href="#" class="nav-link">Smoothies</a>
-            <a href="franquicia.html" class="nav-link">Franquicia</a>
-          </nav>
+        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+          <img src="../images/sana1937-productos.png" alt="SANA 1937 Productos" class="w-full h-60 object-cover" />
+          <div class="p-6">
+            <h4 class="text-xl font-semibold text-primary-navy mb-4">Innovación Natural</h4>
+            <p class="text-gray-600 font-light leading-relaxed text-sm">Combinamos la sabiduría tradicional con tecnología moderna para crear productos que nutren cuerpo y alma.</p>
+          </div>
+        </div>
 
-          <!-- Menú móvil unificado -->
-          <nav class="nav mobile-nav">
-            <a href="#" class="nav-link">Productos</a>
-            <a href="#" class="nav-link">Marcas</a>
-            <a href="nosotros.html" class="nav-link">Nosotros</a>
-            <a href="#" class="nav-link">Smoothies</a>
-            <a href="franquicia.html" class="nav-link">Franquicia</a>
-          </nav>
-
-          <button class="menu-toggle" aria-label="Abrir menú">
-            <span>☰</span>
-          </button>
+        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+          <img src="../images/sana1937-compromiso.png" alt="SANA 1937 Compromiso" class="w-full h-60 object-cover" />
+          <div class="p-6">
+            <h4 class="text-xl font-semibold text-primary-navy mb-4">Compromiso Peruano</h4>
+            <p class="text-gray-600 font-light leading-relaxed text-sm">Orgullosamente peruanos, promovemos los superalimentos locales y apoyamos el desarrollo de nuestra comunidad.</p>
+          </div>
         </div>
       </div>
-    </header>
-
-    <!-- Hero Banner -->
-    <section class="hero">
-      <!-- Solo fondo de imagen, sin contenido -->
-    </section>
-
-    <!-- Historia Principal -->
-    <section class="section-content">
-      <!-- Nosotros Section -->
-      <div id="nosotros" class="nosotros-section-new">
-        <div class="nosotros-text">
-          <h3>Nosotros</h3>
-          <p>
-            En <strong>SANA 1937</strong> creemos que la salud empieza con lo
-            que eliges cada día. Somos una marca peruana inspirada en el
-            bienestar, la vitalidad y el equilibrio, con raíces familiares que
-            se remontan a 1937, cuando comenzó nuestra dedicación al cuidado de
-            la salud. Desde entonces, hemos mantenido viva una tradición de
-            bienestar natural, trayendo al Perú el conocimiento y los beneficios
-            de la comida saludable, y transformando esa herencia en una
-            propuesta moderna de nutrición y sabor.
-          </p>
-        </div>
-
-        <!-- Gallery Grid -->
-        <div class="nosotros-gallery">
-          <div class="gallery-item">
-            <img
-              src="../images/sana1937-historia.png"
-              alt="SANA 1937 Historia"
-              class="gallery-img"
-            />
-            <div class="gallery-text">
-              <h4>Tradición Familiar</h4>
-              <p>
-                Más de 85 años de dedicación familiar al bienestar natural,
-                transmitiendo conocimientos ancestrales de generación en
-                generación.
-              </p>
-            </div>
-          </div>
-
-          <div class="gallery-item">
-            <img
-              src="../images/sana1937-productos.png"
-              alt="SANA 1937 Productos"
-              class="gallery-img"
-            />
-            <div class="gallery-text">
-              <h4>Innovación Natural</h4>
-              <p>
-                Combinamos la sabiduría tradicional con tecnología moderna para
-                crear productos que nutren cuerpo y alma.
-              </p>
-            </div>
-          </div>
-
-          <div class="gallery-item">
-            <img
-              src="../images/sana1937-compromiso.png"
-              alt="SANA 1937 Compromiso"
-              class="gallery-img"
-            />
-            <div class="gallery-text">
-              <h4>Compromiso Peruano</h4>
-              <p>
-                Orgullosamente peruanos, promovemos los superalimentos locales y
-                apoyamos el desarrollo de nuestra comunidad.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- <div class="nosotros-actions">
-            <a href="pages/nosotros.html" class="btn">Conoce Más</a>
-            <a href="pages/franquicia.html" class="btn btn-secondary"
-              >Oportunidades de Franquicia</a
-            >
-          </div> -->
-      </div>
-    </section>
+    </div>
+  </section>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <!-- Columna 1: Redes Sociales -->
-          <div class="footer-section">
-            <div class="footer-logo">
+    <footer class="bg-gray-50 text-gray-800 py-16 border-t border-gray-200">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          <!-- Columna 1: Logo y Redes Sociales -->
+          <div class="text-center md:text-left">
+            <div class="mb-6">
               <img
-                src="../images/logowhite.png"
+                src="../images/logo_let.png"
                 alt="SANA 1937"
-                class="footer-logo-img"
+                class="h-20 w-auto mx-auto md:mx-0"
               />
             </div>
-            <div class="social-links">
+            <div class="flex gap-4 justify-center md:justify-start">
               <a
                 href="https://www.facebook.com/share/1D5MP5KZiw/?mibextid=wwXIfr"
                 target="_blank"
-                class="social-link"
+                class="inline-flex items-center justify-center w-10 h-10 bg-primary-navy rounded-full text-white transition-all hover:bg-secondary-navy hover:-translate-y-0.5 hover:shadow-md"
                 title="Facebook - SANA 1937"
               >
                 <i class="fab fa-facebook-f"></i>
-                <span>Facebook</span>
               </a>
               <a
-                href="https://www.instagram.com/sana1937"
+                href="https://www.instagram.com/_sana1937_/"
                 target="_blank"
-                class="social-link"
+                class="inline-flex items-center justify-center w-10 h-10 bg-primary-navy rounded-full text-white transition-all hover:bg-secondary-navy hover:-translate-y-0.5 hover:shadow-md"
                 title="Instagram - @sana1937"
               >
                 <i class="fab fa-instagram"></i>
-                <span>@sana1937</span>
               </a>
             </div>
           </div>
 
           <!-- Columna 2: SANA 1937 - Quiénes Somos -->
-          <div class="footer-section">
-            <h3>SANA 1937 - Quiénes Somos</h3>
-            <p>
+          <div class="text-center md:text-left">
+            <h3 class="font-inter font-semibold text-primary-navy mb-6 text-sm uppercase tracking-wide">SANA 1937 - Quiénes Somos</h3>
+            <p class="font-inter text-gray-600 leading-relaxed text-sm">
               Marca peruana dedicada al bienestar, con más de 85 años de
               tradición familiar en el cuidado de la salud natural.
               Transformamos la herencia ancestral en propuestas modernas de
@@ -214,46 +146,38 @@
           </div>
 
           <!-- Columna 3: Servicio al Cliente -->
-          <div class="footer-section">
-            <h3>Servicio al Cliente - Contacto</h3>
-            <p>
-              <i
-                class="fas fa-phone"
-                style="margin-right: 10px; color: var(--black)"
-              ></i>
+          <div class="text-center md:text-left">
+            <h3 class="font-inter font-semibold text-primary-navy mb-6 text-sm uppercase tracking-wide">Servicio al Cliente - Contacto</h3>
+            <!-- <p class="font-inter text-gray-600 text-sm mb-3">
+              <i class="fas fa-phone mr-2.5 text-black"></i>
               +51 1 234 5678
             </p>
-            <p>
-              <i
-                class="fas fa-envelope"
-                style="margin-right: 10px; color: var(--black)"
-              ></i>
+            <p class="font-inter text-gray-600 text-sm mb-3">
+              <i class="fas fa-envelope mr-2.5 text-black"></i>
               info@sana1937.com
-            </p>
-            <p>
-              <i
-                class="fas fa-map-marker-alt"
-                style="margin-right: 10px; color: var(--black)"
-              ></i>
-              Lima, Perú
+            </p> -->
+            <p class="font-inter text-gray-600 text-sm mb-4">
+              <i class="fas fa-map-marker-alt mr-2.5 text-black"></i>
+              For Now - Lima, Perú
             </p>
             <a
               href="contacto.html"
-              class="btn"
-              style="margin-top: 1rem; display: inline-block"
+              class="inline-block bg-primary-navy text-white py-2.5 px-6 rounded text-sm font-medium uppercase tracking-wide transition-all hover:bg-secondary-navy hover:-translate-y-0.5 hover:shadow-md"
             >
               Contáctanos
             </a>
           </div>
         </div>
 
-        <div class="footer-bottom">
-          <p>&copy; 2025 SANA 1937. Todos los derechos reservados.</p>
+        <div class="border-t border-gray-200 pt-5 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
+          <p class="font-inter text-gray-500 text-sm">&copy; 2025 SANA 1937. Todos los derechos reservados.</p>
+          <div class="flex items-center gap-2">
+            <!-- Payment icons placeholder -->
+          </div>
         </div>
       </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="../js/main.js"></script>
-  </body>
+  <script src="../js/main.js"></script>
+</body>
 </html>

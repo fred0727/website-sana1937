@@ -1,324 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Menú de Smoothies - SANA 1937</title>
-    <meta
-      name="description"
-      content="Descubre nuestro delicioso menú de smoothies naturales, preparados con superalimentos peruanos. Próximamente disponible."
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú de Smoothies - SANA 1937</title>
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary-navy': '#15264b',
+            'secondary-navy': '#2d4a6b',
+          },
+          fontFamily: {
+            'poppins': ['Poppins', 'sans-serif'],
+            'inter': ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="font-poppins">
+  <!-- Header -->
+  <header class="header fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="flex justify-between items-center py-8 relative">
+        <nav class="hidden lg:flex items-center gap-10">
+          <a href="productos.html" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 hover:text-primary-navy transition-all">Productos</a>
+          <a href="marcas.html" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 hover:text-primary-navy transition-all">Marcas</a>
+          <a href="nosotros.html" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 hover:text-primary-navy transition-all">Nosotros</a>
+        </nav>
+        <div class="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 z-10">
+          <a href="../index.html"><img src="../images/logo.png" alt="SANA 1937" class="h-[100px] w-auto" /></a>
+        </div>
+        <nav class="hidden lg:flex items-center gap-10">
+          <a href="smoothies.html" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 hover:text-primary-navy transition-all">Smoothies</a>
+          <a href="franquicia.html" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 hover:text-primary-navy transition-all">Franquicia</a>
+        </nav>
+        <button class="lg:hidden p-2 menu-toggle"><span class="text-2xl">☰</span></button>
+      </div>
+    </div>
+  </header>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/styles.css" />
+  <!-- Coming Soon -->
+  <section class="min-h-screen flex items-center justify-center pt-32 pb-20 px-5">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="text-8xl text-primary-navy mb-8"><i class="fas fa-blender"></i></div>
+      <h1 class="text-5xl font-semibold text-gray-800 mb-4">Menú de Smoothies</h1>
+      <h2 class="text-3xl text-black mb-8">Próximamente</h2>
+      <p class="text-xl text-gray-600 mb-8">Estamos perfeccionando nuestras recetas de smoothies naturales para ofrecerte la mejor experiencia</p>
 
-    <!-- Font Awesome para iconos -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="header">
-      <div class="container">
-        <div class="header-content">
-          <nav class="nav">
-            <a href="productos.html" class="nav-link">Productos</a>
-            <a href="marcas.html" class="nav-link">Marcas</a>
-            <a href="nosotros.html" class="nav-link">Nosotros</a>
-          </nav>
-
-          <div class="logo-container">
-            <a href="../index.html">
-              <img
-                src="../../images/logo-sana1937.svg"
-                alt="SANA 1937"
-                class="logo"
-              />
-            </a>
-          </div>
-
-          <nav class="nav">
-            <a href="smoothies.html" class="nav-link">Menú de Smoothies</a>
-            <a href="franquicia.html" class="nav-link"
-              >Oportunidades de Franquicia</a
-            >
-          </nav>
-
-          <button class="menu-toggle" aria-label="Abrir menú">
-            <span>☰</span>
-          </button>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
+        <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-lg transition-all">
+          <div class="text-5xl text-secondary-navy mb-4"><i class="fas fa-apple-alt"></i></div>
+          <h3 class="text-xl font-semibold mb-2">Detox Naturales</h3>
+          <p class="text-gray-600">Smoothies purificadores y energizantes</p>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-lg transition-all">
+          <div class="text-5xl text-secondary-navy mb-4"><i class="fas fa-dumbbell"></i></div>
+          <h3 class="text-xl font-semibold mb-2">Protein Boost</h3>
+          <p class="text-gray-600">Alto contenido proteico para deportistas</p>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-lg transition-all">
+          <div class="text-5xl text-secondary-navy mb-4"><i class="fas fa-heart"></i></div>
+          <h3 class="text-xl font-semibold mb-2">Antioxidantes</h3>
+          <p class="text-gray-600">Ricos en antioxidantes naturales</p>
         </div>
       </div>
-    </header>
 
-    <!-- Coming Soon Section -->
-    <section class="coming-soon">
-      <div class="container">
-        <div
-          style="
-            font-size: 5rem;
-            color: var(--primary-navy);
-            margin-bottom: 2rem;
-          "
-        >
-          <i class="fas fa-blender"></i>
-        </div>
-        <h1>Menú de Smoothies</h1>
-        <h2 style="color: var(--black); margin-bottom: 2rem">
-          Próximamente
-        </h2>
-        <p>
-          Estamos perfeccionando nuestras recetas de smoothies naturales para
-          ofrecerte la mejor experiencia
-        </p>
-
-        <div style="max-width: 600px; margin: 2rem auto">
-          <p style="font-size: 1.1rem; line-height: 1.8">
-            Cada smoothie de SANA 1937 está cuidadosamente elaborado con frutas
-            frescas, superalimentos peruanos y ingredientes naturales que nutren
-            tu cuerpo y despiertan tus sentidos. Nuestro menú combinará
-            tradición ancestral con sabores modernos.
-          </p>
-        </div>
-
-        <div class="grid grid-3" style="margin: 3rem auto; max-width: 800px">
-          <div class="card text-center">
-            <div
-              style="
-                font-size: 2.5rem;
-                color: var(--secondary-navy);
-                margin-bottom: 1rem;
-              "
-            >
-              <i class="fas fa-apple-alt"></i>
-            </div>
-            <h3>Detox Naturales</h3>
-            <p>Smoothies purificadores y energizantes</p>
+      <!-- Categorías Preview -->
+      <div class="my-12">
+        <h2 class="text-3xl font-semibold mb-8">Nuestras Categorías</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-gradient-to-br from-orange-400 to-pink-400 text-white p-8 rounded-lg text-center">
+            <h3 class="text-2xl font-semibold mb-2">🌅 Energía Matutina</h3>
+            <p class="mb-2">Smoothies para comenzar el día con vitalidad</p>
+            <small>Con maca, quinoa y frutas tropicales</small>
           </div>
-
-          <div class="card text-center">
-            <div
-              style="
-                font-size: 2.5rem;
-                color: var(--secondary-navy);
-                margin-bottom: 1rem;
-              "
-            >
-              <i class="fas fa-dumbbell"></i>
-            </div>
-            <h3>Protein Boost</h3>
-            <p>Alto contenido proteico para deportistas</p>
+          <div class="bg-gradient-to-br from-green-300 to-teal-400 text-white p-8 rounded-lg text-center">
+            <h3 class="text-2xl font-semibold mb-2">🥬 Verde y Saludable</h3>
+            <p class="mb-2">Vegetales verdes con superalimentos</p>
+            <small>Espinaca, kale, chía y aguacate</small>
           </div>
-
-          <div class="card text-center">
-            <div
-              style="
-                font-size: 2.5rem;
-                color: var(--secondary-navy);
-                margin-bottom: 1rem;
-              "
-            >
-              <i class="fas fa-heart"></i>
-            </div>
-            <h3>Antioxidantes</h3>
-            <p>Ricos en antioxidantes naturales</p>
+          <div class="bg-gradient-to-br from-yellow-300 to-red-400 text-white p-8 rounded-lg text-center">
+            <h3 class="text-2xl font-semibold mb-2">🍓 Frutas Tropicales</h3>
+            <p class="mb-2">Sabores exóticos del Perú</p>
+            <small>Camu camu, lucuma y maracuyá</small>
           </div>
-        </div>
-
-        <!-- Preview de Categorías -->
-        <div style="max-width: 900px; margin: 3rem auto">
-          <h2 style="text-align: center; margin-bottom: 2rem">
-            Nuestras Categorías
-          </h2>
-          <div class="grid grid-2 gap-2">
-            <div
-              class="card"
-              style="
-                background: linear-gradient(135deg, #ff9a56 0%, #ff6b95 100%);
-                color: white;
-                text-align: center;
-              "
-            >
-              <h3 style="color: white">🌅 Energía Matutina</h3>
-              <p>Smoothies para comenzar el día con vitalidad</p>
-              <small>Con maca, quinoa y frutas tropicales</small>
-            </div>
-
-            <div
-              class="card"
-              style="
-                background: linear-gradient(135deg, #a8e6cf 0%, #7fcdcd 100%);
-                color: white;
-                text-align: center;
-              "
-            >
-              <h3 style="color: white">🥬 Verde y Saludable</h3>
-              <p>Vegetales verdes con superalimentos</p>
-              <small>Espinaca, kale, chía y aguacate</small>
-            </div>
-
-            <div
-              class="card"
-              style="
-                background: linear-gradient(135deg, #ffd93d 0%, #ff6b6b 100%);
-                color: white;
-                text-align: center;
-              "
-            >
-              <h3 style="color: white">🍓 Frutas Tropicales</h3>
-              <p>Sabores exóticos del Perú</p>
-              <small>Camu camu, lucuma y maracuyá</small>
-            </div>
-
-            <div
-              class="card"
-              style="
-                background: linear-gradient(135deg, #a8e6cf 0%, #88d8c0 100%);
-                color: white;
-                text-align: center;
-              "
-            >
-              <h3 style="color: white">💪 Post-Entrenamiento</h3>
-              <p>Recuperación y construcción muscular</p>
-              <small>Proteínas vegetales y aminoácidos</small>
-            </div>
+          <div class="bg-gradient-to-br from-green-300 to-teal-500 text-white p-8 rounded-lg text-center">
+            <h3 class="text-2xl font-semibold mb-2">💪 Post-Entrenamiento</h3>
+            <p class="mb-2">Recuperación y construcción muscular</p>
+            <small>Proteínas vegetales y aminoácidos</small>
           </div>
-        </div>
-
-        <div class="d-flex justify-center gap-2">
-          <a href="contacto.html" class="btn">Notificarme del lanzamiento</a>
-          <a href="../index.html" class="btn btn-secondary">Volver al Inicio</a>
-        </div>
-
-        <!-- Suscripción a Newsletter -->
-        <div
-          style="
-            max-width: 500px;
-            margin: 3rem auto;
-            padding: 2rem;
-            background: var(--light-gray);
-            border-radius: 10px;
-          "
-        >
-          <h3 style="text-align: center; margin-bottom: 1rem">
-            ¡Sé el primero en probarlo!
-          </h3>
-          <p style="text-align: center; margin-bottom: 2rem">
-            Suscríbete para recibir ofertas exclusivas y ser notificado cuando
-            lancemos nuestro menú de smoothies
-          </p>
-          <form class="d-flex gap-1">
-            <input
-              type="email"
-              placeholder="Tu email"
-              class="form-input"
-              style="flex: 1"
-              required
-            />
-            <button type="submit" class="btn" style="white-space: nowrap">
-              Suscribirme
-            </button>
-          </form>
         </div>
       </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <!-- Columna 1: Redes Sociales -->
-          <div class="footer-section">
-            <h3>Síguenos</h3>
-            <p>Conecta con nosotros en redes sociales</p>
-            <div class="social-links">
-              <a
-                href="https://www.facebook.com/share/1D5MP5KZiw/?mibextid=wwXIfr"
-                target="_blank"
-                class="social-link"
-                title="Facebook"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/sana1937"
-                target="_blank"
-                class="social-link"
-                title="Instagram"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
-            </div>
-          </div>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <a href="contacto.html" class="inline-block bg-primary-navy text-white py-3 px-8 rounded font-medium uppercase tracking-wide hover:bg-secondary-navy transition-all">Notificarme del lanzamiento</a>
+        <a href="../index.html" class="inline-block bg-transparent border-2 border-primary-navy text-primary-navy py-3 px-8 rounded font-medium uppercase tracking-wide hover:bg-primary-navy hover:text-white transition-all">Volver al Inicio</a>
+      </div>
 
-          <!-- Columna 2: SANA 1937 - Quiénes Somos -->
-          <div class="footer-section">
-            <h3>SANA 1937 - Quiénes Somos</h3>
-            <p>
-              Marca peruana dedicada al bienestar, con más de 85 años de
-              tradición familiar en el cuidado de la salud natural.
-              Transformamos la herencia ancestral en propuestas modernas de
-              nutrición y sabor.
-            </p>
-            <a href="nosotros.html" style="color: var(--black)"
-              >Conoce más sobre nosotros</a
-            >
-          </div>
+      <!-- Newsletter -->
+      <div class="max-w-lg mx-auto bg-gray-50 p-8 rounded-lg">
+        <h3 class="text-2xl font-semibold mb-4">¡Sé el primero en probarlo!</h3>
+        <p class="text-gray-600 mb-6">Suscríbete para recibir ofertas exclusivas y ser notificado cuando lancemos nuestro menú de smoothies</p>
+        <form class="flex gap-2">
+          <input type="email" placeholder="Tu email" class="flex-1 px-4 py-3 border-2 border-gray-200 rounded focus:outline-none focus:border-primary-navy" required />
+          <button type="submit" class="bg-primary-navy text-white px-6 py-3 rounded font-medium hover:bg-secondary-navy transition-all whitespace-nowrap">Suscribirme</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-          <!-- Columna 3: Servicio al Cliente -->
-          <div class="footer-section">
-            <h3>Servicio al Cliente - Contacto</h3>
-            <p>
-              <i
-                class="fas fa-phone"
-                style="margin-right: 10px; color: var(--black)"
-              ></i>
-              +51 1 234 5678
-            </p>
-            <p>
-              <i
-                class="fas fa-envelope"
-                style="margin-right: 10px; color: var(--black)"
-              ></i>
-              info@sana1937.com
-            </p>
-            <p>
-              <i
-                class="fas fa-map-marker-alt"
-                style="margin-right: 10px; color: var(--black)"
-              ></i>
-              Lima, Perú
-            </p>
-            <a
-              href="contacto.html"
-              class="btn"
-              style="margin-top: 1rem; display: inline-block"
-            >
-              Contáctanos
-            </a>
+  <!-- Footer -->
+  <footer class="bg-gray-50 text-gray-800 py-16 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div class="text-center md:text-left">
+          <div class="mb-6"><img src="../images/logowhite.png" alt="SANA 1937" class="h-20 w-auto mx-auto md:mx-0" /></div>
+          <div class="flex gap-4 justify-center md:justify-start">
+            <a href="https://www.facebook.com/share/1D5MP5KZiw/?mibextid=wwXIfr" target="_blank" class="inline-flex items-center justify-center w-10 h-10 bg-primary-navy rounded-full text-white hover:bg-secondary-navy transition-all"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/sana1937" target="_blank" class="inline-flex items-center justify-center w-10 h-10 bg-primary-navy rounded-full text-white hover:bg-secondary-navy transition-all"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
-
-        <div class="footer-bottom">
-          <p>
-            &copy; 2024 SANA 1937. Todos los derechos reservados. | Desarrollado
-            con amor por el bienestar natural.
-          </p>
+        <div class="text-center md:text-left">
+          <h3 class="font-inter font-semibold text-primary-navy mb-6 text-sm uppercase tracking-wide">SANA 1937</h3>
+          <p class="font-inter text-gray-600 leading-relaxed text-sm">Marca peruana dedicada al bienestar, con más de 85 años de tradición familiar.</p>
+          <a href="nosotros.html" class="text-black hover:text-primary-navy">Conoce más</a>
+        </div>
+        <div class="text-center md:text-left">
+          <h3 class="font-inter font-semibold text-primary-navy mb-6 text-sm uppercase tracking-wide">Contacto</h3>
+          <p class="font-inter text-gray-600 text-sm mb-3"><i class="fas fa-phone mr-2.5"></i>+51 1 234 5678</p>
+          <p class="font-inter text-gray-600 text-sm mb-3"><i class="fas fa-envelope mr-2.5"></i>info@sana1937.com</p>
+          <a href="contacto.html" class="inline-block bg-primary-navy text-white py-2.5 px-6 rounded text-sm font-medium uppercase tracking-wide hover:bg-secondary-navy transition-all mt-4">Contáctanos</a>
         </div>
       </div>
-    </footer>
+      <div class="border-t border-gray-200 pt-5 text-center">
+        <p class="font-inter text-gray-500 text-sm">&copy; 2024 SANA 1937. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
 
-    <!-- JavaScript -->
-    <script src="../js/main.js"></script>
-  </body>
+  <script src="../js/main.js"></script>
+</body>
 </html>
