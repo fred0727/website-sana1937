@@ -13,6 +13,7 @@ function initializeApp() {
     initScrollAnimations();
     initStickyHeader();
     initHeroScrollButton();
+    initComingSoonLinks();
 }
 
 // Menu móvil
@@ -385,3 +386,97 @@ window.SANA1937 = {
 
 // Hacer función globalmente accesible
 window.scrollToContent = scrollToContent;
+
+// Funciones para modal de PDF
+function openPdfModal(pdfUrl) {
+    const modal = document.getElementById('pdfModal');
+    const pdfContent = document.getElementById('pdfModalContent');
+
+    if (modal && pdfContent) {
+        pdfContent.src = pdfUrl;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closePdfModal(event) {
+    const modal = document.getElementById('pdfModal');
+    const pdfContent = document.getElementById('pdfModalContent');
+
+    if (modal && pdfContent) {
+        // Si event existe y el click fue en el modal (no en su contenido), cerrar
+        if (!event || event.target === modal) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            pdfContent.src = '';
+            document.body.style.overflow = '';
+        }
+    }
+}
+
+// Hacer funciones globalmente accesibles
+window.openPdfModal = openPdfModal;
+window.closePdfModal = closePdfModal;
+
+// Cerrar modal con tecla ESC
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+        closePdfModal();
+    }
+});
+
+// Coming Soon Popup
+function initComingSoonLinks() {
+    const comingSoonLinks = document.querySelectorAll('.coming-soon-link');
+
+    comingSoonLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            showComingSoonPopup();
+        });
+    });
+}
+
+function showComingSoonPopup() {
+    // Crear el popup si no existe
+    let popup = document.getElementById('coming-soon-popup');
+
+    if (!popup) {
+        popup = document.createElement('div');
+        popup.id = 'coming-soon-popup';
+        popup.className = 'fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[9999] opacity-0 transition-all duration-300';
+        popup.innerHTML = `
+            <div class="bg-white rounded-2xl shadow-2xl p-8 min-w-[320px] max-w-md border-2 border-primary-navy">
+                <div class="text-center">
+                    <div class="mb-4">
+                        <i class="fas fa-clock text-primary-navy text-5xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-primary-navy tracking-wide">COMING SOON</h3>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(popup);
+    }
+
+    // Mostrar popup con animación
+    setTimeout(() => {
+        popup.style.opacity = '1';
+        popup.style.transform = 'translate(-50%, -50%) scale(1)';
+    }, 10);
+
+    // Ocultar y remover después de 3 segundos
+    setTimeout(() => {
+        popup.style.opacity = '0';
+        popup.style.transform = 'translate(-50%, -50%) scale(0.95)';
+
+        setTimeout(() => {
+            if (popup && popup.parentNode) {
+                popup.remove();
+            }
+        }, 300);
+    }, 3000);
+}
+
+// Hacer función globalmente accesible
+window.showComingSoonPopup = showComingSoonPopup;

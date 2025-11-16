@@ -36,23 +36,23 @@
     <div class="max-w-7xl mx-auto px-5">
       <div class="flex justify-between items-center py-8 relative">
         <nav class="hidden lg:flex items-center gap-10">
-          <a href="#" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Productos</a>
-          <a href="#" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Marcas</a>
+          <a href="#" class="coming-soon-link font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Productos</a>
+          <a href="#" class="coming-soon-link font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Marcas</a>
           <a href="nosotros.html" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 text-primary-navy border-black">Nosotros</a>
         </nav>
         <div class="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 z-10">
           <a href="../index.html"><img src="../images/logo_let.png" alt="SANA 1937" class="h-[60px] w-auto transition-all duration-300 logo" /></a>
         </div>
         <nav class="hidden lg:flex items-center gap-10">
-          <a href="#" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Smoothies</a>
+          <a href="#" class="coming-soon-link font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Smoothies</a>
           <a href="franquicia.html" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Franquicia</a>
         </nav>
         <button class="lg:hidden p-2 rounded text-primary-navy hover:bg-gray-50 menu-toggle" aria-label="Abrir menú"><span class="text-2xl">☰</span></button>
         <nav class="mobile-nav absolute top-full left-0 right-0 bg-white flex-col p-5 shadow-lg border-t border-gray-200 opacity-0 invisible -translate-y-full transition-all duration-300">
-          <a href="#" class="py-4 text-center border-b border-gray-200 text-gray-800">Productos</a>
-          <a href="#" class="py-4 text-center border-b border-gray-200 text-gray-800">Marcas</a>
+          <a href="#" class="coming-soon-link py-4 text-center border-b border-gray-200 text-gray-800">Productos</a>
+          <a href="#" class="coming-soon-link py-4 text-center border-b border-gray-200 text-gray-800">Marcas</a>
           <a href="nosotros.html" class="py-4 text-center border-b border-gray-200 text-gray-800">Nosotros</a>
-          <a href="#" class="py-4 text-center border-b border-gray-200 text-gray-800">Smoothies</a>
+          <a href="#" class="coming-soon-link py-4 text-center border-b border-gray-200 text-gray-800">Smoothies</a>
           <a href="franquicia.html" class="py-4 text-center text-gray-800">Franquicia</a>
         </nav>
       </div>
@@ -68,34 +68,146 @@
       <div class="text-center mb-12">
         <h3 class="text-4xl md:text-5xl font-medium text-primary-navy mb-8 tracking-tight">Nosotros</h3>
         <p class="text-lg text-gray-600 font-light leading-relaxed max-w-5xl mx-auto">
-          En <strong>SANA 1937</strong> creemos que la salud empieza con lo que eliges cada día. Somos una marca peruana inspirada en el bienestar, la vitalidad y el equilibrio, con raíces familiares que se remontan a 1937, cuando comenzó nuestra dedicación al cuidado de la salud.
+          En <strong>SANA 1937</strong> creemos que la salud empieza con lo que eliges cada día. Somos una marca peruana inspirada en el bienestar, la vitalidad y el equilibrio, con raíces familiares que se remontan a 1937, cuando comenzó nuestra dedicación al cuidado de la salud. Desde entonces, hemos mantenido viva una tradición de bienestar natural, trayendo al Perú el conocimiento y los beneficios de la comida saludable, y transformando esa herencia en una propuesta moderna de nutrición y sabor.
         </p>
       </div>
 
-      <!-- Gallery Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
-          <img src="../images/sana1937-historia.png" alt="SANA 1937 Historia" class="w-full h-60 object-cover" />
-          <div class="p-6">
-            <h4 class="text-xl font-semibold text-primary-navy mb-4">Tradición Familiar</h4>
-            <p class="text-gray-600 font-light leading-relaxed text-sm">Más de 85 años de dedicación familiar al bienestar natural, transmitiendo conocimientos ancestrales de generación en generación.</p>
+      <!-- Historia Timeline -->
+      <div class="space-y-16" id="nosotros-gallery">
+        <!-- Sección 1: Los Inicios -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <div class="order-1 lg:order-1">
+            <div class="bg-gray-50 border border-gray-200 p-8 rounded-lg shadow-sm">
+              <div class="mb-6">
+                <span class="inline-block bg-primary-navy text-white text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider">1930s - Los Inicios</span>
+              </div>
+              <h4 class="text-2xl font-semibold mb-6 text-primary-navy">El Origen de Nuestra Filosofía</h4>
+              <ul class="space-y-4 text-gray-700 leading-relaxed">
+                <li class="flex items-start">
+                  <span class="text-primary-navy mr-3 mt-1">•</span>
+                  <span>En una época en que la medicina buscaba nuevas respuestas, el Dr. Faustino Oliver Rodríguez presentó su investigación sobre el hongo <em>Teomicina (Kombucha)</em>, un fermento natural capaz de fortalecer el cuerpo desde dentro.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-primary-navy mr-3 mt-1">•</span>
+                  <span>El Dr. Oliver llegó al Perú en la década de 1930, movido por el deseo de servir a la comunidad a través de la medicina. Se estableció en Arequipa, donde combinó su formación científica con una profunda curiosidad por los recursos naturales del país.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-primary-navy mr-3 mt-1">•</span>
+                  <span>Su trabajo unió ciencia y bienestar, marcando el origen de la filosofía de SANA 1937.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="order-2 lg:order-2">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+              <div class="pdf-viewer-container relative" data-pdf="../src/pdf-4.pdf">
+                <div class="aspect-[8.5/11] bg-gray-100 relative overflow-hidden cursor-pointer group" onclick="openPdfModal('../src/pdf-4.pdf')">
+                  <embed src="../src/pdf-4.pdf" type="application/pdf" class="w-full h-full object-contain" />
+                  <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <div class="bg-white/95 px-6 py-3 rounded-full shadow-lg">
+                      <i class="fas fa-search-plus text-primary-navy mr-2"></i>
+                      <span class="text-primary-navy font-semibold">Ver documento completo</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 bg-gray-50 border-t border-gray-200">
+                  <p class="text-sm text-gray-600 text-center">
+                    <i class="fas fa-file-pdf text-red-600 mr-2"></i>
+                    Documento histórico - Dr. Faustino Oliver Rodríguez
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
-          <img src="../images/sana1937-productos.png" alt="SANA 1937 Productos" class="w-full h-60 object-cover" />
-          <div class="p-6">
-            <h4 class="text-xl font-semibold text-primary-navy mb-4">Innovación Natural</h4>
-            <p class="text-gray-600 font-light leading-relaxed text-sm">Combinamos la sabiduría tradicional con tecnología moderna para crear productos que nutren cuerpo y alma.</p>
+        <!-- Sección 2: Investigación y Legado -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <div class="order-2 lg:order-1">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+              <div class="pdf-viewer-container relative" data-pdf="../src/pdf-6.pdf">
+                <div class="aspect-[8.5/11] bg-gray-100 relative overflow-hidden cursor-pointer group" onclick="openPdfModal('../src/pdf-6.pdf')">
+                  <embed src="../src/pdf-6.pdf" type="application/pdf" class="w-full h-full object-contain" />
+                  <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <div class="bg-white/95 px-6 py-3 rounded-full shadow-lg">
+                      <i class="fas fa-search-plus text-primary-navy mr-2"></i>
+                      <span class="text-primary-navy font-semibold">Ver documento completo</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 bg-gray-50 border-t border-gray-200">
+                  <p class="text-sm text-gray-600 text-center">
+                    <i class="fas fa-file-pdf text-red-600 mr-2"></i>
+                    Investigaciones sobre el hongo Teomicina
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-1 lg:order-2">
+            <div class="bg-white border border-gray-200 p-8 rounded-lg shadow-sm">
+              <div class="mb-6">
+                <span class="inline-block bg-gray-800 text-white text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider">Investigación y Compromiso</span>
+              </div>
+              <h4 class="text-2xl font-semibold mb-6 text-primary-navy">Un Legado de Servicio</h4>
+              <ul class="space-y-4 text-gray-700 leading-relaxed">
+                <li class="flex items-start">
+                  <span class="text-primary-navy mr-3 mt-1">•</span>
+                  <span>Fue en Perú donde comenzó sus investigaciones sobre el hongo Teomicina, un fermento natural que observó podía fortalecer el organismo y ayudar en la recuperación de diversas enfermedades.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-primary-navy mr-3 mt-1">•</span>
+                  <span>Más allá de sus descubrimientos, el Dr. Oliver fue reconocido por su generosidad y compromiso con la salud pública: ofrecía atención médica accesible, formaba jóvenes médicos y promovía una visión de la medicina centrada en la prevención, la empatía y el equilibrio humano.</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
-          <img src="../images/sana1937-compromiso.png" alt="SANA 1937 Compromiso" class="w-full h-60 object-cover" />
-          <div class="p-6">
-            <h4 class="text-xl font-semibold text-primary-navy mb-4">Compromiso Peruano</h4>
-            <p class="text-gray-600 font-light leading-relaxed text-sm">Orgullosamente peruanos, promovemos los superalimentos locales y apoyamos el desarrollo de nuestra comunidad.</p>
+        <!-- Sección 3: Continuidad de la Tradición -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <div class="order-1 lg:order-1">
+            <div class="bg-gray-50 border border-gray-200 p-8 rounded-lg shadow-sm">
+              <div class="mb-6">
+                <span class="inline-block bg-primary-navy text-white text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider">Décadas Después</span>
+              </div>
+              <h4 class="text-2xl font-semibold mb-6 text-primary-navy">Una Tradición Viva</h4>
+              <p class="text-gray-700 leading-relaxed">
+                Décadas después, el hongo introducido por el Dr. Oliver seguía vivo en la cultura peruana. La revista Somos exploró su historia y beneficios, destacando que el té fermentado no solo era una moda, sino una tradición con raíces científicas profundas.
+              </p>
+            </div>
           </div>
+          <div class="order-2 lg:order-2">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+              <div class="pdf-viewer-container relative" data-pdf="../src/pdf-1.pdf">
+                <div class="aspect-[8.5/11] bg-gray-100 relative overflow-hidden cursor-pointer group" onclick="openPdfModal('../src/pdf-1.pdf')">
+                  <embed src="../src/pdf-1.pdf" type="application/pdf" class="w-full h-full object-contain" />
+                  <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <div class="bg-white/95 px-6 py-3 rounded-full shadow-lg">
+                      <i class="fas fa-search-plus text-primary-navy mr-2"></i>
+                      <span class="text-primary-navy font-semibold">Ver documento completo</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 bg-gray-50 border-t border-gray-200">
+                  <p class="text-sm text-gray-600 text-center">
+                    <i class="fas fa-file-pdf text-red-600 mr-2"></i>
+                    Revista Somos - Tradición del té fermentado
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal para PDF en grande -->
+      <div id="pdfModal" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-4" onclick="closePdfModal(event)">
+        <div class="relative w-full h-full max-w-6xl max-h-[90vh] bg-white rounded-lg overflow-hidden" onclick="event.stopPropagation()">
+          <button onclick="closePdfModal()" class="absolute top-4 right-4 z-10 bg-white/90 hover:bg-white text-gray-800 rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition-all">
+            <i class="fas fa-times text-xl"></i>
+          </button>
+          <embed id="pdfModalContent" src="" type="application/pdf" class="w-full h-full" />
         </div>
       </div>
     </div>
