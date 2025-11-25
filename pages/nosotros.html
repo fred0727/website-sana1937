@@ -100,23 +100,14 @@
           </div>
           <div class="order-2 lg:order-2">
             <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
-              <div class="pdf-viewer-container relative" data-pdf="../src/pdf-4.pdf">
-                <div class="aspect-[8.5/11] bg-gray-100 relative overflow-hidden cursor-pointer group" onclick="openPdfModal('../src/pdf-4.pdf')">
-                  <embed src="../src/pdf-4.pdf" type="application/pdf" class="w-full h-full object-contain" />
-                  <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <div class="bg-white/95 px-6 py-3 rounded-full shadow-lg">
-                      <i class="fas fa-search-plus text-primary-navy mr-2"></i>
-                      <span class="text-primary-navy font-semibold">Ver documento completo</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="p-4 bg-gray-50 border-t border-gray-200">
-                  <p class="text-sm text-gray-600 text-center">
-                    <i class="fas fa-file-pdf text-red-600 mr-2"></i>
-                    Documento histórico - Dr. Faustino Oliver Rodríguez
-                  </p>
-                </div>
+              <div class="aspect-[8.5/11] bg-gray-100 relative overflow-hidden">
+                <img src="../images/foto1.png" alt="Documento histórico - Dr. Faustino Oliver Rodríguez" class="w-full h-full object-contain" />
               </div>
+              <!-- <div class="p-4 bg-gray-50 border-t border-gray-200">
+                <p class="text-sm text-gray-600 text-center">
+                  Documento histórico - Dr. Faustino Oliver Rodríguez
+                </p>
+              </div> -->
             </div>
           </div>
         </div>
@@ -125,23 +116,14 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           <div class="order-2 lg:order-1">
             <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
-              <div class="pdf-viewer-container relative" data-pdf="../src/pdf-6.pdf">
-                <div class="aspect-[8.5/11] bg-gray-100 relative overflow-hidden cursor-pointer group" onclick="openPdfModal('../src/pdf-6.pdf')">
-                  <embed src="../src/pdf-6.pdf" type="application/pdf" class="w-full h-full object-contain" />
-                  <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <div class="bg-white/95 px-6 py-3 rounded-full shadow-lg">
-                      <i class="fas fa-search-plus text-primary-navy mr-2"></i>
-                      <span class="text-primary-navy font-semibold">Ver documento completo</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="p-4 bg-gray-50 border-t border-gray-200">
-                  <p class="text-sm text-gray-600 text-center">
-                    <i class="fas fa-file-pdf text-red-600 mr-2"></i>
-                    Investigaciones sobre el hongo Teomicina
-                  </p>
-                </div>
+              <div class="aspect-[8.5/11] bg-gray-100 relative overflow-hidden">
+                <img src="../images/foto2.png" alt="Investigaciones sobre el hongo Teomicina" class="w-full h-full object-contain" />
               </div>
+              <!-- <div class="p-4 bg-gray-50 border-t border-gray-200">
+                <p class="text-sm text-gray-600 text-center">
+                  Investigaciones sobre el hongo Teomicina
+                </p>
+              </div> -->
             </div>
           </div>
           <div class="order-1 lg:order-2">
@@ -179,37 +161,19 @@
           </div>
           <div class="order-2 lg:order-2">
             <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
-              <div class="pdf-viewer-container relative" data-pdf="../src/pdf-1.pdf">
-                <div class="aspect-[8.5/11] bg-gray-100 relative overflow-hidden cursor-pointer group" onclick="openPdfModal('../src/pdf-1.pdf')">
-                  <embed src="../src/pdf-1.pdf" type="application/pdf" class="w-full h-full object-contain" />
-                  <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <div class="bg-white/95 px-6 py-3 rounded-full shadow-lg">
-                      <i class="fas fa-search-plus text-primary-navy mr-2"></i>
-                      <span class="text-primary-navy font-semibold">Ver documento completo</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="p-4 bg-gray-50 border-t border-gray-200">
-                  <p class="text-sm text-gray-600 text-center">
-                    <i class="fas fa-file-pdf text-red-600 mr-2"></i>
-                    Revista Somos - Tradición del té fermentado
-                  </p>
-                </div>
+              <div class="aspect-[8.5/11] bg-gray-100 relative overflow-hidden">
+                <img src="../images/foto3.png" alt="Revista Somos - Tradición del té fermentado" class="w-full h-full object-contain" />
               </div>
+              <!-- <div class="p-4 bg-gray-50 border-t border-gray-200">
+                <p class="text-sm text-gray-600 text-center">
+                  Revista Somos - Tradición del té fermentado
+                </p>
+              </div> -->
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Modal para PDF en grande -->
-      <div id="pdfModal" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-4" onclick="closePdfModal(event)">
-        <div class="relative w-full h-full max-w-6xl max-h-[90vh] bg-white rounded-lg overflow-hidden" onclick="event.stopPropagation()">
-          <button onclick="closePdfModal()" class="absolute top-4 right-4 z-10 bg-white/90 hover:bg-white text-gray-800 rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition-all">
-            <i class="fas fa-times text-xl"></i>
-          </button>
-          <embed id="pdfModalContent" src="" type="application/pdf" class="w-full h-full" />
-        </div>
-      </div>
     </div>
   </section>
 
@@ -218,7 +182,7 @@
       <div class="max-w-7xl mx-auto px-5">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <!-- Columna 1: Logo y Redes Sociales -->
-          <div class="text-center md:text-left">
+          <div class="flex justify-center flex-col items-center text-center text-center">
             <div class="mb-6">
               <img
                 src="../images/logo_let.png"

@@ -105,7 +105,7 @@
     </header>
 
     <!-- Hero Banner -->
-    <section class="hidden sm:flex hero h-[80vh] flex items-center justify-center relative bg-cover bg-center bg-fixed bg-no-repeat" style="background-image: url('images/herov2.webp');">
+    <section class="mt-12 hidden sm:flex hero h-[45vh] flex items-center justify-center relative bg-contain bg-center bg-no-repeat" style="background-image: url('images/hero.webp');background-color: #15264B;">
       <!-- Solo fondo de imagen, sin contenido -->
     </section>
 
@@ -130,10 +130,9 @@
     <section class="py-16 pt-10" id="nuevos-productos">
       <div class="max-w-7xl mx-auto px-5">
         <div class="text-center mb-12">
-          <h2 class="text-4xl font-semibold text-primary-navy mb-4 tracking-tight">¿Qué estás buscando hoy?</h2>
+          <h2 class="text-4xl font-semibold text-primary-navy mb-4 tracking-tight">¿Qué opción SANA quieres hoy?</h2>
           <p class="text-lg text-gray-600 max-w-2xl mx-auto font-light">
-            Descubre nuestra selección curada de productos premium para tu
-            bienestar integral
+            Descubre nuestra selección curada de productos premium para tu bienestar integral.
           </p>
         </div>
 
@@ -160,9 +159,9 @@
             <a href="#" class="coming-soon-link text-primary-navy text-sm font-medium underline hover:text-secondary-navy">Ver más productos</a>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12 max-w-6xl mx-auto" id="nuevos-productos-list">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12 max-w-8xl mx-auto" id="nuevos-productos-list">
             <!-- Producto 1 -->
-            <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 fade-in-left delay-200">
+            <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 ">
               <div class="relative overflow-hidden bg-gray-50">
                 <img
                   src="images/omega-3.png"
@@ -188,7 +187,7 @@
             </div>
 
             <!-- Producto 2 -->
-            <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 fade-in-right delay-200">
+            <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 ">
               <div class="relative overflow-hidden bg-gray-50">
                 <img
                   src="images/proteina-vegana.png"
@@ -212,9 +211,36 @@
                 </a>
               </div>
             </div>
-          </div>
 
-          <div class="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-10 md:p-12 mt-12 shadow-sm scale-in delay-300" id="desbloquea">
+            <!-- Producto 3 -->
+            <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 ">
+              <div class="relative overflow-hidden bg-gray-50">
+                <img
+                  src="images/adaptogenos.png"
+                  alt="SANA 1937 Adaptógenos"
+                  class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div class="absolute top-4 right-4 bg-primary-navy text-white px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide">
+                  Nuevo
+                </div>
+              </div>
+              <div class="p-8">
+                <div class="text-xs text-primary-navy uppercase font-bold tracking-wider mb-2">SANA 1937</div>
+                <h4 class="text-xl font-semibold text-gray-900 mb-3 leading-tight group-hover:text-primary-navy transition-colors">
+                  Adaptógenos Naturales | Mezcla
+                </h4>
+                <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                  Proteína 100% vegana de origen natural, perfecta para tu estilo de vida saludable.
+                </p>
+                <a href="#" class="block w-full bg-primary-navy text-white text-center rounded-full px-8 py-4 text-sm font-bold uppercase tracking-wide transition-all hover:bg-secondary-navy hover:shadow-lg transform hover:scale-105">
+                  Descubrir más
+                </a>
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="hidden bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-10 md:p-12 mt-12 shadow-sm scale-in delay-300" id="desbloquea">
             <div class="max-w-4xl mx-auto text-center">
               <div class="mb-6">
                 <i class="fas fa-leaf text-primary-navy text-4xl opacity-20"></i>
@@ -251,17 +277,15 @@
         <!-- Headline principal -->
         <div class="text-center mb-16 fade-in">
           <h2 class="text-3xl md:text-4xl font-semibold text-primary-navy tracking-tight">
-            Somos más que una tienda de vitaminas, suplementos y alimentos
-            saludables, somos un estilo de vida.
+            Somos más que una tienda de alimentos saludables, somos un estilo de vida.
           </h2>
         </div>
 
         <!-- Smoothie Bar Items -->
         <div class="mb-16">
-          <h3 class="text-3xl font-medium text-primary-navy text-center mb-4 fade-in delay-100">Menú de Smoothie Bar</h3>
+          <h3 class="text-3xl font-medium text-primary-navy text-center mb-4 fade-in delay-100">Descubre Nuestro Smoothie Bar</h3>
           <p class="text-center text-gray-600 text-lg font-light mb-10 max-w-2xl mx-auto fade-in delay-100">
-            Ordena tus Smoothies, Smoothie Bowls y Acai Bowls favoritos en línea
-            o a través de nuestra App.
+            Encuentra más información sobre tus smoothies favoritos y sus beneficios nutricionales.
           </p>
 
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 scale-in delay-200">
@@ -301,11 +325,9 @@
         <!-- SUPERCHARGE Section -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-white rounded-lg p-8 border border-gray-200 fade-in delay-300">
           <div class="text-center lg:text-left">
-            <h3 class="text-2xl font-semibold text-gray-800 mb-4">POTENCIA Tu Smoothie</h3>
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Eleva Tu Smoothie</h3>
             <p class="font-light leading-relaxed mb-6">
-              Combinaciones curadas de smoothies y Power Fuels para tu impulso
-              diario. ¡Disponible con Açaí de Arándanos, Green Goddess y Thunder
-              Coffee!
+              Creamos recetas que se integran deliciosamente con nuestros add-ons. Escoge entre nuestras opciones de vitaminas, superfoods y creatina para impulsar tu día.
             </p>
             <a href="#" class="inline-block bg-primary-navy text-white rounded-full px-6 py-3 text-sm font-medium uppercase tracking-wide transition-all hover:bg-secondary-navy">Ver más</a>
           </div>
@@ -325,7 +347,7 @@
       <div class="max-w-7xl mx-auto px-5">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <!-- Columna 1: Logo y Redes Sociales -->
-          <div class="text-center md:text-left">
+          <div class="flex justify-center flex-col items-center text-center">
             <div class="mb-6">
               <img
                 src="images/logo_let.png"
@@ -388,11 +410,8 @@
           </div>
         </div>
 
-        <div class="border-t border-gray-200 pt-5 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
+        <div class="border-t border-gray-200 pt-5 flex flex-col md:flex-row justify-start items-center gap-4 text-left">
           <p class="font-inter text-gray-500 text-sm">&copy; 2025 SANA 1937. Todos los derechos reservados.</p>
-          <div class="flex items-center gap-2">
-            <!-- Payment icons placeholder -->
-          </div>
         </div>
       </div>
     </footer>
