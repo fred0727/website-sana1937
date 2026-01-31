@@ -1,189 +1,414 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oportunidades de Franquicia - SANA 1937</title>
-  <link rel="icon" type="image/x-icon" href="../images/logo_let.png" />
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'primary-navy': '#15264b',
-            'secondary-navy': '#2d4a6b',
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oportunidades de Franquicia - SANA 1937</title>
+    <link rel="icon" type="image/x-icon" href="../images/logo_let.png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary-navy": "#15264b",
+              "secondary-navy": "#2d4a6b",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              inter: ["Inter", "sans-serif"],
+            },
           },
-          fontFamily: {
-            'poppins': ['Poppins', 'sans-serif'],
-            'inter': ['Inter', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-  
-  <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-</head>
-<body class="font-poppins">
-  <!-- Header -->
-  <header class="header fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-5">
-      <div class="flex justify-between items-center py-8 relative">
-        <nav class="hidden lg:flex items-center gap-10">
-          <a href="#" class="coming-soon-link font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Productos</a>
-          <a href="#" class="coming-soon-link font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Marcas</a>
-          <a href="nosotros.html" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Nosotros</a>
-        </nav>
-        <div class="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 z-10">
-          <a href="../index.html"><img src="../images/logo_let.png" alt="SANA 1937" class="h-[60px] w-auto transition-all duration-300 logo" /></a>
-        </div>
-        <nav class="hidden lg:flex items-center gap-10">
-          <a href="#" class="coming-soon-link font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Smoothies</a>
-          <a href="franquicia.html" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 text-primary-navy border-black transition-all">Franquicia</a>
-        </nav>
-        <button class="lg:hidden p-2 rounded text-primary-navy hover:bg-gray-50 menu-toggle" aria-label="Abrir menú"><span class="text-2xl">☰</span></button>
-        <nav class="mobile-nav absolute top-full left-0 right-0 bg-white flex-col p-5 shadow-lg border-t border-gray-200 opacity-0 invisible -translate-y-full transition-all duration-300">
-          <a href="#" class="coming-soon-link py-4 text-center border-b border-gray-200 text-gray-800">Productos</a>
-          <a href="#" class="coming-soon-link py-4 text-center border-b border-gray-200 text-gray-800">Marcas</a>
-          <a href="nosotros.html" class="py-4 text-center border-b border-gray-200 text-gray-800">Nosotros</a>
-          <a href="#" class="coming-soon-link py-4 text-center border-b border-gray-200 text-gray-800">Smoothies</a>
-          <a href="franquicia.html" class="py-4 text-center text-gray-800">Franquicia</a>
-        </nav>
-      </div>
-    </div>
-  </header>
+        },
+      };
+    </script>
 
-  <!-- Hero -->
-  <section class="hidden hero min-h-[90vh] flex items-center justify-center relative overflow-hidden bg-cover bg-center bg-fixed" style="background-image: url('../images/hero.webp');"></section>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-poppins">
+    <!-- Header -->
+    <header
+      class="header fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="flex justify-between items-center py-5 relative">
+          <!-- Nav izquierda - desktop -->
+          <nav class="hidden lg:flex items-center gap-10">
+            <a
+              href="#"
+              class="coming-soon-link font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all"
+              >Productos</a
+            >
+            <a
+              href="marcas.html"
+              class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all"
+              >Marcas</a
+            >
+            <a
+              href="nosotros.html"
+              class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all"
+              >Nosotros</a
+            >
+          </nav>
 
-  <!-- Franquicia Section -->
-  <section class="py-20 px-5 md:px-12 lg:px-48 mt-24">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-12 max-w-4xl mx-auto">
-        <h3 class="text-4xl md:text-5xl font-medium text-primary-navy mb-8 tracking-tight">Conviértete en un dueño</h3>
-        <p class="text-lg text-gray-600 font-light leading-relaxed">En <strong>SANA 1937</strong> estamos buscando personas entusiasmadas con nuestra marca. Ser franquiciado significa contar con un equipo de apoyo en cada paso del camino.</p>
-      </div>
-
-      <!-- Beneficios -->
-      <div class="mb-16">
-        <h4 class="text-3xl font-medium text-primary-navy text-center mb-12">¿Por qué elegir SANA 1937?</h4>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="bg-white p-8 rounded-lg text-center shadow-md hover:shadow-lg transition-all">
-            <div class="text-5xl text-primary-navy mb-6"><i class="far fa-lightbulb"></i></div>
-            <h5 class="text-xl font-medium text-primary-navy mb-4">Marketing y Publicidad</h5>
-            <p class="text-gray-600 font-light text-sm leading-relaxed">Material y herramientas de marketing, uso de nuestra marca registrada para asegurar coherencia y éxito.</p>
-          </div>
-          
-          <div class="bg-white p-8 rounded-lg text-center shadow-md hover:shadow-lg transition-all">
-            <div class="text-5xl text-primary-navy mb-6"><i class="far fa-gem"></i></div>
-            <h5 class="text-xl font-medium text-primary-navy mb-4">Proveedores</h5>
-            <p class="text-gray-600 font-light text-sm leading-relaxed">Trabajamos con proveedores reconocidos para garantizar calidad y precios competitivos.</p>
-          </div>
-          
-          <div class="bg-white p-8 rounded-lg text-center shadow-md hover:shadow-lg transition-all">
-            <div class="text-5xl text-primary-navy mb-6"><i class="far fa-star"></i></div>
-            <h5 class="text-xl font-medium text-primary-navy mb-4">Eficiencia</h5>
-            <p class="text-gray-600 font-light text-sm leading-relaxed">Capacitación inicial y continua, guías y mejores prácticas para operar de manera eficiente.</p>
-          </div>
-          
-          <div class="bg-white p-8 rounded-lg text-center shadow-md hover:shadow-lg transition-all">
-            <div class="text-5xl text-primary-navy mb-6"><i class="far fa-handshake"></i></div>
-            <h5 class="text-xl font-medium text-primary-navy mb-4">Proceso</h5>
-            <p class="text-gray-600 font-light text-sm leading-relaxed">Proceso riguroso de selección y fuerte apoyo para desarrollar tu negocio de forma sostenible.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Proceso Timeline -->
-      <div class="mb-16">
-        <h4 class="text-3xl font-medium text-primary-navy text-center mb-12">Tu camino hacia el éxito</h4>
-        <div class="max-w-4xl mx-auto relative">
-          <div class="timeline-line absolute left-8 top-16 bottom-16 w-0.5 bg-gradient-to-b from-primary-navy via-secondary-navy to-gray-200 rounded hidden md:block"></div>
-          
-          <div class="space-y-8">
-            <div class="timeline-step flex items-start opacity-0 animate-fade-in-up" style="animation-delay: 0s;">
-              <div class="w-16 h-16 bg-white border-4 border-primary-navy rounded-full flex items-center justify-center font-semibold text-primary-navy text-sm mr-8 flex-shrink-0 z-10 shadow-md">01</div>
-              <div class="flex-1 bg-white p-6 rounded-xl border border-gray-100 mt-2 relative">
-                <h5 class="text-lg font-semibold text-primary-navy mb-3">Solicitud de información</h5>
-                <p class="text-gray-500 text-sm leading-relaxed">Se recopilan datos básicos para confirmar que el candidato y la empresa comparten objetivos compatibles.</p>
-              </div>
-            </div>
-
-            <div class="timeline-step flex items-start opacity-0 animate-fade-in-up" style="animation-delay: 0.1s;">
-              <div class="w-16 h-16 bg-white border-4 border-primary-navy rounded-full flex items-center justify-center font-semibold text-primary-navy text-sm mr-8 flex-shrink-0 z-10 shadow-md">02</div>
-              <div class="flex-1 bg-white p-6 rounded-xl border border-gray-100 mt-2">
-                <h5 class="text-lg font-semibold text-primary-navy mb-3">Presentar aplicación</h5>
-                <p class="text-gray-500 text-sm leading-relaxed">El interesado completa una solicitud formal en línea para avanzar en el proceso.</p>
-              </div>
-            </div>
-
-            <div class="timeline-step flex items-start opacity-0 animate-fade-in-up" style="animation-delay: 0.2s;">
-              <div class="w-16 h-16 bg-white border-4 border-primary-navy rounded-full flex items-center justify-center font-semibold text-primary-navy text-sm mr-8 flex-shrink-0 z-10 shadow-md">03</div>
-              <div class="flex-1 bg-white p-6 rounded-xl border border-gray-100 mt-2">
-                <h5 class="text-lg font-semibold text-primary-navy mb-3">Entrevista</h5>
-                <p class="text-gray-500 text-sm leading-relaxed">Entrevistas telefónicas y presenciales para conocer mejor al candidato y evaluar su experiencia.</p>
-              </div>
-            </div>
-
-            <div class="timeline-step flex items-start opacity-0 animate-fade-in-up" style="animation-delay: 0.3s;">
-              <div class="w-16 h-16 bg-white border-4 border-primary-navy rounded-full flex items-center justify-center font-semibold text-primary-navy text-sm mr-8 flex-shrink-0 z-10 shadow-md">04</div>
-              <div class="flex-1 bg-white p-6 rounded-xl border border-gray-100 mt-2">
-                <h5 class="text-lg font-semibold text-primary-navy mb-3">Aprobación</h5>
-                <p class="text-gray-500 text-sm leading-relaxed">Tras analizar la situación financiera y operativa, se comunica la aprobación y próximos pasos.</p>
-              </div>
-            </div>
-
-            <div class="timeline-step flex items-start opacity-0 animate-fade-in-up" style="animation-delay: 0.4s;">
-              <div class="w-16 h-16 bg-white border-4 border-primary-navy rounded-full flex items-center justify-center font-semibold text-primary-navy text-sm mr-8 flex-shrink-0 z-10 shadow-md">05</div>
-              <div class="flex-1 bg-white p-6 rounded-xl border border-gray-100 mt-2">
-                <h5 class="text-lg font-semibold text-primary-navy mb-3">Selección del sitio</h5>
-                <p class="text-gray-500 text-sm leading-relaxed">El franquiciado propone una ubicación para su tienda, que debe ser aprobada por SANA 1937.</p>
-              </div>
-            </div>
-
-            <div class="timeline-step flex items-start opacity-0 animate-fade-in-up" style="animation-delay: 0.5s;">
-              <div class="w-16 h-16 bg-white border-4 border-primary-navy rounded-full flex items-center justify-center font-semibold text-primary-navy text-sm mr-8 flex-shrink-0 z-10 shadow-md">06</div>
-              <div class="flex-1 bg-white p-6 rounded-xl border border-gray-100 mt-2">
-                <h5 class="text-lg font-semibold text-primary-navy mb-3">Ejecutar acuerdos</h5>
-                <p class="text-gray-500 text-sm leading-relaxed">Se firma el contrato de franquicia y se pagan las tarifas, permitiendo iniciar la apertura.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CTA Section -->
-      <div class="max-w-4xl mx-auto mt-20">
-        <div class="bg-white border border-gray-200 rounded-lg p-12 text-center">
-          <h3 class="text-3xl font-medium text-primary-navy mb-6 tracking-tight">
-            ¿Listo para ser parte de SANA 1937?
-          </h3>
-          <p class="text-lg text-gray-600 font-light mb-8 max-w-2xl mx-auto leading-relaxed">
-            Únete a la familia SANA 1937 y forma parte de una marca con más de 85 años de tradición en bienestar y salud natural.
-          </p>
-          <a 
-            href="contacto.html" 
-            class="inline-block bg-primary-navy text-white px-8 py-4 rounded-full text-sm font-medium uppercase tracking-wide transition-all hover:bg-secondary-navy hover:shadow-lg"
+          <!-- Logo centrado -->
+          <div
+            class="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 z-10"
           >
-            Solicitar Información
-          </a>
+            <a href="../index.html">
+              <img
+                src="../images/logo_let.png"
+                alt="SANA 1937"
+                width="120"
+                height="60"
+                class="h-[60px] w-auto transition-all duration-300 logo"
+              />
+            </a>
+          </div>
+
+          <!-- Nav derecha - desktop -->
+          <nav class="hidden lg:flex items-center gap-10">
+            <a
+              href="smoothies.html"
+              class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all"
+              >Smoothies</a
+            >
+            <a
+              href="franquicia.html"
+              class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 text-primary-navy border-black transition-all"
+              >Franquicia</a
+            >
+            <a
+              href="#"
+              class="coming-soon-link font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all"
+              >Dónde estamos</a
+            >
+          </nav>
+
+          <!-- Menú móvil -->
+          <button
+            class="lg:hidden p-2 rounded text-primary-navy hover:bg-gray-50 menu-toggle"
+            aria-label="Abrir menú"
+          >
+            <span class="text-2xl">☰</span>
+          </button>
+
+          <!-- Nav móvil desplegable -->
+          <nav
+            class="mobile-nav absolute top-full left-0 right-0 bg-white flex-col p-5 shadow-lg border-t border-gray-200 opacity-0 invisible -translate-y-full transition-all duration-300"
+          >
+            <a
+              href="#"
+              class="coming-soon-link py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy"
+              >Productos</a
+            >
+            <a
+              href="marcas.html"
+              class="py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy"
+              >Marcas</a
+            >
+            <a
+              href="nosotros.html"
+              class="py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy"
+              >Nosotros</a
+            >
+            <a
+              href="smoothies.html"
+              class="py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy"
+              >Smoothies</a
+            >
+            <a
+              href="franquicia.html"
+              class="py-4 text-center text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy"
+              >Franquicia</a
+            >
+          </nav>
         </div>
       </div>
-    </div>
-  </section>
+    </header>
+
+    <!-- Hero -->
+    <section
+      class="hidden hero min-h-[90vh] flex items-center justify-center relative overflow-hidden bg-cover bg-center bg-fixed"
+      style="background-image: url(&quot;../images/hero.webp&quot;)"
+    ></section>
+
+    <!-- Franquicia Section -->
+    <section class="py-20 px-5 md:px-12 lg:px-48 mt-24">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12 max-w-4xl mx-auto">
+          <h3
+            class="text-4xl md:text-5xl font-medium text-primary-navy mb-8 tracking-tight"
+          >
+            Conviértete en un dueño
+          </h3>
+          <p class="text-lg text-gray-600 font-light leading-relaxed">
+            En <strong>SANA 1937</strong> estamos buscando personas
+            entusiasmadas con nuestra marca. Ser dueño de una franquicia
+            significa contar con un equipo de apoyo en cada paso del camino.
+          </p>
+        </div>
+
+        <!-- Beneficios -->
+        <div class="mb-16">
+          <h4 class="text-3xl font-medium text-primary-navy text-center mb-12">
+            ¿Por qué elegir SANA 1937?
+          </h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div
+              class="bg-white p-8 rounded-lg text-center shadow-md hover:shadow-lg transition-all"
+            >
+              <div class="text-5xl text-primary-navy mb-6">
+                <i class="far fa-lightbulb"></i>
+              </div>
+              <h5 class="text-xl font-medium text-primary-navy mb-4">
+                Marketing y Publicidad
+              </h5>
+              <p class="text-gray-600 font-light text-sm leading-relaxed">
+                Material y herramientas de marketing, uso de nuestra marca
+                registrada para asegurar coherencia y éxito.
+              </p>
+            </div>
+
+            <div
+              class="bg-white p-8 rounded-lg text-center shadow-md hover:shadow-lg transition-all"
+            >
+              <div class="text-5xl text-primary-navy mb-6">
+                <i class="far fa-gem"></i>
+              </div>
+              <h5 class="text-xl font-medium text-primary-navy mb-4">
+                Proveedores
+              </h5>
+              <p class="text-gray-600 font-light text-sm leading-relaxed">
+                Trabajamos con proveedores reconocidos para garantizar calidad y
+                precios competitivos.
+              </p>
+            </div>
+
+            <div
+              class="bg-white p-8 rounded-lg text-center shadow-md hover:shadow-lg transition-all"
+            >
+              <div class="text-5xl text-primary-navy mb-6">
+                <i class="far fa-star"></i>
+              </div>
+              <h5 class="text-xl font-medium text-primary-navy mb-4">
+                Eficiencia
+              </h5>
+              <p class="text-gray-600 font-light text-sm leading-relaxed">
+                Capacitación inicial y continua, guías y mejores prácticas para
+                operar de manera eficiente.
+              </p>
+            </div>
+
+            <div
+              class="bg-white p-8 rounded-lg text-center shadow-md hover:shadow-lg transition-all"
+            >
+              <div class="text-5xl text-primary-navy mb-6">
+                <i class="far fa-handshake"></i>
+              </div>
+              <h5 class="text-xl font-medium text-primary-navy mb-4">
+                Proceso
+              </h5>
+              <p class="text-gray-600 font-light text-sm leading-relaxed">
+                Proceso riguroso de selección y fuerte apoyo para desarrollar tu
+                negocio de forma sostenible.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proceso Timeline -->
+        <div class="mb-16">
+          <h4 class="text-3xl font-medium text-primary-navy text-center mb-12">
+            Tu camino hacia el éxito
+          </h4>
+          <div class="max-w-4xl mx-auto relative">
+            <div
+              class="timeline-line absolute left-8 top-16 bottom-16 w-0.5 bg-gradient-to-b from-primary-navy via-secondary-navy to-gray-200 rounded hidden md:block"
+            ></div>
+
+            <div class="space-y-8">
+              <div
+                class="timeline-step flex items-start opacity-0 animate-fade-in-up"
+                style="animation-delay: 0s"
+              >
+                <div
+                  class="w-16 h-16 bg-white border-4 border-primary-navy rounded-full flex items-center justify-center font-semibold text-primary-navy text-sm mr-8 flex-shrink-0 z-10 shadow-md"
+                >
+                  01
+                </div>
+                <div
+                  class="flex-1 bg-white p-6 rounded-xl border border-gray-100 mt-2 relative"
+                >
+                  <h5 class="text-lg font-semibold text-primary-navy mb-3">
+                    Solicitud de información
+                  </h5>
+                  <p class="text-gray-500 text-sm leading-relaxed">
+                    Se recopilan datos básicos para confirmar que el candidato y
+                    la empresa comparten objetivos compatibles.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="timeline-step flex items-start opacity-0 animate-fade-in-up"
+                style="animation-delay: 0.1s"
+              >
+                <div
+                  class="w-16 h-16 bg-white border-4 border-primary-navy rounded-full flex items-center justify-center font-semibold text-primary-navy text-sm mr-8 flex-shrink-0 z-10 shadow-md"
+                >
+                  02
+                </div>
+                <div
+                  class="flex-1 bg-white p-6 rounded-xl border border-gray-100 mt-2"
+                >
+                  <h5 class="text-lg font-semibold text-primary-navy mb-3">
+                    Presentar aplicación
+                  </h5>
+                  <p class="text-gray-500 text-sm leading-relaxed">
+                    El interesado completa una solicitud formal en línea para
+                    avanzar en el proceso.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="timeline-step flex items-start opacity-0 animate-fade-in-up"
+                style="animation-delay: 0.2s"
+              >
+                <div
+                  class="w-16 h-16 bg-white border-4 border-primary-navy rounded-full flex items-center justify-center font-semibold text-primary-navy text-sm mr-8 flex-shrink-0 z-10 shadow-md"
+                >
+                  03
+                </div>
+                <div
+                  class="flex-1 bg-white p-6 rounded-xl border border-gray-100 mt-2"
+                >
+                  <h5 class="text-lg font-semibold text-primary-navy mb-3">
+                    Entrevista
+                  </h5>
+                  <p class="text-gray-500 text-sm leading-relaxed">
+                    Entrevistas telefónicas y presenciales para conocer mejor al
+                    candidato y evaluar su experiencia.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="timeline-step flex items-start opacity-0 animate-fade-in-up"
+                style="animation-delay: 0.3s"
+              >
+                <div
+                  class="w-16 h-16 bg-white border-4 border-primary-navy rounded-full flex items-center justify-center font-semibold text-primary-navy text-sm mr-8 flex-shrink-0 z-10 shadow-md"
+                >
+                  04
+                </div>
+                <div
+                  class="flex-1 bg-white p-6 rounded-xl border border-gray-100 mt-2"
+                >
+                  <h5 class="text-lg font-semibold text-primary-navy mb-3">
+                    Aprobación
+                  </h5>
+                  <p class="text-gray-500 text-sm leading-relaxed">
+                    Tras analizar la situación financiera y operativa, se
+                    comunica la aprobación y próximos pasos.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="timeline-step flex items-start opacity-0 animate-fade-in-up"
+                style="animation-delay: 0.4s"
+              >
+                <div
+                  class="w-16 h-16 bg-white border-4 border-primary-navy rounded-full flex items-center justify-center font-semibold text-primary-navy text-sm mr-8 flex-shrink-0 z-10 shadow-md"
+                >
+                  05
+                </div>
+                <div
+                  class="flex-1 bg-white p-6 rounded-xl border border-gray-100 mt-2"
+                >
+                  <h5 class="text-lg font-semibold text-primary-navy mb-3">
+                    Selección del sitio
+                  </h5>
+                  <p class="text-gray-500 text-sm leading-relaxed">
+                    El franquiciado propone una ubicación para su tienda, que
+                    debe ser aprobada por SANA 1937.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="timeline-step flex items-start opacity-0 animate-fade-in-up"
+                style="animation-delay: 0.5s"
+              >
+                <div
+                  class="w-16 h-16 bg-white border-4 border-primary-navy rounded-full flex items-center justify-center font-semibold text-primary-navy text-sm mr-8 flex-shrink-0 z-10 shadow-md"
+                >
+                  06
+                </div>
+                <div
+                  class="flex-1 bg-white p-6 rounded-xl border border-gray-100 mt-2"
+                >
+                  <h5 class="text-lg font-semibold text-primary-navy mb-3">
+                    Ejecutar acuerdos
+                  </h5>
+                  <p class="text-gray-500 text-sm leading-relaxed">
+                    Se firma el contrato de franquicia y se pagan las tarifas,
+                    permitiendo iniciar la apertura.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="max-w-4xl mx-auto mt-20">
+          <div
+            class="bg-white border border-gray-200 rounded-lg p-12 text-center"
+          >
+            <h3
+              class="text-3xl font-medium text-primary-navy mb-6 tracking-tight"
+            >
+              ¿Listo para ser parte de SANA 1937?
+            </h3>
+            <p
+              class="text-lg text-gray-600 font-light mb-8 max-w-2xl mx-auto leading-relaxed"
+            >
+              Únete a la familia SANA 1937 y forma parte de una marca con más de
+              85 años de tradición en bienestar y salud natural.
+            </p>
+            <a
+              href="contacto.html"
+              class="inline-block bg-primary-navy text-white px-8 py-4 rounded-full text-sm font-medium uppercase tracking-wide transition-all hover:bg-secondary-navy hover:shadow-lg"
+            >
+              Solicitar Información
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-gray-50 text-gray-800 py-16 border-t border-gray-200">
       <div class="max-w-7xl mx-auto px-5">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <!-- Columna 1: Logo y Redes Sociales -->
-          <div class="flex justify-center flex-col items-center text-center text-center">
+          <div
+            class="flex justify-center flex-col items-center text-center text-center"
+          >
             <div class="mb-6">
               <img
                 src="../images/logo_let.png"
@@ -213,7 +438,11 @@
 
           <!-- Columna 2: SANA 1937 - Quiénes Somos -->
           <div class="text-center md:text-left">
-            <h3 class="font-inter font-semibold text-primary-navy mb-6 text-sm uppercase tracking-wide">SANA 1937 - Quiénes Somos</h3>
+            <h3
+              class="font-inter font-semibold text-primary-navy mb-6 text-sm uppercase tracking-wide"
+            >
+              SANA 1937 - Quiénes Somos
+            </h3>
             <p class="font-inter text-gray-600 leading-relaxed text-sm">
               Marca peruana dedicada al bienestar, con más de 85 años de
               tradición familiar en el cuidado de la salud natural.
@@ -224,7 +453,11 @@
 
           <!-- Columna 3: Servicio al Cliente -->
           <div class="text-center md:text-left">
-            <h3 class="font-inter font-semibold text-primary-navy mb-6 text-sm uppercase tracking-wide">Servicio al Cliente - Contacto</h3>
+            <h3
+              class="font-inter font-semibold text-primary-navy mb-6 text-sm uppercase tracking-wide"
+            >
+              Servicio al Cliente - Contacto
+            </h3>
             <!-- <p class="font-inter text-gray-600 text-sm mb-3">
               <i class="fas fa-phone mr-2.5 text-black"></i>
               +51 1 234 5678
@@ -243,18 +476,25 @@
             >
               Contáctanos
             </a>
+            <a
+              href="#"
+              class="coming-soon-link block mt-4 font-inter font-medium text-sm uppercase tracking-wide text-gray-800 hover:text-primary-navy transition-all underline"
+            >
+              Trabaja con nosotros
+            </a>
           </div>
         </div>
 
-        <div class="border-t border-gray-200 pt-5 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
-          <p class="font-inter text-gray-500 text-sm">&copy; 2025 SANA 1937. Todos los derechos reservados.</p>
-          <div class="flex items-center gap-2">
-            <!-- Payment icons placeholder -->
-          </div>
+        <div
+          class="border-t border-gray-200 pt-5 flex flex-col md:flex-row justify-start items-center gap-4 text-left"
+        >
+          <p class="font-inter text-gray-500 text-sm">
+            &copy; 2025 SANA 1937. Todos los derechos reservados.
+          </p>
         </div>
       </div>
     </footer>
 
-  <script src="../js/main.js"></script>
-</body>
+    <script src="../js/main.js"></script>
+  </body>
 </html>

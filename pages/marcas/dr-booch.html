@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Booch - SANA 1937</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../../images/logo-sana1937.svg"
+    />
+    <link rel="alternate icon" type="image/png" href="../../images/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary-navy": "#15264b",
+              "secondary-navy": "#2d4a6b",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-poppins">
+    <!-- Header -->
+    <header
+      class="header fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="flex justify-between items-center py-5 relative">
+          <nav class="hidden lg:flex items-center gap-10">
+            <a
+              href="#"
+              class="coming-soon-link font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all"
+              >Productos</a
+            >
+            <a
+              href="../marcas.html"
+              class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 text-primary-navy border-black"
+              >Marcas</a
+            >
+            <a
+              href="../nosotros.html"
+              class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all"
+              >Nosotros</a
+            >
+          </nav>
+          <div
+            class="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 z-10"
+          >
+            <a href="../../index.html">
+              <img
+                src="../../images/logo_let.png"
+                alt="SANA 1937"
+                width="120"
+                height="60"
+                class="h-[60px] w-auto transition-all duration-300 logo"
+              />
+            </a>
+          </div>
+          <nav class="hidden lg:flex items-center gap-10">
+            <a
+              href="../smoothies.html"
+              class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all"
+              >Smoothies</a
+            >
+            <a
+              href="../franquicia.html"
+              class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all"
+              >Franquicia</a
+            >
+            <a
+              href="#"
+              class="coming-soon-link font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all"
+              >Dónde estamos</a
+            >
+          </nav>
+          <button
+            class="lg:hidden p-2 rounded text-primary-navy hover:bg-gray-50 menu-toggle"
+            aria-label="Abrir menú"
+          >
+            <span class="text-2xl">☰</span>
+          </button>
+          <nav
+            class="mobile-nav absolute top-full left-0 right-0 bg-white flex-col p-5 shadow-lg border-t border-gray-200 opacity-0 invisible -translate-y-full transition-all duration-300"
+          >
+            <a
+              href="#"
+              class="coming-soon-link py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy"
+              >Productos</a
+            >
+            <a
+              href="../marcas.html"
+              class="py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy"
+              >Marcas</a
+            >
+            <a
+              href="../nosotros.html"
+              class="py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy"
+              >Nosotros</a
+            >
+            <a
+              href="../smoothies.html"
+              class="py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy"
+              >Smoothies</a
+            >
+            <a
+              href="../franquicia.html"
+              class="py-4 text-center text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy"
+              >Franquicia</a
+            >
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Brand Header -->
+    <section class="py-12 mt-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="mb-6">
+          <a
+            href="../marcas.html"
+            class="text-sm text-gray-600 hover:text-primary-navy inline-flex items-center"
+          >
+            <i class="fas fa-arrow-left mr-2"></i> Volver a Marcas
+          </a>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+          <div class="lg:col-span-1 flex justify-center">
+            <div class="bg-white rounded-xl p-8 shadow-md">
+              <img
+                src="../../images/marcas/drbooch.png"
+                alt="Dr. Booch"
+                class="max-h-50 w-auto mx-auto"
+                onerror="
+                  this.style.display = 'none';
+                  this.parentElement.innerHTML =
+                    '<span class=\'text-5xl font-bold text-primary-navy\'>Dr. Booch</span>';
+                "
+              />
+            </div>
+          </div>
+          <div class="lg:col-span-2">
+            <h1 class="text-4xl font-semibold text-primary-navy mb-4">
+              Dr. Booch
+            </h1>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              Dr. Booch es una marca de kombuchas premium que combina ciencia,
+              tradición familiar, y diseño de producto contemporáneo,
+              posicionándose en la intersección entre salud, placer y estilo de
+              vida.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-5">
+        <!-- Shots 50ml -->
+        <div class="mb-16">
+          <h2
+            class="text-3xl font-semibold text-primary-navy mb-8 pb-3 border-b-2 border-primary-navy"
+          >
+            Shots 50ml
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Immunity Booch -->
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+            >
+              <div class="bg-gray-100 h-85 overflow-hidden">
+                <img
+                  src="../../images/marcas/immunitybooch.jpeg"
+                  alt="Immunity Booch"
+                  class="w-full h-full object-cover"
+                  onerror="this.src = '../../images/smoothie1.webp'"
+                />
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  Immunity Booch
+                </h3>
+                <div class="mb-4">
+                  <h4 class="text-sm font-semibold text-primary-navy mb-2">
+                    Ingredientes:
+                  </h4>
+                  <p class="text-sm text-gray-600">Jengibre, Cúrcuma, Limón</p>
+                </div>
+                <div class="mb-4">
+                  <h4 class="text-sm font-semibold text-primary-navy mb-2">
+                    Beneficios:
+                  </h4>
+                  <ul class="text-sm text-gray-600 space-y-1">
+                    <li>✓ Refuerza defensas</li>
+                    <li>✓ Anti-inflamatorio</li>
+                    <li>✓ Ideal para después de entrenar</li>
+                  </ul>
+                </div>
+                <div class="border-t pt-4">
+                  <p class="text-lg font-semibold text-primary-navy mb-2">
+                    Precio por unidad: <span class="text-2xl">S/. 5</span>
+                  </p>
+                  <p class="text-md text-gray-700">
+                    Six pack:
+                    <span class="font-semibold text-primary-navy">S/. 25</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Natural Energy Booch -->
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+            >
+              <div class="bg-gray-100 h-85 overflow-hidden">
+                <img
+                  src="../../images/marcas/naturalenergybooch.jpeg"
+                  alt="Natural Energy Booch"
+                  class="w-full h-full object-cover"
+                  onerror="this.src = '../../images/smoothie2.webp'"
+                />
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  Natural Energy Booch
+                </h3>
+                <div class="mb-4">
+                  <h4 class="text-sm font-semibold text-primary-navy mb-2">
+                    Ingredientes:
+                  </h4>
+                  <p class="text-sm text-gray-600">
+                    Café, Cacao, Maca, Miel Yacon
+                  </p>
+                </div>
+                <div class="mb-4">
+                  <h4 class="text-sm font-semibold text-primary-navy mb-2">
+                    Beneficios:
+                  </h4>
+                  <ul class="text-sm text-gray-600 space-y-1">
+                    <li>✓ Energía sostenida</li>
+                    <li>✓ Ideal para antes de entrenar</li>
+                  </ul>
+                </div>
+                <div class="border-t pt-4">
+                  <p class="text-lg font-semibold text-primary-navy mb-2">
+                    Precio por unidad: <span class="text-2xl">S/. 5</span>
+                  </p>
+                  <p class="text-md text-gray-700">
+                    Six pack:
+                    <span class="font-semibold text-primary-navy">S/. 25</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botellas 250ml -->
+        <div class="mb-16">
+          <h2
+            class="text-3xl font-semibold text-primary-navy mb-8 pb-3 border-b-2 border-primary-navy"
+          >
+            Botellas 250ml
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Manzana - Canela -->
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+            >
+              <div class="bg-gray-100 h-85 overflow-hidden">
+                <img
+                  src="../../images/marcas/manzanacanela.jpeg"
+                  alt="Manzana - Canela"
+                  class="w-full h-full object-cover"
+                  onerror="this.src = '../../images/smoothie3.webp'"
+                />
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  Manzana - Canela
+                </h3>
+                <div class="mb-4">
+                  <span
+                    class="bg-primary-navy/10 text-primary-navy px-4 py-2 rounded-full text-sm font-semibold"
+                    >250ml</span
+                  >
+                </div>
+                <div class="border-t pt-4">
+                  <p class="text-lg font-semibold text-primary-navy">
+                    Precio: <span class="text-3xl">S/. 10</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Agua de Jamaica -->
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+            >
+              <div class="bg-gray-100 h-85 overflow-hidden">
+                <img
+                  src="../../images/marcas/aguadejamaica.jpeg"
+                  alt="Agua de Jamaica"
+                  class="w-full h-full object-cover"
+                  onerror="this.src = '../../images/smoothie-purple_v2.webp'"
+                />
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  Agua de Jamaica
+                </h3>
+                <div class="mb-4">
+                  <span
+                    class="bg-primary-navy/10 text-primary-navy px-4 py-2 rounded-full text-sm font-semibold"
+                    >250ml</span
+                  >
+                </div>
+                <div class="border-t pt-4">
+                  <p class="text-lg font-semibold text-primary-navy">
+                    Precio: <span class="text-3xl">S/. 10</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div
+          class="bg-gradient-to-br from-primary-navy to-secondary-navy rounded-2xl p-8 md:p-12 text-white text-center"
+        >
+          <h3 class="text-3xl font-semibold mb-4">
+            ¿Listo para probar Dr. Booch?
+          </h3>
+          <p class="text-lg mb-6 opacity-90">
+            Realiza tu pedido directamente por WhatsApp
+          </p>
+          <a
+            href="https://wa.me/51998136738?text=Hola,%20quiero%20hacer%20un%20pedido%20de%20Dr.%20Booch"
+            target="_blank"
+            class="inline-flex items-center gap-3 bg-white text-primary-navy px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg"
+          >
+            <i class="fab fa-whatsapp text-2xl"></i>
+            <span>Pedidos al WhatsApp: +51 998 136 738</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 text-gray-800 py-16 border-t border-gray-200">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          <div class="flex justify-center flex-col items-center text-center">
+            <div class="mb-6">
+              <img
+                src="../../images/logo_let.png"
+                alt="SANA 1937"
+                class="h-20 w-auto mx-auto md:mx-0"
+              />
+            </div>
+            <div class="flex gap-4 justify-center md:justify-start">
+              <a
+                href="https://www.facebook.com/share/1D5MP5KZiw/?mibextid=wwXIfr"
+                target="_blank"
+                class="inline-flex items-center justify-center w-10 h-10 bg-primary-navy rounded-full text-white transition-all hover:bg-secondary-navy hover:-translate-y-0.5 hover:shadow-md"
+                title="Facebook - SANA 1937"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/_sana1937_/"
+                target="_blank"
+                class="inline-flex items-center justify-center w-10 h-10 bg-primary-navy rounded-full text-white transition-all hover:bg-secondary-navy hover:-translate-y-0.5 hover:shadow-md"
+                title="Instagram - @sana1937"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+          <div class="text-center md:text-left">
+            <h3
+              class="font-inter font-semibold text-primary-navy mb-6 text-sm uppercase tracking-wide"
+            >
+              SANA 1937 - Quiénes Somos
+            </h3>
+            <p class="font-inter text-gray-600 leading-relaxed text-sm">
+              Marca peruana dedicada al bienestar, con más de 85 años de
+              tradición familiar en el cuidado de la salud natural.
+              Transformamos la herencia ancestral en propuestas modernas de
+              nutrición y sabor.
+            </p>
+          </div>
+          <div class="text-center md:text-left">
+            <h3
+              class="font-inter font-semibold text-primary-navy mb-6 text-sm uppercase tracking-wide"
+            >
+              Servicio al Cliente - Contacto
+            </h3>
+            <p class="font-inter text-gray-600 text-sm mb-4">
+              <i class="fas fa-map-marker-alt mr-2.5 text-black"></i>For Now -
+              Lima, Perú
+            </p>
+            <a
+              href="../contacto.html"
+              class="inline-block bg-primary-navy text-white py-2.5 px-6 rounded text-sm font-medium uppercase tracking-wide transition-all hover:bg-secondary-navy hover:-translate-y-0.5 hover:shadow-md"
+              >Contáctanos</a
+            >
+            <a
+              href="#"
+              class="coming-soon-link block mt-4 font-inter font-medium text-sm uppercase tracking-wide text-gray-800 hover:text-primary-navy transition-all underline"
+              >Trabaja con nosotros</a
+            >
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-200 pt-5 flex flex-col md:flex-row justify-start items-center gap-4 text-left"
+        >
+          <p class="font-inter text-gray-500 text-sm">
+            &copy; 2025 SANA 1937. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="../../js/main.js"></script>
+  </body>
+</html>

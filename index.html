@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SANA 1937 - Salud y Bienestar Natural </title>
+    <title>SANA 1937 - Salud y Bienestar Natural</title>
     <meta
       name="description"
       content="SANA 1937 - Marca peruana dedicada al bienestar, la vitalidad y el equilibrio. Descubre nuestros productos naturales y smoothies saludables."
@@ -21,9 +21,53 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sana1937.com" />
+    <meta
+      property="og:image"
+      content="https://sana1937.com/images/logo-sana1937.svg"
+    />
+    <meta property="og:image:alt" content="SANA 1937 - Logo" />
+    <meta property="og:site_name" content="SANA 1937" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="SANA 1937 - Salud y Bienestar Natural"
+    />
+    <meta
+      name="twitter:description"
+      content="Marca peruana inspirada en el bienestar, la vitalidad y el equilibrio, con raíces familiares desde 1937."
+    />
+    <meta
+      name="twitter:image"
+      content="https://sana1937.com/images/logo-sana1937.svg"
+    />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/logo_let.png" />
+    <link rel="icon" type="image/svg+xml" href="images/logo-sana1937.svg" />
+    <link rel="alternate icon" type="image/png" href="images/logo.png" />
+    <link rel="apple-touch-icon" href="images/logo.png" />
+
+    <!-- Preload recursos críticos -->
+    <link
+      rel="preload"
+      as="image"
+      href="images/hero.webp"
+      type="image/webp"
+      media="(min-width: 640px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="images/hero_mobile.png"
+      type="image/png"
+      media="(max-width: 639px)"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      as="style"
+    />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -32,17 +76,17 @@
         theme: {
           extend: {
             colors: {
-              'primary-navy': '#15264b',
-              'secondary-navy': '#2d4a6b',
-              'light-navy': '#4a6b8a',
+              "primary-navy": "#15264b",
+              "secondary-navy": "#2d4a6b",
+              "light-navy": "#4a6b8a",
             },
             fontFamily: {
-              'poppins': ['Poppins', 'sans-serif'],
-              'inter': ['Inter', 'sans-serif'],
-            }
-          }
-        }
-      }
+              poppins: ["Poppins", "sans-serif"],
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
     </script>
 
     <!-- CSS personalizado mínimo -->
@@ -52,7 +96,14 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      media="print"
+      onload="this.media = 'all'"
     />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    /></noscript>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -64,60 +115,141 @@
   </head>
   <body class="font-poppins">
     <!-- Header -->
-    <header class="header fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 transition-all duration-300">
+    <header
+      class="header fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 transition-all duration-300"
+    >
       <div class="max-w-7xl mx-auto px-5">
         <div class="flex justify-between items-center py-5 relative">
           <!-- Nav izquierda - desktop -->
           <nav class="hidden lg:flex items-center gap-10">
-            <a href="#" class="coming-soon-link font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Productos</a>
-            <a href="#" class="coming-soon-link font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Marcas</a>
-            <a href="pages/nosotros.html" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Nosotros</a>
+            <a
+              href="#"
+              class="coming-soon-link font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all"
+              >Productos</a
+            >
+            <a
+              href="pages/marcas.html"
+              class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all"
+              >Marcas</a
+            >
+            <a
+              href="pages/nosotros.html"
+              class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all"
+              >Nosotros</a
+            >
           </nav>
 
           <!-- Logo centrado -->
-          <div class="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 z-10">
+          <div
+            class="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 z-10"
+          >
             <a href="index.html">
-              <img src="images/logo_let.png" alt="SANA 1937" class="h-[60px] w-auto transition-all duration-300 logo" />
+              <img
+                src="images/logo_let.png"
+                alt="SANA 1937"
+                width="120"
+                height="60"
+                class="h-[60px] w-auto transition-all duration-300 logo"
+              />
             </a>
           </div>
 
           <!-- Nav derecha - desktop -->
           <nav class="hidden lg:flex items-center gap-10">
-            <a href="#" class="coming-soon-link font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Smoothies</a>
-            <a href="pages/franquicia.html" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all">Franquicia</a>
+            <a
+              href="pages/smoothies.html"
+              class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all"
+              >Smoothies</a
+            >
+            <a
+              href="pages/franquicia.html"
+              class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all"
+              >Franquicia</a
+            >
+            <a
+              href="#"
+              class="coming-soon-link font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all"
+              >Dondo estamos</a
+            >
           </nav>
 
           <!-- Menú móvil -->
-          <button class="lg:hidden p-2 rounded text-primary-navy hover:bg-gray-50 menu-toggle" aria-label="Abrir menú">
+          <button
+            class="lg:hidden p-2 rounded text-primary-navy hover:bg-gray-50 menu-toggle"
+            aria-label="Abrir menú"
+          >
             <span class="text-2xl">☰</span>
           </button>
 
           <!-- Nav móvil desplegable -->
-          <nav class="mobile-nav absolute top-full left-0 right-0 bg-white flex-col p-5 shadow-lg border-t border-gray-200 opacity-0 invisible -translate-y-full transition-all duration-300">
-            <a href="#" class="coming-soon-link py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy">Productos</a>
-            <a href="#" class="coming-soon-link py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy">Marcas</a>
-            <a href="pages/nosotros.html" class="py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy">Nosotros</a>
-            <a href="#" class="coming-soon-link py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy">Smoothies</a>
-            <a href="pages/franquicia.html" class="py-4 text-center text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy">Franquicia</a>
+          <nav
+            class="mobile-nav absolute top-full left-0 right-0 bg-white flex-col p-5 shadow-lg border-t border-gray-200 opacity-0 invisible -translate-y-full transition-all duration-300"
+          >
+            <a
+              href="#"
+              class="coming-soon-link py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy"
+              >Productos</a
+            >
+            <a
+              href="pages/marcas.html"
+              class="py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy"
+              >Marcas</a
+            >
+            <a
+              href="pages/nosotros.html"
+              class="py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy"
+              >Nosotros</a
+            >
+            <a
+              href="pages/smoothies.html"
+              class="py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy"
+              >Smoothies</a
+            >
+            <a
+              href="pages/franquicia.html"
+              class="py-4 text-center text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy"
+              >Franquicia</a
+            >
           </nav>
         </div>
       </div>
     </header>
 
     <!-- Hero Banner -->
-    <section class="mt-12 hidden sm:flex hero h-[45vh] flex items-center justify-center relative bg-contain bg-center bg-no-repeat" style="background-image: url('images/hero.webp');background-color: #15264B;">
-      <!-- Solo fondo de imagen, sin contenido -->
+    <section
+      class="mt-12 hidden sm:flex hero h-[78vh] flex items-center justify-center relative overflow-hidden"
+    >
+      <!-- Imagen de fondo -->
+      <div
+        class="absolute inset-0 bg-cover bg-center"
+        style="background-image: url(&quot;images/smoothiesgente_v3.jpeg&quot;)"
+      ></div>
+
+      <!-- Overlay con opacidad -->
+      <div class="absolute inset-0 bg-primary-navy" style="opacity: 0.9"></div>
+
+      <!-- Imagen hero sobrepuesta -->
+      <div class="relative z-10 w-full h-full flex items-center justify-center">
+        <img
+          src="images/hero_v2.png"
+          alt="SANA 1937"
+          class="max-h-full w-auto object-contain"
+        />
+      </div>
     </section>
 
-
     <!-- Hero Banner -->
-    <section class="flex sm:hidden hero h-[50vh] flex items-center justify-center relative bg-contain bg-center bg-no-repeat mt-12" style="background-image: url('images/hero_mobile.png');">
+    <section
+      class="flex sm:hidden hero h-[50vh] flex items-center justify-center relative bg-contain bg-center bg-no-repeat mt-12"
+      style="background-image: url(&quot;images/hero_mobile.png&quot;)"
+    >
       <!-- Solo fondo de imagen, sin contenido -->
     </section>
 
     <!-- Botón de scroll entre secciones -->
     <div class="relative text-center -mt-12 sm:-mt-8 mb-4 z-10">
-      <a href="#nuevos-productos"
+      <a
+        href="#nuevos-productos"
         class="scroll-down-btn mx-auto bg-primary-navy border-2 border-primary-navy rounded-full w-[60px] h-[60px] flex items-center justify-center text-white text-xl cursor-pointer transition-all duration-300 shadow-lg hover:bg-primary-navy hover:-translate-y-1 hover:shadow-xl"
         onclick="scrollToContent()"
         aria-label="Navegar hacia abajo"
@@ -130,138 +262,268 @@
     <section class="py-16 pt-10" id="nuevos-productos">
       <div class="max-w-7xl mx-auto px-5">
         <div class="text-center mb-12">
-          <h2 class="text-4xl font-semibold text-primary-navy mb-4 tracking-tight">¿Qué opción SANA quieres hoy?</h2>
+          <h2
+            class="text-4xl font-semibold text-primary-navy mb-4 tracking-tight"
+          >
+            ¿Qué opción SANA quieres hoy?
+          </h2>
           <p class="text-lg text-gray-600 max-w-2xl mx-auto font-light">
-            Descubre nuestra selección curada de productos premium para tu bienestar integral.
+            Descubre nuestra selección curada de productos premium para tu
+            bienestar integral.
           </p>
         </div>
 
         <!-- Tags de categorías -->
-        <div class="hidden flex flex-wrap justify-center gap-2 mb-12 max-w-4xl mx-auto">
-          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Creatina</span>
-          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Proteína Vegana</span>
-          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Proteína Whey</span>
-          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Colágeno</span>
-          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Salud Femenina</span>
-          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Salud Masculina</span>
-          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Electrolitos</span>
-          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Aminoácidos</span>
-          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Sueño</span>
-          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Holístico</span>
-          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Omega-3</span>
-          <span class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy">Antioxidantes</span>
+        <div
+          class="hidden flex flex-wrap justify-center gap-2 mb-12 max-w-4xl mx-auto"
+        >
+          <span
+            class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy"
+            >Creatina</span
+          >
+          <span
+            class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy"
+            >Proteína Vegana</span
+          >
+          <span
+            class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy"
+            >Proteína Whey</span
+          >
+          <span
+            class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy"
+            >Colágeno</span
+          >
+          <span
+            class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy"
+            >Salud Femenina</span
+          >
+          <span
+            class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy"
+            >Salud Masculina</span
+          >
+          <span
+            class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy"
+            >Electrolitos</span
+          >
+          <span
+            class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy"
+            >Aminoácidos</span
+          >
+          <span
+            class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy"
+            >Sueño</span
+          >
+          <span
+            class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy"
+            >Holístico</span
+          >
+          <span
+            class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy"
+            >Omega-3</span
+          >
+          <span
+            class="bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-primary-navy cursor-pointer transition-all hover:bg-primary-navy hover:text-white hover:border-primary-navy"
+            >Antioxidantes</span
+          >
         </div>
 
         <!-- Sección de marca destacada -->
         <div class="mt-12">
-          <div class="flex justify-between items-center mb-8 border-b border-gray-200 pb-4 fade-in delay-100">
+          <div
+            class="flex justify-between items-center mb-8 border-b border-gray-200 pb-4 fade-in delay-100"
+          >
             <h3 class="text-2xl font-normal text-gray-800">Nuevos Productos</h3>
-            <a href="#" class="coming-soon-link text-primary-navy text-sm font-medium underline hover:text-secondary-navy">Ver más productos</a>
+            <a
+              href="#"
+              class="coming-soon-link text-primary-navy text-sm font-medium underline hover:text-secondary-navy"
+              >Ver más productos</a
+            >
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12 max-w-8xl mx-auto" id="nuevos-productos-list">
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12 max-w-8xl mx-auto"
+            id="nuevos-productos-list"
+          >
             <!-- Producto 1 -->
-            <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 ">
+            <div
+              class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+            >
               <div class="relative overflow-hidden bg-gray-50">
                 <img
-                  src="images/smoothie-azul.webp"
-                  alt="SANA 1937 Blue Power Fuel"
+                  src="images/almondreishi.jpeg"
+                  alt="SANA 1937 Almond Reishi"
+                  width="400"
+                  height="384"
+                  fetchpriority="high"
                   class="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div class="absolute top-4 right-4 bg-primary-navy text-white px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide">
+                <div
+                  class="absolute top-4 right-4 bg-primary-navy text-white px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide"
+                >
                   Nuevo
                 </div>
               </div>
               <div class="p-8">
-                <div class="text-xs text-primary-navy uppercase font-bold tracking-wider mb-2">SANA 1937</div>
-                <h4 class="text-xl font-semibold text-gray-900 mb-3 leading-tight group-hover:text-primary-navy transition-colors">
-                  Blue Power Fuel
+                <div
+                  class="text-xs text-primary-navy uppercase font-bold tracking-wider mb-2"
+                >
+                  SANA 1937
+                </div>
+                <h4
+                  class="text-xl font-semibold text-gray-900 mb-3 leading-tight group-hover:text-primary-navy transition-colors"
+                >
+                  Almond Reishi
                 </h4>
                 <p class="text-gray-600 text-sm mb-6 leading-relaxed">
-                  Su mezcla rica en antioxidantes, vitaminas y proteína ayuda a fortalecer el sistema inmune y apoyar la recuperación muscular de forma natural.
+                  Smoothie cremoso y equilibrado que aporta energía sostenida,
+                  apoya la relajación y el manejo del estrés, contribuye a la
+                  recuperación muscular y favorece una buena hidratación.
                 </p>
-                <a href="#" class="block w-full bg-primary-navy text-white text-center rounded-full px-8 py-4 text-sm font-bold uppercase tracking-wide transition-all hover:bg-secondary-navy hover:shadow-lg transform hover:scale-105">
+                <a
+                  href="#"
+                  class="block w-full bg-primary-navy text-white text-center rounded-full px-8 py-4 text-sm font-bold uppercase tracking-wide transition-all hover:bg-secondary-navy hover:shadow-lg transform hover:scale-105"
+                >
                   Descubrir más
                 </a>
               </div>
             </div>
 
             <!-- Producto 2 -->
-            <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 ">
+            <div
+              class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+            >
               <div class="relative overflow-hidden bg-gray-50">
                 <img
-                  src="images/smoothie-naranja.webp"
-                  alt="SANA 1937 Immuni-Boost"
+                  src="images/powergreens.jpeg"
+                  alt="SANA 1937 Power Greens"
+                  width="400"
+                  height="384"
+                  fetchpriority="high"
                   class="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div class="absolute top-4 right-4 bg-primary-navy text-white px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide">
+                <div
+                  class="absolute top-4 right-4 bg-primary-navy text-white px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide"
+                >
                   Nuevo
                 </div>
               </div>
               <div class="p-8">
-                <div class="text-xs text-primary-navy uppercase font-bold tracking-wider mb-2">SANA 1937</div>
-                <h4 class="text-xl font-semibold text-gray-900 mb-3 leading-tight group-hover:text-primary-navy transition-colors">
-                  Immuni-Boost
+                <div
+                  class="text-xs text-primary-navy uppercase font-bold tracking-wider mb-2"
+                >
+                  SANA 1937
+                </div>
+                <h4
+                  class="text-xl font-semibold text-gray-900 mb-3 leading-tight group-hover:text-primary-navy transition-colors"
+                >
+                  Power Greens
                 </h4>
                 <p class="text-gray-600 text-sm mb-6 leading-relaxed">
-                  Aporta un impulso natural al bienestar gracias a su perfil antiinflamatorio y energizante. Favorece el equilibrio del cuerpo y contribuye a una recuperación más ligera y sostenida a lo largo del día.
+                  Smoothie revitalizante, rico en antioxidantes que apoyan la
+                  desintoxicación natural, la salud celular y el sistema
+                  inmunológico, aportando energía limpia y nutrición concentrada
+                  en cada sorbo.
                 </p>
-                <a href="#" class="block w-full bg-primary-navy text-white text-center rounded-full px-8 py-4 text-sm font-bold uppercase tracking-wide transition-all hover:bg-secondary-navy hover:shadow-lg transform hover:scale-105">
+                <a
+                  href="#"
+                  class="block w-full bg-primary-navy text-white text-center rounded-full px-8 py-4 text-sm font-bold uppercase tracking-wide transition-all hover:bg-secondary-navy hover:shadow-lg transform hover:scale-105"
+                >
                   Descubrir más
                 </a>
               </div>
             </div>
 
             <!-- Producto 3 -->
-            <div class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 ">
+            <div
+              class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+            >
               <div class="relative overflow-hidden bg-gray-50">
                 <img
-                  src="images/smoothie-purple.webp"
-                  alt="SANA 1937 Berry Good"
+                  src="images/pinkpowerblend_v2.jpeg"
+                  alt="SANA 1937 Pink Power Blend"
+                  width="400"
+                  height="384"
+                  fetchpriority="high"
                   class="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div class="absolute top-4 right-4 bg-primary-navy text-white px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide">
+                <div
+                  class="absolute top-4 right-4 bg-primary-navy text-white px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide"
+                >
                   Nuevo
                 </div>
               </div>
               <div class="p-8">
-                <div class="text-xs text-primary-navy uppercase font-bold tracking-wider mb-2">SANA 1937</div>
-                <h4 class="text-xl font-semibold text-gray-900 mb-3 leading-tight group-hover:text-primary-navy transition-colors">
-                  Berry Good
+                <div
+                  class="text-xs text-primary-navy uppercase font-bold tracking-wider mb-2"
+                >
+                  SANA 1937
+                </div>
+                <h4
+                  class="text-xl font-semibold text-gray-900 mb-3 leading-tight group-hover:text-primary-navy transition-colors"
+                >
+                  Pink Power Blend
                 </h4>
                 <p class="text-gray-600 text-sm mb-6 leading-relaxed">
-                  Una mezcla alta en proteína que apoya la recuperación muscular, brinda energía constante y contribuye a una nutrición equilibrada día a día.
+                  Smoothie reconfortante que contribuye al cuidado de la piel y
+                  las articulaciones, ideal para un momento de calma y
+                  bienestar, con nutrientes que apoyan la hidratación del
+                  cuerpo.
                 </p>
-                <a href="#" class="block w-full bg-primary-navy text-white text-center rounded-full px-8 py-4 text-sm font-bold uppercase tracking-wide transition-all hover:bg-secondary-navy hover:shadow-lg transform hover:scale-105">
+                <a
+                  href="#"
+                  class="block w-full bg-primary-navy text-white text-center rounded-full px-8 py-4 text-sm font-bold uppercase tracking-wide transition-all hover:bg-secondary-navy hover:shadow-lg transform hover:scale-105"
+                >
                   Descubrir más
                 </a>
               </div>
             </div>
           </div>
-          
 
-          <div class="hidden bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-10 md:p-12 mt-12 shadow-sm scale-in delay-300" id="desbloquea">
+          <div
+            class="hidden bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-10 md:p-12 mt-12 shadow-sm scale-in delay-300"
+            id="desbloquea"
+          >
             <div class="max-w-4xl mx-auto text-center">
               <div class="mb-6">
-                <i class="fas fa-leaf text-primary-navy text-4xl opacity-20"></i>
+                <i
+                  class="fas fa-leaf text-primary-navy text-4xl opacity-20"
+                ></i>
               </div>
-              <h3 class="text-2xl md:text-3xl font-semibold text-primary-navy mb-6 tracking-tight">
+              <h3
+                class="text-2xl md:text-3xl font-semibold text-primary-navy mb-6 tracking-tight"
+              >
                 Desbloquea tu Bienestar Holístico
               </h3>
-              <p class="text-gray-700 text-base md:text-lg font-light leading-relaxed mb-6">
-                Descubre nuestra selección de productos naturales y naturopáticos recomendados para soluciones integrales de bienestar. Desde suplementos para el alivio del estrés hasta mejorar la salud integral del cuerpo, nuestra colección curada ofrece suplementos de salud premium adaptados a tus necesidades.
+              <p
+                class="text-gray-700 text-base md:text-lg font-light leading-relaxed mb-6"
+              >
+                Descubre nuestra selección de productos naturales y
+                naturopáticos recomendados para soluciones integrales de
+                bienestar. Desde suplementos para el alivio del estrés hasta
+                mejorar la salud integral del cuerpo, nuestra colección curada
+                ofrece suplementos de salud premium adaptados a tus necesidades.
               </p>
-              <p class="text-gray-600 italic text-sm md:text-base font-light leading-relaxed">
-                Eleva tu bienestar con marcas de confianza provenientes de todo el Perú, y embárcate en un viaje hacia una salud y vitalidad óptimas.
+              <p
+                class="text-gray-600 italic text-sm md:text-base font-light leading-relaxed"
+              >
+                Eleva tu bienestar con marcas de confianza provenientes de todo
+                el Perú, y embárcate en un viaje hacia una salud y vitalidad
+                óptimas.
               </p>
               <div class="mt-8 flex flex-wrap justify-center gap-3">
-                <span class="bg-white border border-primary-navy/20 text-primary-navy px-4 py-2 rounded-full text-xs font-medium">
+                <span
+                  class="bg-white border border-primary-navy/20 text-primary-navy px-4 py-2 rounded-full text-xs font-medium"
+                >
                   <i class="fas fa-check-circle mr-1"></i> 100% Natural
                 </span>
-                <span class="bg-white border border-primary-navy/20 text-primary-navy px-4 py-2 rounded-full text-xs font-medium">
+                <span
+                  class="bg-white border border-primary-navy/20 text-primary-navy px-4 py-2 rounded-full text-xs font-medium"
+                >
                   <i class="fas fa-check-circle mr-1"></i> Calidad Premium
                 </span>
-                <span class="bg-white border border-primary-navy/20 text-primary-navy px-4 py-2 rounded-full text-xs font-medium">
+                <span
+                  class="bg-white border border-primary-navy/20 text-primary-navy px-4 py-2 rounded-full text-xs font-medium"
+                >
                   <i class="fas fa-check-circle mr-1"></i> Origen Peruano
                 </span>
               </div>
@@ -276,23 +538,36 @@
       <div class="max-w-7xl mx-auto px-5">
         <!-- Headline principal -->
         <div class="text-center mb-16 fade-in">
-          <h2 class="text-3xl md:text-4xl font-semibold text-primary-navy tracking-tight">
-            Somos más que una tienda de alimentos saludables, somos un estilo de vida.
+          <h2
+            class="text-3xl md:text-4xl font-semibold text-primary-navy tracking-tight"
+          >
+            Somos más que una tienda de alimentos saludables, somos un estilo de
+            vida.
           </h2>
         </div>
 
         <!-- Smoothie Bar Items -->
         <div class="mb-16">
-          <h3 class="text-3xl font-medium text-primary-navy text-center mb-4 fade-in delay-100">Descubre Nuestro Smoothie Bar</h3>
-          <p class="text-center text-gray-600 text-lg font-light mb-10 max-w-2xl mx-auto fade-in delay-100">
-            Encuentra más información sobre tus smoothies favoritos y sus beneficios nutricionales.
+          <h3
+            class="text-3xl font-medium text-primary-navy text-center mb-4 fade-in delay-100"
+          >
+            Descubre Nuestro Smoothie Bar
+          </h3>
+          <p
+            class="text-center text-gray-600 text-lg font-light mb-10 max-w-2xl mx-auto fade-in delay-100"
+          >
+            Encuentra más información sobre tus smoothies favoritos y sus
+            beneficios nutricionales.
           </p>
 
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 scale-in delay-200">
             <div class="lg:col-span-2">
               <img
-                src="images/smoothie1.webp"
+                src="images/smoothiesgente.jpeg"
                 alt="SANA 1937 Smoothies"
+                width="800"
+                height="500"
+                loading="lazy"
                 class="w-full h-[500px] object-cover rounded-lg"
               />
             </div>
@@ -301,21 +576,33 @@
               <img
                 src="images/smoothie2.webp"
                 alt="Acai Bowl"
+                width="400"
+                height="245"
+                loading="lazy"
                 class="w-full h-[245px] object-cover rounded-lg"
               />
               <img
                 src="images/smoothie3.webp"
                 alt="Smoothie Bottles"
+                width="400"
+                height="245"
+                loading="lazy"
                 class="w-full h-[245px] object-cover rounded-lg"
               />
               <img
                 src="images/smoothie4.webp"
                 alt="Smoothie Bowl"
+                width="400"
+                height="245"
+                loading="lazy"
                 class="w-full h-[245px] object-cover rounded-lg"
               />
               <img
                 src="images/smoothie5.webp"
                 alt="Blue Smoothie"
+                width="400"
+                height="245"
+                loading="lazy"
                 class="w-full h-[245px] object-cover rounded-lg"
               />
             </div>
@@ -323,18 +610,31 @@
         </div>
 
         <!-- SUPERCHARGE Section -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-white rounded-lg p-8 border border-gray-200 fade-in delay-300">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-white rounded-lg p-8 border border-gray-200 fade-in delay-300"
+        >
           <div class="text-center lg:text-left">
-            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Eleva Tu Smoothie</h3>
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+              Eleva Tu Smoothie
+            </h3>
             <p class="font-light leading-relaxed mb-6">
-              Creamos recetas que se integran deliciosamente con nuestros add-ons. Escoge entre nuestras opciones de vitaminas, superfoods y creatina para impulsar tu día.
+              Creamos recetas que se integran deliciosamente con nuestros
+              add-ons. Escoge entre nuestras opciones de vitaminas, superfoods y
+              creatina para impulsar tu día.
             </p>
-            <a href="#" class="inline-block bg-primary-navy text-white rounded-full px-6 py-3 text-sm font-medium uppercase tracking-wide transition-all hover:bg-secondary-navy">Ver más</a>
+            <a
+              href="#"
+              class="inline-block bg-primary-navy text-white rounded-full px-6 py-3 text-sm font-medium uppercase tracking-wide transition-all hover:bg-secondary-navy"
+              >Ver más</a
+            >
           </div>
           <div>
             <img
-              src="images/power-smoothies.webp"
+              src="images/smoothiesoficial.jpeg"
               alt="Power Smoothies"
+              width="600"
+              height="300"
+              loading="lazy"
               class="w-full h-[300px] object-cover rounded-lg"
             />
           </div>
@@ -377,7 +677,11 @@
 
           <!-- Columna 2: SANA 1937 - Quiénes Somos -->
           <div class="text-center md:text-left">
-            <h3 class="font-inter font-semibold text-primary-navy mb-6 text-sm uppercase tracking-wide">SANA 1937 - Quiénes Somos</h3>
+            <h3
+              class="font-inter font-semibold text-primary-navy mb-6 text-sm uppercase tracking-wide"
+            >
+              SANA 1937 - Quiénes Somos
+            </h3>
             <p class="font-inter text-gray-600 leading-relaxed text-sm">
               Marca peruana dedicada al bienestar, con más de 85 años de
               tradición familiar en el cuidado de la salud natural.
@@ -388,7 +692,11 @@
 
           <!-- Columna 3: Servicio al Cliente -->
           <div class="text-center md:text-left">
-            <h3 class="font-inter font-semibold text-primary-navy mb-6 text-sm uppercase tracking-wide">Servicio al Cliente - Contacto</h3>
+            <h3
+              class="font-inter font-semibold text-primary-navy mb-6 text-sm uppercase tracking-wide"
+            >
+              Servicio al Cliente - Contacto
+            </h3>
             <!-- <p class="font-inter text-gray-600 text-sm mb-3">
               <i class="fas fa-phone mr-2.5 text-black"></i>
               +51 1 234 5678
@@ -407,16 +715,26 @@
             >
               Contáctanos
             </a>
+            <a
+              href="#"
+              class="coming-soon-link block mt-4 font-inter font-medium text-sm uppercase tracking-wide text-gray-800 hover:text-primary-navy transition-all underline"
+            >
+              Trabaja con nosotros
+            </a>
           </div>
         </div>
 
-        <div class="border-t border-gray-200 pt-5 flex flex-col md:flex-row justify-start items-center gap-4 text-left">
-          <p class="font-inter text-gray-500 text-sm">&copy; 2025 SANA 1937. Todos los derechos reservados.</p>
+        <div
+          class="border-t border-gray-200 pt-5 flex flex-col md:flex-row justify-start items-center gap-4 text-left"
+        >
+          <p class="font-inter text-gray-500 text-sm">
+            &copy; 2025 SANA 1937. Todos los derechos reservados.
+          </p>
         </div>
       </div>
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>

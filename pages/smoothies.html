@@ -1,154 +1,727 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Menú de Smoothies - SANA 1937</title>
-  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'primary-navy': '#15264b',
-            'secondary-navy': '#2d4a6b',
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menú de Smoothies - SANA 1937</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary-navy": "#15264b",
+              "secondary-navy": "#2d4a6b",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              inter: ["Inter", "sans-serif"],
+            },
           },
-          fontFamily: {
-            'poppins': ['Poppins', 'sans-serif'],
-            'inter': ['Inter', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-  
-  <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-</head>
-<body class="font-poppins">
-  <!-- Header -->
-  <header class="header fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
-    <div class="max-w-7xl mx-auto px-5">
-      <div class="flex justify-between items-center py-8 relative">
-        <nav class="hidden lg:flex items-center gap-10">
-          <a href="productos.html" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 hover:text-primary-navy transition-all">Productos</a>
-          <a href="marcas.html" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 hover:text-primary-navy transition-all">Marcas</a>
-          <a href="nosotros.html" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 hover:text-primary-navy transition-all">Nosotros</a>
-        </nav>
-        <div class="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 z-10">
-          <a href="../index.html"><img src="../images/logo.png" alt="SANA 1937" class="h-[100px] w-auto" /></a>
-        </div>
-        <nav class="hidden lg:flex items-center gap-10">
-          <a href="smoothies.html" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 hover:text-primary-navy transition-all">Smoothies</a>
-          <a href="franquicia.html" class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 hover:text-primary-navy transition-all">Franquicia</a>
-        </nav>
-        <button class="lg:hidden p-2 menu-toggle"><span class="text-2xl">☰</span></button>
-      </div>
-    </div>
-  </header>
+        },
+      };
+    </script>
 
-  <!-- Coming Soon -->
-  <section class="min-h-screen flex items-center justify-center pt-32 pb-20 px-5">
-    <div class="max-w-4xl mx-auto text-center">
-      <div class="text-8xl text-primary-navy mb-8"><i class="fas fa-blender"></i></div>
-      <h1 class="text-5xl font-semibold text-gray-800 mb-4">Menú de Smoothies</h1>
-      <h2 class="text-3xl text-black mb-8">Próximamente</h2>
-      <p class="text-xl text-gray-600 mb-8">Estamos perfeccionando nuestras recetas de smoothies naturales para ofrecerte la mejor experiencia</p>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-poppins">
+    <!-- Header -->
+    <header
+      class="header fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="flex justify-between items-center py-5 relative">
+          <!-- Nav izquierda - desktop -->
+          <nav class="hidden lg:flex items-center gap-10">
+            <a
+              href="#"
+              class="coming-soon-link font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all"
+              >Productos</a
+            >
+            <a
+              href="marcas.html"
+              class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all"
+              >Marcas</a
+            >
+            <a
+              href="nosotros.html"
+              class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all"
+              >Nosotros</a
+            >
+          </nav>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
-        <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-lg transition-all">
-          <div class="text-5xl text-secondary-navy mb-4"><i class="fas fa-apple-alt"></i></div>
-          <h3 class="text-xl font-semibold mb-2">Detox Naturales</h3>
-          <p class="text-gray-600">Smoothies purificadores y energizantes</p>
-        </div>
-        <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-lg transition-all">
-          <div class="text-5xl text-secondary-navy mb-4"><i class="fas fa-dumbbell"></i></div>
-          <h3 class="text-xl font-semibold mb-2">Protein Boost</h3>
-          <p class="text-gray-600">Alto contenido proteico para deportistas</p>
-        </div>
-        <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-lg transition-all">
-          <div class="text-5xl text-secondary-navy mb-4"><i class="fas fa-heart"></i></div>
-          <h3 class="text-xl font-semibold mb-2">Antioxidantes</h3>
-          <p class="text-gray-600">Ricos en antioxidantes naturales</p>
-        </div>
-      </div>
-
-      <!-- Categorías Preview -->
-      <div class="my-12">
-        <h2 class="text-3xl font-semibold mb-8">Nuestras Categorías</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-gradient-to-br from-orange-400 to-pink-400 text-white p-8 rounded-lg text-center">
-            <h3 class="text-2xl font-semibold mb-2">🌅 Energía Matutina</h3>
-            <p class="mb-2">Smoothies para comenzar el día con vitalidad</p>
-            <small>Con maca, quinoa y frutas tropicales</small>
+          <!-- Logo centrado -->
+          <div
+            class="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 z-10"
+          >
+            <a href="../index.html">
+              <img
+                src="../images/logo_let.png"
+                alt="SANA 1937"
+                width="120"
+                height="60"
+                class="h-[60px] w-auto transition-all duration-300 logo"
+              />
+            </a>
           </div>
-          <div class="bg-gradient-to-br from-green-300 to-teal-400 text-white p-8 rounded-lg text-center">
-            <h3 class="text-2xl font-semibold mb-2">🥬 Verde y Saludable</h3>
-            <p class="mb-2">Vegetales verdes con superalimentos</p>
-            <small>Espinaca, kale, chía y aguacate</small>
+
+          <!-- Nav derecha - desktop -->
+          <nav class="hidden lg:flex items-center gap-10">
+            <a
+              href="smoothies.html"
+              class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 text-primary-navy border-black"
+              >Smoothies</a
+            >
+            <a
+              href="franquicia.html"
+              class="font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all"
+              >Franquicia</a
+            >
+            <a
+              href="#"
+              class="coming-soon-link font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all"
+              >Dónde estamos</a
+            >
+          </nav>
+
+          <!-- Menú móvil -->
+          <button
+            class="lg:hidden p-2 rounded text-primary-navy hover:bg-gray-50 menu-toggle"
+            aria-label="Abrir menú"
+          >
+            <span class="text-2xl">☰</span>
+          </button>
+
+          <!-- Nav móvil desplegable -->
+          <nav
+            class="mobile-nav absolute top-full left-0 right-0 bg-white flex-col p-5 shadow-lg border-t border-gray-200 opacity-0 invisible -translate-y-full transition-all duration-300"
+          >
+            <a
+              href="#"
+              class="coming-soon-link py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy"
+              >Productos</a
+            >
+            <a
+              href="marcas.html"
+              class="py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy"
+              >Marcas</a
+            >
+            <a
+              href="nosotros.html"
+              class="py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy"
+              >Nosotros</a
+            >
+            <a
+              href="smoothies.html"
+              class="py-4 text-center border-b border-gray-200 text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy"
+              >Smoothies</a
+            >
+            <a
+              href="franquicia.html"
+              class="py-4 text-center text-gray-800 font-inter font-medium text-sm uppercase tracking-wide hover:text-primary-navy"
+              >Franquicia</a
+            >
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Smoothie Menu Section -->
+    <section class="py-20 mt-20">
+      <div class="max-w-7xl mx-auto px-5">
+        <!-- Header -->
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-5xl font-semibold text-primary-navy mb-4">
+            Menú de Smoothies
+          </h1>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Smoothies funcionales elaborados con ingredientes naturales y
+            superfoods para potenciar tu bienestar
+          </p>
+        </div>
+
+        <!-- Functional Smoothies -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-semibold text-primary-navy mb-8">
+            Functional Smoothies
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Hazelnut -->
+            <div
+              class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500"
+            >
+              <a href="smoothies/hazelnut.html" class="block">
+                <div class="relative overflow-hidden bg-gray-50 h-80">
+                  <img
+                    src="../images/smoothies/hazelnut.jpeg"
+                    alt="Hazelnut Smoothie"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    onerror="this.src = '../images/smoothie1.webp'"
+                  />
+                  <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                    <span
+                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                      >🌾 Gluten-Free</span
+                    >
+                    <span
+                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                      >💪 High Protein</span
+                    >
+                    <span
+                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                      >⭐ Popular</span
+                    >
+                  </div>
+                </div>
+              </a>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  Hazelnut
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                  Smoothie reconfortante, de sabor profundo y naturalmente
+                  achocolatado, con textura cremosa que satisface el paladar.
+                  Aporta energía sostenida, apoyo al mantenimiento muscular y
+                  nutrición equilibrada.
+                </p>
+                <div class="text-sm text-gray-500 mb-4">
+                  <span class="font-semibold">Tamaño:</span> 16 oz
+                </div>
+                <details class="mb-4">
+                  <summary
+                    class="cursor-pointer text-sm font-semibold text-primary-navy mb-2"
+                  >
+                    Ver ingredientes
+                  </summary>
+                  <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                    Leche de avena, Plátano, Palta, Dátiles, Avellanas,
+                    Mantequilla de avellanas, Cacao en polvo, Yogurt griego,
+                    Proteína de chocolate.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Berry Glow -->
+            <div
+              class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500"
+            >
+              <a href="smoothies/berry-glow.html" class="block">
+                <div class="relative overflow-hidden bg-gray-50 h-80">
+                  <img
+                    src="../images/smoothies/berryglow_v2.jpeg"
+                    alt="Berry Glow Smoothie"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    onerror="this.src = '../images/smoothie-purple_v2.webp'"
+                  />
+                  <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                    <span
+                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                      >🌾 Gluten-Free</span
+                    >
+                  </div>
+                </div>
+              </a>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  Berry Glow
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                  Smoothie vibrante y cremoso, rico en antioxidantes que
+                  favorecen la luminosidad de la piel y la circulación, mientras
+                  el colágeno contribuye al cuidado de articulaciones, tejidos y
+                  firmeza cutánea.
+                </p>
+                <div class="text-sm text-gray-500 mb-4">
+                  <span class="font-semibold">Tamaño:</span> 16 oz
+                </div>
+                <details class="mb-4">
+                  <summary
+                    class="cursor-pointer text-sm font-semibold text-primary-navy mb-2"
+                  >
+                    Ver ingredientes
+                  </summary>
+                  <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                    Leche de almendras, Arándanos, Fresa, Frambuesa, Plátano,
+                    Palta, Miel de maple, Colágeno, Yogurt griego, Proteína de
+                    vainilla.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Vitamin Boost -->
+            <div
+              class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500"
+            >
+              <a href="smoothies/vitamin-boost.html" class="block">
+                <div class="relative overflow-hidden bg-gray-50 h-80">
+                  <img
+                    src="../images/smoothies/vitaminboost_v2.jpeg"
+                    alt="Vitamin Boost Smoothie"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    onerror="this.src = '../images/smoothie-naranja_v2.webp'"
+                  />
+                  <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                    <span
+                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                      >🌱 Vegan</span
+                    >
+                    <span
+                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                      >🌾 Gluten-Free</span
+                    >
+                  </div>
+                </div>
+              </a>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  Vitamin Boost
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                  Smoothie fresco y tropical, de sabor cítrico y vibrante,
+                  diseñado para aportar un alto contenido de vitamina C, apoyar
+                  las defensas naturales, favorecer la digestión y brindar
+                  energía ligera y revitalizante.
+                </p>
+                <div class="text-sm text-gray-500 mb-4">
+                  <span class="font-semibold">Tamaño:</span> 16 oz
+                </div>
+                <details class="mb-4">
+                  <summary
+                    class="cursor-pointer text-sm font-semibold text-primary-navy mb-2"
+                  >
+                    Ver ingredientes
+                  </summary>
+                  <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                    Agua de coco, Leche de coco, Zumo de naranja, Zumo de limón,
+                    Mango, Piña, Papaya, Jengibre, Camu camu, Yogurt griego,
+                    Proteína de vainilla.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Power Greens -->
+            <div
+              class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500"
+            >
+              <a href="smoothies/power-greens.html" class="block">
+                <div class="relative overflow-hidden bg-gray-50 h-80">
+                  <img
+                    src="../images/smoothies/powergreens_v2.jpeg"
+                    alt="Power Greens Smoothie"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    onerror="this.src = '../images/smoothie2.webp'"
+                  />
+                  <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                    <span
+                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                      >🌱 Vegan</span
+                    >
+                    <span
+                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                      >🌾 Gluten-Free</span
+                    >
+                    <span
+                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                      >💪 High Protein</span
+                    >
+                  </div>
+                </div>
+              </a>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  Power Greens
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                  Smoothie revitalizante, rico en antioxidantes que apoyan la
+                  desintoxicación natural, la salud celular y el sistema
+                  inmunológico, aportando energía limpia y nutrición concentrada
+                  en cada sorbo.
+                </p>
+                <div class="text-sm text-gray-500 mb-4">
+                  <span class="font-semibold">Tamaño:</span> 16 oz
+                </div>
+                <details class="mb-4">
+                  <summary
+                    class="cursor-pointer text-sm font-semibold text-primary-navy mb-2"
+                  >
+                    Ver ingredientes
+                  </summary>
+                  <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                    Agua de coco, Zumo de limón, Espinaca, Kale, Plátano, Piña,
+                    Mango, Palta, Espirulina, Proteína.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Almond Reishi -->
+            <div
+              class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500"
+            >
+              <a href="smoothies/almond-reishi.html" class="block">
+                <div class="relative overflow-hidden bg-gray-50 h-80">
+                  <img
+                    src="../images/smoothies/almondreishi_v2.jpeg"
+                    alt="Almond Reishi Smoothie"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    onerror="this.src = '../images/smoothie-azul_v2.webp'"
+                  />
+                  <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                    <span
+                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                      >🌾 Gluten-Free</span
+                    >
+                    <span
+                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                      >⭐ Popular</span
+                    >
+                  </div>
+                </div>
+              </a>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  Almond Reishi
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                  Smoothie cremoso y equilibrado que aporta energía sostenida,
+                  apoya la relajación y el manejo del estrés, contribuye a la
+                  recuperación muscular y favorece una buena hidratación.
+                </p>
+                <div class="text-sm text-gray-500 mb-4">
+                  <span class="font-semibold">Tamaño:</span> 16 oz
+                </div>
+                <details class="mb-4">
+                  <summary
+                    class="cursor-pointer text-sm font-semibold text-primary-navy mb-2"
+                  >
+                    Ver ingredientes
+                  </summary>
+                  <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                    Leche de almendras, Agua de coco, Plátano, Dátiles,
+                    Mantequilla de almendra, Vainilla, Sal marina, Hongo reishi,
+                    Caramelo de alulosa, Proteína de vainilla.
+                  </p>
+                </details>
+              </div>
+            </div>
           </div>
-          <div class="bg-gradient-to-br from-yellow-300 to-red-400 text-white p-8 rounded-lg text-center">
-            <h3 class="text-2xl font-semibold mb-2">🍓 Frutas Tropicales</h3>
-            <p class="mb-2">Sabores exóticos del Perú</p>
-            <small>Camu camu, lucuma y maracuyá</small>
+        </div>
+
+        <!-- High Protein Smoothies -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-semibold text-primary-navy mb-8">
+            High Protein Smoothies
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Pink Power Blend -->
+            <div
+              class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500"
+            >
+              <a href="smoothies/pink-power-blend.html" class="block">
+                <div class="relative overflow-hidden bg-gray-50 h-80">
+                  <img
+                    src="../images/smoothies/pinkpowerblend_v2.jpeg"
+                    alt="Pink Power Blend Smoothie"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    onerror="this.src = '../images/smoothie3.webp'"
+                  />
+                  <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                    <span
+                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                      >🌾 Gluten-Free</span
+                    >
+                    <span
+                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                      >🔥 Low Calorie</span
+                    >
+                    <span
+                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                      >⭐ Popular</span
+                    >
+                  </div>
+                </div>
+              </a>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  Pink Power Blend
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                  Smoothie reconfortante que contribuye al cuidado de la piel y
+                  las articulaciones, ideal para un momento de calma y
+                  bienestar.
+                </p>
+                <div class="text-sm text-gray-500 mb-4">
+                  <span class="font-semibold">Tamaño:</span> 16 oz
+                </div>
+                <details class="mb-4">
+                  <summary
+                    class="cursor-pointer text-sm font-semibold text-primary-navy mb-2"
+                  >
+                    Ver ingredientes
+                  </summary>
+                  <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                    Leche de almendras, Plátano, Fresa, Frambuesa, Betarraga,
+                    Vainilla, Miel de maple, Ashwagandha, Colágeno, Proteína de
+                    vainilla.
+                  </p>
+                </details>
+              </div>
+            </div>
           </div>
-          <div class="bg-gradient-to-br from-green-300 to-teal-500 text-white p-8 rounded-lg text-center">
-            <h3 class="text-2xl font-semibold mb-2">💪 Post-Entrenamiento</h3>
-            <p class="mb-2">Recuperación y construcción muscular</p>
-            <small>Proteínas vegetales y aminoácidos</small>
+        </div>
+
+        <!-- Add-Ons Section -->
+        <div
+          class="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-8 md:p-12"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+            <!-- Texto -->
+            <div class="lg:col-span-2 flex flex-col justify-center">
+              <h2 class="text-3xl font-semibold text-primary-navy mb-4">
+                Add-Ons
+              </h2>
+              <p class="text-lg text-gray-600">
+                Potencia tu smoothie con nuestros add-ons 100% naturales, que
+                incluyen creatina, espirulina, colágeno, probióticos y más
+                superfoods energizantes para apoyar tu salud y objetivos de
+                bienestar físico.
+              </p>
+            </div>
+
+            <!-- Imagen destacada -->
+            <div class="lg:col-span-1">
+              <div
+                class="bg-gray-100 rounded-xl overflow-hidden shadow-md aspect-square"
+              >
+                <img
+                  src="../images/smoothies/addons.jpeg"
+                  alt="Add-Ons SANA 1937"
+                  class="w-full h-full object-cover"
+                  onerror="this.src = '../images/smoothie1.webp'"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Protein Isolate -->
+            <div
+              class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-all"
+            >
+              <h4 class="text-lg font-semibold text-primary-navy mb-2">
+                💪 Protein Isolate
+              </h4>
+              <p class="text-sm text-gray-600">
+                Proteína de alta pureza con bajo contenido de grasa y
+                carbohidratos.
+              </p>
+            </div>
+
+            <!-- Creatina -->
+            <div
+              class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-all"
+            >
+              <h4 class="text-lg font-semibold text-primary-navy mb-2">
+                ⚡ Creatina
+              </h4>
+              <p class="text-sm text-gray-600">
+                Mejora la fuerza, el rendimiento físico y ayuda a la
+                recuperación muscular.
+              </p>
+            </div>
+
+            <!-- Chia -->
+            <div
+              class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-all"
+            >
+              <h4 class="text-lg font-semibold text-primary-navy mb-2">
+                🌾 Chia
+              </h4>
+              <p class="text-sm text-gray-600">
+                Fuente de fibra y omega-3 que apoya la digestión y mantiene
+                saciedad por más tiempo.
+              </p>
+            </div>
+
+            <!-- Maca -->
+            <div
+              class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-all"
+            >
+              <h4 class="text-lg font-semibold text-primary-navy mb-2">
+                🌿 Maca
+              </h4>
+              <p class="text-sm text-gray-600">
+                Aumenta la energía natural, el enfoque y el balance hormonal.
+              </p>
+            </div>
+
+            <!-- Ashwagandha -->
+            <div
+              class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-all"
+            >
+              <h4 class="text-lg font-semibold text-primary-navy mb-2">
+                🧘 Ashwagandha
+              </h4>
+              <p class="text-sm text-gray-600">
+                Reduce el estrés, mejora el estado de ánimo.
+              </p>
+            </div>
+
+            <!-- Colágeno -->
+            <div
+              class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-all"
+            >
+              <h4 class="text-lg font-semibold text-primary-navy mb-2">
+                ✨ Colágeno
+              </h4>
+              <p class="text-sm text-gray-600">
+                Fortalece piel, uñas y articulaciones, apoyando la regeneración
+                del tejido conectivo.
+              </p>
+            </div>
+
+            <!-- Reishi -->
+            <div
+              class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-all"
+            >
+              <h4 class="text-lg font-semibold text-primary-navy mb-2">
+                🍄 Reishi
+              </h4>
+              <p class="text-sm text-gray-600">
+                Adaptógeno que apoya la relajación, el sistema inmune y el
+                bienestar general.
+              </p>
+            </div>
+
+            <!-- Vitamina C -->
+            <div
+              class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-all"
+            >
+              <h4 class="text-lg font-semibold text-primary-navy mb-2">
+                🍊 Vitamina C
+              </h4>
+              <p class="text-sm text-gray-600">
+                Antioxidante que refuerza las defensas y mejora la absorción de
+                nutrientes.
+              </p>
+            </div>
+
+            <!-- Probióticos -->
+            <div
+              class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-all"
+            >
+              <h4 class="text-lg font-semibold text-primary-navy mb-2">
+                🦠 Probióticos
+              </h4>
+              <p class="text-sm text-gray-600">
+                Favorece la salud intestinal, mejoran la digestión y mantienen
+                un sistema inmune fuerte.
+              </p>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-        <a href="contacto.html" class="inline-block bg-primary-navy text-white py-3 px-8 rounded font-medium uppercase tracking-wide hover:bg-secondary-navy transition-all">Notificarme del lanzamiento</a>
-        <a href="../index.html" class="inline-block bg-transparent border-2 border-primary-navy text-primary-navy py-3 px-8 rounded font-medium uppercase tracking-wide hover:bg-primary-navy hover:text-white transition-all">Volver al Inicio</a>
-      </div>
+    <!-- Footer -->
+    <footer class="bg-gray-50 text-gray-800 py-16 border-t border-gray-200">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          <!-- Columna 1: Logo y Redes Sociales -->
+          <div class="flex justify-center flex-col items-center text-center">
+            <div class="mb-6">
+              <img
+                src="../images/logo_let.png"
+                alt="SANA 1937"
+                class="h-20 w-auto mx-auto md:mx-0"
+              />
+            </div>
+            <div class="flex gap-4 justify-center md:justify-start">
+              <a
+                href="https://www.facebook.com/share/1D5MP5KZiw/?mibextid=wwXIfr"
+                target="_blank"
+                class="inline-flex items-center justify-center w-10 h-10 bg-primary-navy rounded-full text-white transition-all hover:bg-secondary-navy hover:-translate-y-0.5 hover:shadow-md"
+                title="Facebook - SANA 1937"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/_sana1937_/"
+                target="_blank"
+                class="inline-flex items-center justify-center w-10 h-10 bg-primary-navy rounded-full text-white transition-all hover:bg-secondary-navy hover:-translate-y-0.5 hover:shadow-md"
+                title="Instagram - @sana1937"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
 
-      <!-- Newsletter -->
-      <div class="max-w-lg mx-auto bg-gray-50 p-8 rounded-lg">
-        <h3 class="text-2xl font-semibold mb-4">¡Sé el primero en probarlo!</h3>
-        <p class="text-gray-600 mb-6">Suscríbete para recibir ofertas exclusivas y ser notificado cuando lancemos nuestro menú de smoothies</p>
-        <form class="flex gap-2">
-          <input type="email" placeholder="Tu email" class="flex-1 px-4 py-3 border-2 border-gray-200 rounded focus:outline-none focus:border-primary-navy" required />
-          <button type="submit" class="bg-primary-navy text-white px-6 py-3 rounded font-medium hover:bg-secondary-navy transition-all whitespace-nowrap">Suscribirme</button>
-        </form>
-      </div>
-    </div>
-  </section>
+          <!-- Columna 2: SANA 1937 - Quiénes Somos -->
+          <div class="text-center md:text-left">
+            <h3
+              class="font-inter font-semibold text-primary-navy mb-6 text-sm uppercase tracking-wide"
+            >
+              SANA 1937 - Quiénes Somos
+            </h3>
+            <p class="font-inter text-gray-600 leading-relaxed text-sm">
+              Marca peruana dedicada al bienestar, con más de 85 años de
+              tradición familiar en el cuidado de la salud natural.
+              Transformamos la herencia ancestral en propuestas modernas de
+              nutrición y sabor.
+            </p>
+          </div>
 
-  <!-- Footer -->
-  <footer class="bg-gray-50 text-gray-800 py-16 border-t border-gray-200">
-    <div class="max-w-7xl mx-auto px-5">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-        <div class="text-center md:text-left">
-          <div class="mb-6"><img src="../images/logowhite.png" alt="SANA 1937" class="h-20 w-auto mx-auto md:mx-0" /></div>
-          <div class="flex gap-4 justify-center md:justify-start">
-            <a href="https://www.facebook.com/share/1D5MP5KZiw/?mibextid=wwXIfr" target="_blank" class="inline-flex items-center justify-center w-10 h-10 bg-primary-navy rounded-full text-white hover:bg-secondary-navy transition-all"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/sana1937" target="_blank" class="inline-flex items-center justify-center w-10 h-10 bg-primary-navy rounded-full text-white hover:bg-secondary-navy transition-all"><i class="fab fa-instagram"></i></a>
+          <!-- Columna 3: Servicio al Cliente -->
+          <div class="text-center md:text-left">
+            <h3
+              class="font-inter font-semibold text-primary-navy mb-6 text-sm uppercase tracking-wide"
+            >
+              Servicio al Cliente - Contacto
+            </h3>
+            <p class="font-inter text-gray-600 text-sm mb-4">
+              <i class="fas fa-map-marker-alt mr-2.5 text-black"></i>
+              For Now - Lima, Perú
+            </p>
+            <a
+              href="contacto.html"
+              class="inline-block bg-primary-navy text-white py-2.5 px-6 rounded text-sm font-medium uppercase tracking-wide transition-all hover:bg-secondary-navy hover:-translate-y-0.5 hover:shadow-md"
+            >
+              Contáctanos
+            </a>
+            <a
+              href="#"
+              class="coming-soon-link block mt-4 font-inter font-medium text-sm uppercase tracking-wide text-gray-800 hover:text-primary-navy transition-all underline"
+            >
+              Trabaja con nosotros
+            </a>
           </div>
         </div>
-        <div class="text-center md:text-left">
-          <h3 class="font-inter font-semibold text-primary-navy mb-6 text-sm uppercase tracking-wide">SANA 1937</h3>
-          <p class="font-inter text-gray-600 leading-relaxed text-sm">Marca peruana dedicada al bienestar, con más de 85 años de tradición familiar.</p>
-          <a href="nosotros.html" class="text-black hover:text-primary-navy">Conoce más</a>
-        </div>
-        <div class="text-center md:text-left">
-          <h3 class="font-inter font-semibold text-primary-navy mb-6 text-sm uppercase tracking-wide">Contacto</h3>
-          <p class="font-inter text-gray-600 text-sm mb-3"><i class="fas fa-phone mr-2.5"></i>+51 1 234 5678</p>
-          <p class="font-inter text-gray-600 text-sm mb-3"><i class="fas fa-envelope mr-2.5"></i>info@sana1937.com</p>
-          <a href="contacto.html" class="inline-block bg-primary-navy text-white py-2.5 px-6 rounded text-sm font-medium uppercase tracking-wide hover:bg-secondary-navy transition-all mt-4">Contáctanos</a>
-        </div>
-      </div>
-      <div class="border-t border-gray-200 pt-5 text-center">
-        <p class="font-inter text-gray-500 text-sm">&copy; 2024 SANA 1937. Todos los derechos reservados.</p>
-      </div>
-    </div>
-  </footer>
 
-  <script src="../js/main.js"></script>
-</body>
+        <div
+          class="border-t border-gray-200 pt-5 flex flex-col md:flex-row justify-start items-center gap-4 text-left"
+        >
+          <p class="font-inter text-gray-500 text-sm">
+            &copy; 2025 SANA 1937. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </body>
 </html>
