@@ -238,12 +238,29 @@
       </div>
     </section>
 
-    <!-- Hero Banner -->
+    <!-- Hero Banner Mobile -->
     <section
-      class="flex sm:hidden hero h-[50vh] flex items-center justify-center relative bg-contain bg-center bg-no-repeat mt-12"
-      style="background-image: url(&quot;images/hero_mobile.png&quot;)"
+      class="flex sm:hidden hero h-[50vh] items-center justify-center relative overflow-hidden mt-12"
     >
-      <!-- Solo fondo de imagen, sin contenido -->
+      <!-- Imagen de fondo -->
+      <div
+        class="absolute inset-0 bg-cover bg-center"
+        style="background-image: url(&quot;images/smoothiesgente_v3.jpeg&quot;)"
+      ></div>
+
+      <!-- Overlay con opacidad -->
+      <div class="absolute inset-0 bg-primary-navy" style="opacity: 0.9"></div>
+
+      <!-- Imagen hero sobrepuesta -->
+      <div
+        class="relative z-10 w-full h-full flex items-center justify-center px-4"
+      >
+        <img
+          src="images/hero_v2.png"
+          alt="SANA 1937"
+          class="max-h-full w-auto object-contain"
+        />
+      </div>
     </section>
 
     <!-- Botón de scroll entre secciones -->
