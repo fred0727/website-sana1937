@@ -1,0 +1,26 @@
+{
+  "name": "website-sana1937",
+  "version": "1.0.0",
+  "description": "Landing page profesional para SANA 1937, marca peruana dedicada al bienestar natural con más de 85 años de tradición familiar.",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.js -i ./css/tailwind.input.css -o ./css/tailwind.css --minify",
+    "watch:css": "tailwindcss -c tailwind.config.js -i ./css/tailwind.input.css -o ./css/tailwind.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fred0727/website-sana1937.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/fred0727/website-sana1937/issues"
+  },
+  "homepage": "https://github.com/fred0727/website-sana1937#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

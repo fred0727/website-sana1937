@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="es">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DBJ145Y6XJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DBJ145Y6XJ');
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dr. Booch - SANA 1937</title>
@@ -10,23 +19,7 @@
       href="../../images/logo-sana1937.svg"
     />
     <link rel="alternate icon" type="image/png" href="../../images/logo.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              "primary-navy": "#15264b",
-              "secondary-navy": "#2d4a6b",
-            },
-            fontFamily: {
-              poppins: ["Poppins", "sans-serif"],
-              inter: ["Inter", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
+    <link rel="stylesheet" href="../../css/tailwind.css" />
     <link rel="stylesheet" href="../../css/styles.css" />
     <link
       rel="stylesheet"
@@ -181,16 +174,16 @@
           >
             Shots 50ml
           </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Immunity Booch -->
             <div
               class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
             >
-              <div class="bg-gray-100 h-85 overflow-hidden">
+              <div class="bg-gray-100 h-72 overflow-hidden">
                 <img
                   src="../../images/marcas/immunitybooch.jpeg"
                   alt="Immunity Booch"
-                  class="w-full h-full object-cover"
+                  class="w-full h-full object-contain p-2 bg-white"
                   onerror="this.src = '../../images/smoothie1.webp'"
                 />
               </div>
@@ -230,11 +223,11 @@
             <div
               class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
             >
-              <div class="bg-gray-100 h-85 overflow-hidden">
+              <div class="bg-gray-100 h-72 overflow-hidden">
                 <img
                   src="../../images/marcas/naturalenergybooch.jpeg"
                   alt="Natural Energy Booch"
-                  class="w-full h-full object-cover"
+                  class="w-full h-full object-contain p-2 bg-white"
                   onerror="this.src = '../../images/smoothie2.webp'"
                 />
               </div>
@@ -280,16 +273,16 @@
           >
             Botellas 250ml
           </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Manzana - Canela -->
             <div
               class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
             >
-              <div class="bg-gray-100 h-85 overflow-hidden">
+              <div class="bg-gray-100 h-72 overflow-hidden">
                 <img
                   src="../../images/marcas/manzanacanela.jpeg"
                   alt="Manzana - Canela"
-                  class="w-full h-full object-cover"
+                  class="w-full h-full object-contain p-2 bg-white"
                   onerror="this.src = '../../images/smoothie3.webp'"
                 />
               </div>
@@ -315,11 +308,11 @@
             <div
               class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
             >
-              <div class="bg-gray-100 h-85 overflow-hidden">
+              <div class="bg-gray-100 h-72 overflow-hidden">
                 <img
                   src="../../images/marcas/aguadejamaica.jpeg"
                   alt="Agua de Jamaica"
-                  class="w-full h-full object-cover"
+                  class="w-full h-full object-contain p-2 bg-white"
                   onerror="this.src = '../../images/smoothie-purple_v2.webp'"
                 />
               </div>

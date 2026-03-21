@@ -1,28 +1,25 @@
 <!doctype html>
 <html lang="es">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-DBJ145Y6XJ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-DBJ145Y6XJ");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menú de Smoothies - SANA 1937</title>
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              "primary-navy": "#15264b",
-              "secondary-navy": "#2d4a6b",
-            },
-            fontFamily: {
-              poppins: ["Poppins", "sans-serif"],
-              inter: ["Inter", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
+    <link rel="stylesheet" href="../css/tailwind.css" />
 
     <link rel="stylesheet" href="../css/styles.css" />
     <link
@@ -162,104 +159,116 @@
           </h2>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Hazelnut -->
+            <!-- Almond Reishi -->
             <div
-              class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500"
+              class="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer"
             >
-              <a href="smoothies/hazelnut.html" class="block">
-                <div class="relative overflow-hidden bg-gray-50 h-80">
-                  <img
-                    src="../images/smoothies/hazelnut.jpeg"
-                    alt="Hazelnut Smoothie"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    onerror="this.src = '../images/smoothie1.webp'"
-                  />
-                  <div class="absolute top-4 left-4 flex flex-wrap gap-2">
-                    <span
-                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
-                      >🌾 Gluten-Free</span
-                    >
-                    <span
-                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
-                      >💪 High Protein</span
-                    >
-                    <span
-                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
-                      >⭐ Popular</span
-                    >
-                  </div>
+              <a
+                href="smoothies/almond-reishi.html"
+                class="absolute inset-0 z-0"
+                aria-label="Ver Almond Reishi"
+              ></a>
+              <div
+                class="relative overflow-hidden bg-gray-50 h-80 pointer-events-none"
+              >
+                <img
+                  src="../images/smoothies/almondreishi_v2.jpeg"
+                  alt="Almond Reishi Smoothie"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onerror="this.src = '../images/smoothie-azul_v2.webp'"
+                />
+                <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >🌾 Gluten-Free</span
+                  >
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >⭐ Popular</span
+                  >
                 </div>
-              </a>
+              </div>
               <div class="p-6">
                 <h3 class="text-2xl font-semibold text-gray-900 mb-3">
-                  Hazelnut
+                  Almond Reishi
                 </h3>
                 <p class="text-sm text-gray-600 mb-4 leading-relaxed">
-                  Smoothie reconfortante, de sabor profundo y naturalmente
-                  achocolatado, con textura cremosa que satisface el paladar.
-                  Aporta energía sostenida, apoyo al mantenimiento muscular y
-                  nutrición equilibrada.
+                  Smoothie cremoso y equilibrado que aporta energía sostenida,
+                  apoya la relajación y el manejo del estrés, contribuye a la
+                  recuperación muscular y favorece una buena hidratación.
                 </p>
                 <div class="text-sm text-gray-500 mb-4">
                   <span class="font-semibold">Tamaño:</span> 16 oz
                 </div>
-                <details class="mb-4">
+                <details class="mb-4 relative z-10">
                   <summary
                     class="cursor-pointer text-sm font-semibold text-primary-navy mb-2"
                   >
                     Ver ingredientes
                   </summary>
                   <p class="text-xs text-gray-600 mt-2 leading-relaxed">
-                    Leche de avena, Plátano, Palta, Dátiles, Avellanas,
-                    Mantequilla de avellanas, Cacao en polvo, Yogurt griego,
-                    Proteína de chocolate.
+                    Leche de almendras, Agua de coco, Plátano, Dátiles,
+                    Mantequilla de almendra, Vainilla, Sal marina, Hongo reishi,
+                    Caramelo de alulosa, Proteína de vainilla.
                   </p>
                 </details>
               </div>
             </div>
 
-            <!-- Berry Glow -->
+            <!-- Pink Power Blend -->
             <div
-              class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500"
+              class="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer"
             >
-              <a href="smoothies/berry-glow.html" class="block">
-                <div class="relative overflow-hidden bg-gray-50 h-80">
-                  <img
-                    src="../images/smoothies/berryglow_v2.jpeg"
-                    alt="Berry Glow Smoothie"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    onerror="this.src = '../images/smoothie-purple_v2.webp'"
-                  />
-                  <div class="absolute top-4 left-4 flex flex-wrap gap-2">
-                    <span
-                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
-                      >🌾 Gluten-Free</span
-                    >
-                  </div>
+              <a
+                href="smoothies/pink-power-blend.html"
+                class="absolute inset-0 z-0"
+                aria-label="Ver Pink Power Blend"
+              ></a>
+              <div
+                class="relative overflow-hidden bg-gray-50 h-80 pointer-events-none"
+              >
+                <img
+                  src="../images/smoothies/pinkpowerblend_v2.jpeg"
+                  alt="Pink Power Blend Smoothie"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onerror="this.src = '../images/smoothie3.webp'"
+                />
+                <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >🌾 Gluten-Free</span
+                  >
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >🔥 Low Calorie</span
+                  >
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >⭐ Popular</span
+                  >
                 </div>
-              </a>
+              </div>
               <div class="p-6">
                 <h3 class="text-2xl font-semibold text-gray-900 mb-3">
-                  Berry Glow
+                  Pink Power Blend
                 </h3>
                 <p class="text-sm text-gray-600 mb-4 leading-relaxed">
-                  Smoothie vibrante y cremoso, rico en antioxidantes que
-                  favorecen la luminosidad de la piel y la circulación, mientras
-                  el colágeno contribuye al cuidado de articulaciones, tejidos y
-                  firmeza cutánea.
+                  Smoothie reconfortante que contribuye al cuidado de la piel y
+                  las articulaciones, ideal para un momento de calma y
+                  bienestar.
                 </p>
                 <div class="text-sm text-gray-500 mb-4">
                   <span class="font-semibold">Tamaño:</span> 16 oz
                 </div>
-                <details class="mb-4">
+                <details class="mb-4 relative z-10">
                   <summary
                     class="cursor-pointer text-sm font-semibold text-primary-navy mb-2"
                   >
                     Ver ingredientes
                   </summary>
                   <p class="text-xs text-gray-600 mt-2 leading-relaxed">
-                    Leche de almendras, Arándanos, Fresa, Frambuesa, Plátano,
-                    Palta, Miel de maple, Colágeno, Yogurt griego, Proteína de
+                    Leche de almendras, Plátano, Fresa, Frambuesa, Betarraga,
+                    Vainilla, Miel de maple, Ashwagandha, Colágeno, Proteína de
                     vainilla.
                   </p>
                 </details>
@@ -268,28 +277,33 @@
 
             <!-- Vitamin Boost -->
             <div
-              class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500"
+              class="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer"
             >
-              <a href="smoothies/vitamin-boost.html" class="block">
-                <div class="relative overflow-hidden bg-gray-50 h-80">
-                  <img
-                    src="../images/smoothies/vitaminboost_v2.jpeg"
-                    alt="Vitamin Boost Smoothie"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    onerror="this.src = '../images/smoothie-naranja_v2.webp'"
-                  />
-                  <div class="absolute top-4 left-4 flex flex-wrap gap-2">
-                    <span
-                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
-                      >🌱 Vegan</span
-                    >
-                    <span
-                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
-                      >🌾 Gluten-Free</span
-                    >
-                  </div>
+              <a
+                href="smoothies/vitamin-boost.html"
+                class="absolute inset-0 z-0"
+                aria-label="Ver Vitamin Boost"
+              ></a>
+              <div
+                class="relative overflow-hidden bg-gray-50 h-80 pointer-events-none"
+              >
+                <img
+                  src="../images/smoothies/vitaminboost_v2.jpeg"
+                  alt="Vitamin Boost Smoothie"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onerror="this.src = '../images/smoothie-naranja_v2.webp'"
+                />
+                <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >🌱 Vegan</span
+                  >
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >🌾 Gluten-Free</span
+                  >
                 </div>
-              </a>
+              </div>
               <div class="p-6">
                 <h3 class="text-2xl font-semibold text-gray-900 mb-3">
                   Vitamin Boost
@@ -303,7 +317,7 @@
                 <div class="text-sm text-gray-500 mb-4">
                   <span class="font-semibold">Tamaño:</span> 16 oz
                 </div>
-                <details class="mb-4">
+                <details class="mb-4 relative z-10">
                   <summary
                     class="cursor-pointer text-sm font-semibold text-primary-navy mb-2"
                   >
@@ -318,107 +332,113 @@
               </div>
             </div>
 
-            <!-- Power Greens -->
+            <!-- Berry Glow -->
             <div
-              class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500"
+              class="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer"
             >
-              <a href="smoothies/power-greens.html" class="block">
-                <div class="relative overflow-hidden bg-gray-50 h-80">
-                  <img
-                    src="../images/smoothies/powergreens_v2.jpeg"
-                    alt="Power Greens Smoothie"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    onerror="this.src = '../images/smoothie2.webp'"
-                  />
-                  <div class="absolute top-4 left-4 flex flex-wrap gap-2">
-                    <span
-                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
-                      >🌱 Vegan</span
-                    >
-                    <span
-                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
-                      >🌾 Gluten-Free</span
-                    >
-                    <span
-                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
-                      >💪 High Protein</span
-                    >
-                  </div>
+              <a
+                href="smoothies/berry-glow.html"
+                class="absolute inset-0 z-0"
+                aria-label="Ver Berry Glow"
+              ></a>
+              <div
+                class="relative overflow-hidden bg-gray-50 h-80 pointer-events-none"
+              >
+                <img
+                  src="../images/smoothies/berryglow_v2.jpeg"
+                  alt="Berry Glow Smoothie"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onerror="this.src = '../images/smoothie-purple_v2.webp'"
+                />
+                <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >🌾 Gluten-Free</span
+                  >
                 </div>
-              </a>
+              </div>
               <div class="p-6">
                 <h3 class="text-2xl font-semibold text-gray-900 mb-3">
-                  Power Greens
+                  Berry Glow
                 </h3>
                 <p class="text-sm text-gray-600 mb-4 leading-relaxed">
-                  Smoothie revitalizante, rico en antioxidantes que apoyan la
-                  desintoxicación natural, la salud celular y el sistema
-                  inmunológico, aportando energía limpia y nutrición concentrada
-                  en cada sorbo.
+                  Smoothie vibrante y cremoso, rico en antioxidantes que
+                  favorecen la luminosidad de la piel y la circulación, mientras
+                  el colágeno contribuye al cuidado de articulaciones, tejidos y
+                  firmeza cutánea.
                 </p>
                 <div class="text-sm text-gray-500 mb-4">
                   <span class="font-semibold">Tamaño:</span> 16 oz
                 </div>
-                <details class="mb-4">
+                <details class="mb-4 relative z-10">
                   <summary
                     class="cursor-pointer text-sm font-semibold text-primary-navy mb-2"
                   >
                     Ver ingredientes
                   </summary>
                   <p class="text-xs text-gray-600 mt-2 leading-relaxed">
-                    Agua de coco, Zumo de limón, Espinaca, Kale, Plátano, Piña,
-                    Mango, Palta, Espirulina, Proteína.
+                    Leche de almendras, Arándanos, Fresa, Frambuesa, Plátano,
+                    Palta, Miel de maple, Colágeno, Yogurt griego, Proteína de
+                    vainilla.
                   </p>
                 </details>
               </div>
             </div>
 
-            <!-- Almond Reishi -->
+            <!-- Matcha Flow -->
             <div
-              class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500"
+              class="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer"
             >
-              <a href="smoothies/almond-reishi.html" class="block">
-                <div class="relative overflow-hidden bg-gray-50 h-80">
-                  <img
-                    src="../images/smoothies/almondreishi_v2.jpeg"
-                    alt="Almond Reishi Smoothie"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    onerror="this.src = '../images/smoothie-azul_v2.webp'"
-                  />
-                  <div class="absolute top-4 left-4 flex flex-wrap gap-2">
-                    <span
-                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
-                      >🌾 Gluten-Free</span
-                    >
-                    <span
-                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
-                      >⭐ Popular</span
-                    >
-                  </div>
+              <a
+                href="smoothies/matcha-flow.html"
+                class="absolute inset-0 z-0"
+                aria-label="Ver Matcha Flow"
+              ></a>
+              <div
+                class="relative overflow-hidden bg-gray-50 h-80 pointer-events-none"
+              >
+                <img
+                  src="../images/smoothies/matcha-flow.png"
+                  alt="Matcha Flow Smoothie"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onerror="this.src = '../images/smoothie2.webp'"
+                />
+                <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >⭐ Popular</span
+                  >
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >🌾 Gluten-Free</span
+                  >
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >🌱 Vegan</span
+                  >
                 </div>
-              </a>
+              </div>
               <div class="p-6">
                 <h3 class="text-2xl font-semibold text-gray-900 mb-3">
-                  Almond Reishi
+                  Matcha Flow
                 </h3>
                 <p class="text-sm text-gray-600 mb-4 leading-relaxed">
-                  Smoothie cremoso y equilibrado que aporta energía sostenida,
-                  apoya la relajación y el manejo del estrés, contribuye a la
-                  recuperación muscular y favorece una buena hidratación.
+                  Smoothie con matcha, rico en antioxidantes que apoyan la
+                  energía, el enfoque y el metabolismo, con una textura cremosa
+                  y nutritiva.
                 </p>
                 <div class="text-sm text-gray-500 mb-4">
                   <span class="font-semibold">Tamaño:</span> 16 oz
                 </div>
-                <details class="mb-4">
+                <details class="mb-4 relative z-10">
                   <summary
                     class="cursor-pointer text-sm font-semibold text-primary-navy mb-2"
                   >
                     Ver ingredientes
                   </summary>
                   <p class="text-xs text-gray-600 mt-2 leading-relaxed">
-                    Leche de almendras, Agua de coco, Plátano, Dátiles,
-                    Mantequilla de almendra, Vainilla, Sal marina, Hongo reishi,
-                    Caramelo de alulosa, Proteína de vainilla.
+                    Leche de almendras, Plátano, Naranja, Dátiles, Moringa,
+                    Matcha, Proteína de vainilla.
                   </p>
                 </details>
               </div>
@@ -433,56 +453,463 @@
           </h2>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Pink Power Blend -->
+            <!-- Hazelnut -->
             <div
-              class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500"
+              class="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer"
             >
-              <a href="smoothies/pink-power-blend.html" class="block">
-                <div class="relative overflow-hidden bg-gray-50 h-80">
-                  <img
-                    src="../images/smoothies/pinkpowerblend_v2.jpeg"
-                    alt="Pink Power Blend Smoothie"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    onerror="this.src = '../images/smoothie3.webp'"
-                  />
-                  <div class="absolute top-4 left-4 flex flex-wrap gap-2">
-                    <span
-                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
-                      >🌾 Gluten-Free</span
-                    >
-                    <span
-                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
-                      >🔥 Low Calorie</span
-                    >
-                    <span
-                      class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
-                      >⭐ Popular</span
-                    >
-                  </div>
+              <a
+                href="smoothies/hazelnut.html"
+                class="absolute inset-0 z-0"
+                aria-label="Ver Hazelnut"
+              ></a>
+              <div
+                class="relative overflow-hidden bg-gray-50 h-80 pointer-events-none"
+              >
+                <img
+                  src="../images/smoothies/hazelnut.jpeg"
+                  alt="Hazelnut Smoothie"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onerror="this.src = '../images/smoothie1.webp'"
+                />
+                <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >🌾 Gluten-Free</span
+                  >
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >💪 High Protein</span
+                  >
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >⭐ Popular</span
+                  >
                 </div>
-              </a>
+              </div>
               <div class="p-6">
                 <h3 class="text-2xl font-semibold text-gray-900 mb-3">
-                  Pink Power Blend
+                  Hazelnut
                 </h3>
                 <p class="text-sm text-gray-600 mb-4 leading-relaxed">
-                  Smoothie reconfortante que contribuye al cuidado de la piel y
-                  las articulaciones, ideal para un momento de calma y
-                  bienestar.
+                  Smoothie reconfortante, de sabor profundo y naturalmente
+                  achocolatado, con textura cremosa que satisface el paladar.
+                  Aporta energía sostenida, apoyo al mantenimiento muscular y
+                  nutrición equilibrada.
                 </p>
                 <div class="text-sm text-gray-500 mb-4">
                   <span class="font-semibold">Tamaño:</span> 16 oz
                 </div>
-                <details class="mb-4">
+                <details class="mb-4 relative z-10">
                   <summary
                     class="cursor-pointer text-sm font-semibold text-primary-navy mb-2"
                   >
                     Ver ingredientes
                   </summary>
                   <p class="text-xs text-gray-600 mt-2 leading-relaxed">
-                    Leche de almendras, Plátano, Fresa, Frambuesa, Betarraga,
-                    Vainilla, Miel de maple, Ashwagandha, Colágeno, Proteína de
-                    vainilla.
+                    Leche de avena, Plátano, Palta, Dátiles, Avellanas,
+                    Mantequilla de avellanas, Cacao en polvo, Yogurt griego,
+                    Proteína de chocolate.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Protein Espresso -->
+            <div
+              class="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer"
+            >
+              <a
+                href="smoothies/protein-espresso.html"
+                class="absolute inset-0 z-0"
+                aria-label="Ver Protein Espresso"
+              ></a>
+              <div
+                class="relative overflow-hidden bg-gray-50 h-80 pointer-events-none"
+              >
+                <img
+                  src="../images/smoothies/protein-espresso.png"
+                  alt="Protein Espresso Smoothie"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onerror="this.src = '../images/smoothie1.webp'"
+                />
+                <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >⭐ Popular</span
+                  >
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >🌾 Gluten-Free</span
+                  >
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >💪 High Protein</span
+                  >
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  Protein Espresso
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                  Smoothie con notas naturales a café y cacao que brindan un
+                  impulso sostenido, apoyan el rendimiento físico y contribuyen
+                  al cuidado de la piel y articulaciones.
+                </p>
+                <div class="text-sm text-gray-500 mb-4">
+                  <span class="font-semibold">Tamaño:</span> 16 oz
+                </div>
+                <details class="mb-4 relative z-10">
+                  <summary
+                    class="cursor-pointer text-sm font-semibold text-primary-navy mb-2"
+                  >
+                    Ver ingredientes
+                  </summary>
+                  <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                    Leche de almendra, Cold brew, Yogurt griego, Dátiles,
+                    Lúcuma, Maca, Cacao nibs, Canela, Colágeno, Proteína.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Power Greens -->
+            <div
+              class="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer"
+            >
+              <a
+                href="smoothies/power-greens.html"
+                class="absolute inset-0 z-0"
+                aria-label="Ver Power Greens"
+              ></a>
+              <div
+                class="relative overflow-hidden bg-gray-50 h-80 pointer-events-none"
+              >
+                <img
+                  src="../images/smoothies/powergreens_v2.jpeg"
+                  alt="Power Greens Smoothie"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onerror="this.src = '../images/smoothie2.webp'"
+                />
+                <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >🌱 Vegan</span
+                  >
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >🌾 Gluten-Free</span
+                  >
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >💪 High Protein</span
+                  >
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  Power Greens
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                  Smoothie revitalizante, rico en antioxidantes que apoyan la
+                  desintoxicación natural, la salud celular y el sistema
+                  inmunológico, aportando energía limpia y nutrición concentrada
+                  en cada sorbo.
+                </p>
+                <div class="text-sm text-gray-500 mb-4">
+                  <span class="font-semibold">Tamaño:</span> 16 oz
+                </div>
+                <details class="mb-4 relative z-10">
+                  <summary
+                    class="cursor-pointer text-sm font-semibold text-primary-navy mb-2"
+                  >
+                    Ver ingredientes
+                  </summary>
+                  <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                    Agua de coco, Zumo de limón, Espinaca, Kale, Plátano, Piña,
+                    Mango, Palta, Espirulina, Proteína.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Acai Glow -->
+            <div
+              class="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer"
+            >
+              <a
+                href="smoothies/acai-glow.html"
+                class="absolute inset-0 z-0"
+                aria-label="Ver Acai Glow"
+              ></a>
+              <div
+                class="relative overflow-hidden bg-gray-50 h-80 pointer-events-none"
+              >
+                <img
+                  src="../images/smoothies/acai-glow.png"
+                  alt="Acai Glow Smoothie"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onerror="this.src = '../images/smoothie-purple_v2.webp'"
+                />
+                <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >💪 High Protein</span
+                  >
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >🌾 Gluten-Free</span
+                  >
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >🌱 Vegan</span
+                  >
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  Acai Glow
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                  Smoothie antioxidante y revitalizante, rico en polifenoles y
+                  grasas saludables que apoyan la salud celular, la energía
+                  natural y la recuperación muscular.
+                </p>
+                <div class="text-sm text-gray-500 mb-4">
+                  <span class="font-semibold">Tamaño:</span> 16 oz
+                </div>
+                <details class="mb-4 relative z-10">
+                  <summary
+                    class="cursor-pointer text-sm font-semibold text-primary-navy mb-2"
+                  >
+                    Ver ingredientes
+                  </summary>
+                  <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                    Acai, Plátano, Fresas, Chia, Hemp seeds, Leche vegetal,
+                    Proteína de vainilla.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Serenity Blend -->
+            <div
+              class="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer"
+            >
+              <a
+                href="smoothies/serenity-blend.html"
+                class="absolute inset-0 z-0"
+                aria-label="Ver Serenity Blend"
+              ></a>
+              <div
+                class="relative overflow-hidden bg-gray-50 h-80 pointer-events-none"
+              >
+                <img
+                  src="../images/smoothies/serenity-blend-v2.png"
+                  alt="Serenity Blend Smoothie"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onerror="this.src = '../images/smoothie3.webp'"
+                />
+                <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >🌾 Gluten-Free</span
+                  >
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >🔥 Low Calorie</span
+                  >
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >💪 High Protein</span
+                  >
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  Serenity Blend
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                  Smoothie frutal que apoya la recuperación muscular, el
+                  equilibrio mineral y la energía natural.
+                </p>
+                <div class="text-sm text-gray-500 mb-4">
+                  <span class="font-semibold">Tamaño:</span> 16 oz
+                </div>
+                <details class="mb-4 relative z-10">
+                  <summary
+                    class="cursor-pointer text-sm font-semibold text-primary-navy mb-2"
+                  >
+                    Ver ingredientes
+                  </summary>
+                  <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                    Arándanos, Fresas, Mango, Leche de coco, Yogurt griego, Sal,
+                    Magnesio Bisglicinato, Proteína de vainilla.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Blue Magic -->
+            <div
+              class="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer"
+            >
+              <a
+                href="smoothies/blue-magic.html"
+                class="absolute inset-0 z-0"
+                aria-label="Ver Blue Magic"
+              ></a>
+              <div
+                class="relative overflow-hidden bg-gray-50 h-80 pointer-events-none"
+              >
+                <img
+                  src="../images/smoothies/blue-magic-v2.png"
+                  alt="Blue Magic Smoothie"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onerror="this.src = '../images/smoothie-azul_v2.webp'"
+                />
+                <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >🌾 Gluten-Free</span
+                  >
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >💪 High Protein</span
+                  >
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  Blue Magic
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                  Smoothie exótico que aporta fitonutrientes y compuestos
+                  funcionales para apoyar la inmunidad, la salud digestiva y la
+                  recuperación de tejidos.
+                </p>
+                <div class="text-sm text-gray-500 mb-4">
+                  <span class="font-semibold">Tamaño:</span> 16 oz
+                </div>
+                <details class="mb-4 relative z-10">
+                  <summary
+                    class="cursor-pointer text-sm font-semibold text-primary-navy mb-2"
+                  >
+                    Ver ingredientes
+                  </summary>
+                  <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                    Leche de coco, Piña, Mango, Plátano, Spirulina azul, Tocosh,
+                    Colágeno, Proteína vainilla.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- Immuni-Boost -->
+            <div
+              class="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer"
+            >
+              <a
+                href="smoothies/immuni-boost.html"
+                class="absolute inset-0 z-0"
+                aria-label="Ver Immuni-Boost"
+              ></a>
+              <div
+                class="relative overflow-hidden bg-gray-50 h-80 pointer-events-none"
+              >
+                <img
+                  src="../images/smoothies/immuni-boost-v2.png"
+                  alt="Immuni-Boost Smoothie"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onerror="this.src = '../images/smoothie-naranja_v2.webp'"
+                />
+                <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >🌾 Gluten-Free</span
+                  >
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >🌱 Vegan</span
+                  >
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >🔥 Low Calorie</span
+                  >
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  Immuni-Boost
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                  Smoothie con alto contenido de vitamina C y antioxidantes,
+                  apoyando las defensas naturales, la respuesta antiinflamatoria
+                  y la vitalidad diaria.
+                </p>
+                <div class="text-sm text-gray-500 mb-4">
+                  <span class="font-semibold">Tamaño:</span> 16 oz
+                </div>
+                <details class="mb-4 relative z-10">
+                  <summary
+                    class="cursor-pointer text-sm font-semibold text-primary-navy mb-2"
+                  >
+                    Ver ingredientes
+                  </summary>
+                  <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                    Zanahoria, Limón, Naranja, Mango, Piña, Cúrcuma, Jengibre,
+                    Camu camu, Proteína.
+                  </p>
+                </details>
+              </div>
+            </div>
+
+            <!-- CocoGoji Smoothie -->
+            <div
+              class="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer"
+            >
+              <a
+                href="smoothies/coco-goji.html"
+                class="absolute inset-0 z-0"
+                aria-label="Ver CocoGoji Smoothie"
+              ></a>
+              <div
+                class="relative overflow-hidden bg-gray-50 h-80 pointer-events-none"
+              >
+                <img
+                  src="../images/smoothies/coco-goji.png"
+                  alt="CocoGoji Smoothie"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onerror="this.src = '../images/smoothie3.webp'"
+                />
+                <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                  <span
+                    class="backdrop-blur-sm text-primary-navy px-3 py-1 rounded-full text-xs font-semibold bg-gray-200"
+                    >🌾 Gluten-Free</span
+                  >
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  CocoGoji Smoothie
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                  Smoothie con un toque dulce y frutal, rico en antioxidantes y
+                  fibra que apoyan la salud digestiva, la hidratación y el
+                  equilibrio energético.
+                </p>
+                <div class="text-sm text-gray-500 mb-4">
+                  <span class="font-semibold">Tamaño:</span> 16 oz
+                </div>
+                <details class="mb-4 relative z-10">
+                  <summary
+                    class="cursor-pointer text-sm font-semibold text-primary-navy mb-2"
+                  >
+                    Ver ingredientes
+                  </summary>
+                  <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                    Agua de coco, Arándanos, Fresas, Yogurt griego, Miel de
+                    agave, Goji berries, Chía, Proteína vainilla.
                   </p>
                 </details>
               </div>

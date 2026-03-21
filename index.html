@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="es">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DBJ145Y6XJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DBJ145Y6XJ');
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SANA 1937 - Salud y Bienestar Natural</title>
@@ -52,42 +61,20 @@
     <link
       rel="preload"
       as="image"
-      href="images/hero.webp"
+      href="images/optimized/smoothiesgente_v3-1200.webp"
       type="image/webp"
       media="(min-width: 640px)"
     />
     <link
       rel="preload"
       as="image"
-      href="images/hero_mobile.png"
-      type="image/png"
+      href="images/optimized/smoothiesgente_v3-640.webp"
+      type="image/webp"
       media="(max-width: 639px)"
-    />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
-      as="style"
     />
 
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              "primary-navy": "#15264b",
-              "secondary-navy": "#2d4a6b",
-              "light-navy": "#4a6b8a",
-            },
-            fontFamily: {
-              poppins: ["Poppins", "sans-serif"],
-              inter: ["Inter", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
+    <link rel="stylesheet" href="css/tailwind.css" />
 
     <!-- CSS personalizado mínimo -->
     <link rel="stylesheet" href="css/styles.css" />
@@ -111,7 +98,15 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
   </head>
   <body class="font-poppins">
     <!-- Header -->
@@ -169,7 +164,7 @@
             <a
               href="#"
               class="coming-soon-link font-inter font-medium text-sm uppercase tracking-wide py-3 text-gray-800 border-b-2 border-transparent hover:text-primary-navy hover:border-black transition-all"
-              >Donde estamos</a
+              >Dónde estamos</a
             >
           </nav>
 
@@ -222,12 +217,14 @@
 
     <!-- Hero Banner -->
     <section
-      class="mt-12 hidden sm:flex hero h-[78vh] flex items-center justify-center relative overflow-hidden"
+      class="mt-12 hidden sm:flex hero h-[70vh] flex items-center justify-center relative overflow-hidden"
     >
       <!-- Imagen de fondo -->
       <div
         class="absolute inset-0 bg-cover bg-center"
-        style="background-image: url(&quot;images/smoothiesgente_v3.jpeg&quot;)"
+        style="
+          background-image: url(&quot;images/optimized/smoothiesgente_v3-1200.webp&quot;);
+        "
       ></div>
 
       <!-- Overlay con opacidad -->
@@ -236,8 +233,15 @@
       <!-- Imagen hero sobrepuesta -->
       <div class="relative z-10 w-full h-full flex items-center justify-center">
         <img
-          src="images/hero_v2.png"
+          src="images/optimized/hero_v2-1200.webp"
+          srcset="
+            images/optimized/hero_v2-720.webp   720w,
+            images/optimized/hero_v2-1200.webp 1200w
+          "
+          sizes="(max-width: 639px) 92vw, 70vw"
           alt="SANA 1937"
+          fetchpriority="high"
+          decoding="async"
           class="max-h-full w-auto object-contain"
         />
       </div>
@@ -250,7 +254,9 @@
       <!-- Imagen de fondo -->
       <div
         class="absolute inset-0 bg-cover bg-center"
-        style="background-image: url(&quot;images/smoothiesgente_v3.jpeg&quot;)"
+        style="
+          background-image: url(&quot;images/optimized/smoothiesgente_v3-640.webp&quot;);
+        "
       ></div>
 
       <!-- Overlay con opacidad -->
@@ -261,8 +267,15 @@
         class="relative z-10 w-full h-full flex items-center justify-center px-4"
       >
         <img
-          src="images/hero_v2.png"
+          src="images/optimized/hero_v2-720.webp"
+          srcset="
+            images/optimized/hero_v2-720.webp   720w,
+            images/optimized/hero_v2-1200.webp 1200w
+          "
+          sizes="92vw"
           alt="SANA 1937"
+          fetchpriority="high"
+          decoding="async"
           class="max-h-full w-auto object-contain"
         />
       </div>
@@ -350,9 +363,9 @@
         </div>
 
         <!-- Sección de marca destacada -->
-        <div class="mt-12">
+        <div class="mt-8">
           <div
-            class="flex justify-between items-center mb-8 border-b border-gray-200 pb-4 fade-in delay-100"
+            class="flex justify-between items-center mb-4 border-b border-gray-200 pb-4 fade-in delay-100"
           >
             <h3 class="text-2xl font-normal text-gray-800">Nuevos Productos</h3>
             <a
@@ -363,21 +376,24 @@
           </div>
 
           <div
-            class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12 max-w-8xl mx-auto"
+            class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 max-w-8xl mx-auto"
             id="nuevos-productos-list"
           >
             <!-- Producto 1 -->
             <div
-              class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+              class="group w-full max-w-md mx-auto bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
             >
-              <div class="relative overflow-hidden bg-gray-50">
+              <div
+                class="relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-slate-100 py-4"
+              >
                 <img
-                  src="images/almondreishi.jpeg"
+                  src="images/optimized/almondreishi_home-520.webp"
                   alt="SANA 1937 Almond Reishi"
                   width="400"
                   height="384"
-                  fetchpriority="high"
-                  class="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
+                  class="w-full h-[14rem] object-contain object-center transition-transform duration-500 group-hover:scale-[1.01]"
                 />
                 <div
                   class="absolute top-4 right-4 bg-primary-navy text-white px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide"
@@ -385,12 +401,12 @@
                   Nuevo
                 </div>
               </div>
-              <div class="p-8">
-                <div
+              <div class="p-6">
+                <!-- <div
                   class="text-xs text-primary-navy uppercase font-bold tracking-wider mb-2"
                 >
                   SANA 1937
-                </div>
+                </div> -->
                 <h4
                   class="text-xl font-semibold text-gray-900 mb-3 leading-tight group-hover:text-primary-navy transition-colors"
                 >
@@ -402,7 +418,7 @@
                   recuperación muscular y favorece una buena hidratación.
                 </p>
                 <a
-                  href="#"
+                  href="pages/smoothies/almond-reishi.html"
                   class="block w-full bg-primary-navy text-white text-center rounded-full px-8 py-4 text-sm font-bold uppercase tracking-wide transition-all hover:bg-secondary-navy hover:shadow-lg transform hover:scale-105"
                 >
                   Descubrir más
@@ -412,16 +428,19 @@
 
             <!-- Producto 2 -->
             <div
-              class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+              class="group w-full max-w-md mx-auto bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
             >
-              <div class="relative overflow-hidden bg-gray-50">
+              <div
+                class="relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-slate-100 py-4"
+              >
                 <img
-                  src="images/powergreens.jpeg"
+                  src="images/optimized/powergreens_home-520.webp"
                   alt="SANA 1937 Power Greens"
                   width="400"
                   height="384"
-                  fetchpriority="high"
-                  class="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
+                  class="w-full h-[14rem] object-contain object-center transition-transform duration-500 group-hover:scale-[1.01]"
                 />
                 <div
                   class="absolute top-4 right-4 bg-primary-navy text-white px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide"
@@ -429,12 +448,12 @@
                   Nuevo
                 </div>
               </div>
-              <div class="p-8">
-                <div
+              <div class="p-6">
+                <!-- <div
                   class="text-xs text-primary-navy uppercase font-bold tracking-wider mb-2"
                 >
                   SANA 1937
-                </div>
+                </div> -->
                 <h4
                   class="text-xl font-semibold text-gray-900 mb-3 leading-tight group-hover:text-primary-navy transition-colors"
                 >
@@ -447,7 +466,7 @@
                   en cada sorbo.
                 </p>
                 <a
-                  href="#"
+                  href="pages/smoothies/power-greens.html"
                   class="block w-full bg-primary-navy text-white text-center rounded-full px-8 py-4 text-sm font-bold uppercase tracking-wide transition-all hover:bg-secondary-navy hover:shadow-lg transform hover:scale-105"
                 >
                   Descubrir más
@@ -457,16 +476,19 @@
 
             <!-- Producto 3 -->
             <div
-              class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+              class="group w-full max-w-md mx-auto bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
             >
-              <div class="relative overflow-hidden bg-gray-50">
+              <div
+                class="relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-slate-100 py-4"
+              >
                 <img
-                  src="images/pinkpowerblend_v2.jpeg"
+                  src="images/optimized/pikinpowerblend_home-520.webp"
                   alt="SANA 1937 Pink Power Blend"
                   width="400"
                   height="384"
-                  fetchpriority="high"
-                  class="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
+                  class="w-full h-[14rem] object-contain object-center transition-transform duration-500 group-hover:scale-[1.01]"
                 />
                 <div
                   class="absolute top-4 right-4 bg-primary-navy text-white px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide"
@@ -474,12 +496,12 @@
                   Nuevo
                 </div>
               </div>
-              <div class="p-8">
-                <div
+              <div class="p-6">
+                <!-- <div
                   class="text-xs text-primary-navy uppercase font-bold tracking-wider mb-2"
                 >
                   SANA 1937
-                </div>
+                </div> -->
                 <h4
                   class="text-xl font-semibold text-gray-900 mb-3 leading-tight group-hover:text-primary-navy transition-colors"
                 >
@@ -492,7 +514,7 @@
                   cuerpo.
                 </p>
                 <a
-                  href="#"
+                  href="pages/smoothies/pink-power-blend.html"
                   class="block w-full bg-primary-navy text-white text-center rounded-full px-8 py-4 text-sm font-bold uppercase tracking-wide transition-all hover:bg-secondary-navy hover:shadow-lg transform hover:scale-105"
                 >
                   Descubrir más
@@ -585,46 +607,51 @@
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 scale-in delay-200">
             <div class="lg:col-span-2">
               <img
-                src="images/smoothiesgente.jpeg"
+                src="images/optimized/smoothiesgente-800.webp"
                 alt="SANA 1937 Smoothies"
                 width="800"
                 height="500"
                 loading="lazy"
+                decoding="async"
                 class="w-full h-[500px] object-cover rounded-lg"
               />
             </div>
 
             <div class="grid grid-cols-2 gap-2">
               <img
-                src="images/smoothie2.webp"
+                src="images/optimized/smoothie2-640.webp"
                 alt="Acai Bowl"
                 width="400"
                 height="245"
                 loading="lazy"
+                decoding="async"
                 class="w-full h-[245px] object-cover rounded-lg"
               />
               <img
-                src="images/smoothie3.webp"
+                src="images/optimized/smoothie3-640.webp"
                 alt="Smoothie Bottles"
                 width="400"
                 height="245"
                 loading="lazy"
+                decoding="async"
                 class="w-full h-[245px] object-cover rounded-lg"
               />
               <img
-                src="images/smoothie4.webp"
+                src="images/optimized/smoothie4-640.webp"
                 alt="Smoothie Bowl"
                 width="400"
                 height="245"
                 loading="lazy"
+                decoding="async"
                 class="w-full h-[245px] object-cover rounded-lg"
               />
               <img
-                src="images/smoothie5.webp"
+                src="images/optimized/smoothie5-640.webp"
                 alt="Blue Smoothie"
                 width="400"
                 height="245"
                 loading="lazy"
+                decoding="async"
                 class="w-full h-[245px] object-cover rounded-lg"
               />
             </div>
@@ -645,19 +672,20 @@
               creatina para impulsar tu día.
             </p>
             <a
-              href="#"
+              href="pages/smoothies.html"
               class="inline-block bg-primary-navy text-white rounded-full px-6 py-3 text-sm font-medium uppercase tracking-wide transition-all hover:bg-secondary-navy"
               >Ver más</a
             >
           </div>
-          <div>
+          <div class="rounded-lg">
             <img
               src="images/smoothiesoficial.jpeg"
               alt="Power Smoothies"
               width="600"
               height="300"
               loading="lazy"
-              class="w-full h-[300px] object-cover rounded-lg"
+              decoding="async"
+              class="w-full h-[220px] sm:h-[300px] object-contain sm:object-cover bg-gray-50 rounded-lg"
             />
           </div>
         </div>
@@ -674,6 +702,8 @@
               <img
                 src="images/logo_let.png"
                 alt="SANA 1937"
+                loading="lazy"
+                decoding="async"
                 class="h-20 w-auto mx-auto md:mx-0"
               />
             </div>
