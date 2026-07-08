@@ -11,6 +11,7 @@ function initializeApp() {
     initSmoothScroll();
     initFormValidation();
     initScrollAnimations();
+    initLazyAutoplayVideos();
     initStickyHeader();
     initHeroScrollButton();
     initComingSoonLinks();
@@ -119,6 +120,41 @@ function initScrollAnimations() {
     animatedElements.forEach(el => {
         observer.observe(el);
     });
+}
+
+// Carga diferida para videos con autoplay fuera del viewport inicial
+function initLazyAutoplayVideos() {
+    const videos = document.querySelectorAll('video[data-src]');
+
+    if (videos.length === 0) return;
+
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const video = entry.target;
+
+            if (entry.isIntersecting) {
+                if (!video.src) {
+                    video.src = video.dataset.src;
+                    video.load();
+                }
+
+                const playPromise = video.play();
+                if (playPromise && typeof playPromise.catch === 'function') {
+                    playPromise.catch(() => { });
+                }
+                return;
+            }
+
+            if (!video.paused) {
+                video.pause();
+            }
+        });
+    }, {
+        threshold: 0.5,
+        rootMargin: '0px'
+    });
+
+    videos.forEach(video => videoObserver.observe(video));
 }
 
 // Validación de formularios
