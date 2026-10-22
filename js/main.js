@@ -25,6 +25,7 @@ function initMobileMenu() {
     if (menuToggle && mobileNav) {
         menuToggle.addEventListener('click', function () {
             mobileNav.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', mobileNav.classList.contains('active'));
 
             // Cambiar icono del menú
             const icon = menuToggle.querySelector('span');
@@ -40,6 +41,7 @@ function initMobileMenu() {
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileNav.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
                 const icon = menuToggle.querySelector('span');
                 icon.textContent = '☰';
             });
@@ -49,6 +51,7 @@ function initMobileMenu() {
         document.addEventListener('click', function (e) {
             if (!mobileNav.contains(e.target) && !menuToggle.contains(e.target)) {
                 mobileNav.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
                 const icon = menuToggle.querySelector('span');
                 icon.textContent = '☰';
             }

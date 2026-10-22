@@ -187,3 +187,6 @@ Proyecto desarrollado con pasión por el bienestar natural y la excelencia en de
 ---
 
 **SANA 1937** - Salud y Bienestar Natural desde 1937
+
+npm run watch:css
+npm run build:css
