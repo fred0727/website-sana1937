@@ -1620,6 +1620,14 @@ video {
   text-decoration-line: underline;
 }
 
+.decoration-2 {
+  text-decoration-thickness: 2px;
+}
+
+.underline-offset-4 {
+  text-underline-offset: 4px;
+}
+
 .opacity-0 {
   opacity: 0;
 }
