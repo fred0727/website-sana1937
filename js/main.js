@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Inicializar aplicación
 function initializeApp() {
+    initCopyrightYear();
     initMobileMenu();
     initSmoothScroll();
     initFormValidation();
@@ -15,6 +16,14 @@ function initializeApp() {
     initStickyHeader();
     initHeroScrollButton();
     initComingSoonLinks();
+}
+
+// Mantener el año del copyright actualizado automáticamente
+function initCopyrightYear() {
+    const currentYear = new Date().getFullYear();
+    document.querySelectorAll('.copyright-year').forEach(element => {
+        element.textContent = currentYear;
+    });
 }
 
 // Menu móvil
